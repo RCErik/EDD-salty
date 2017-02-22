@@ -1,17 +1,4 @@
-#include "pila_stc.h"
-
-int Size(pila *s){
-    return s -> tope + 1;
-}
-
-boolean Empty(pila *s){
-    boolean r;
-    if(s -> tope >= 0)
-        r = FALSE;
-    else
-        r = TRUE;
-    return r;
-}
+#include "TADPila_stc.h"
 
 void Initialize(pila *s){
     s -> tope = -1;
@@ -36,3 +23,17 @@ elemento Pop(pila *s){
     return r;
 }
 
+int Size(pila *s){
+    return s -> tope + 1;
+}
+
+boolean Empty(pila *s){
+    if (Size(s) == 0)
+        return TRUE;
+    return FALSE;
+}
+
+elemento Top (pila *s)
+{
+  return s->A[s->tope];
+}
