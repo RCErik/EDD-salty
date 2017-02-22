@@ -1,7 +1,7 @@
 #include"TADPila_dim.h"
 
 void 
-initialize (pila *s)
+Initialize (pila *s)
 {
   s->tope=NULL;
   return;
