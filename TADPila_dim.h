@@ -22,7 +22,7 @@ typedef struct pila
   nodo *tope;
 }pila;
 
-void initialize (pila *s);  //Inicializa una pila
+void Initialize (pila *s);  //Inicializa una pila
 void Push (elemento e, pila *s); //Mete un elemento a la pila
 elemento Pop (pila *s); //Saca el elemento tope de la pila
 boolean Empty (pila *s); //Verifica el estado de la pila
