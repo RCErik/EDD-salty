@@ -15,4 +15,22 @@ aux->e = e;
 return;
 }
 
-elemento Pop 
+elemento Pop (pila *s)
+{
+elemento r;
+nodo *aux;
+r = s->tope->e;
+aux = s->tope;
+s->tope = s->tope->abajo;
+free(aux);
+return r;
+}
+
+boolean Empty (pila *s)
+{
+if (s->tope == NULL)
+  return TRUE;
+return FALSE;
+}
+
+int Size
