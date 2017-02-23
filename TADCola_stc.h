@@ -18,13 +18,13 @@ typedef struct cola
   elemento A[MAX_ELEMENT];
 }
 
-void Initialize (cola *c);
-void Queue (elemento e, cola *c);
-elemento Dequeue (cola *c);
-boolean Empty (cola *c);
-int Size (cola *c);
-elemento Front (cola *c);
-elemento Final (cola *c);
-elemento Element (int n, cola *c);
-void Destroy (cola *c);
+void Initialize (cola *c); //Inicializa la cola
+void Queue (elemento e, cola *c);  //Mete un elemento al final de la cola
+elemento Dequeue (cola *c);  //Saca al primer elemento de la cola
+boolean Empty (cola *c);  //Verifica si la cola esta vacia o no
+int Size (cola *c);  //Muestra el numero de elementos de la cola
+elemento Front (cola *c);  //Muestra al primer elemento de la cola
+elemento Final (cola *c);  //Muestra al ultimo elemento de la cola
+elemento Element (int n, cola *c);  //Muestra el elemento que el usuario desea conocer
+void Destroy (cola *c);  //Destruye la cola
 
