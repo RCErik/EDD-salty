@@ -1,131 +1,243 @@
-#include "TADPila_stc.h"
+/*
+
+AUTOR: Equipo "Salty Boys" (C) Febrero 2017
+VERSIÓN: 1.2
+
+DESCRIPCIÓN: Funcion que hace uso de la pila para convertir una expresion infijo
+dada por el usuario a una expresion posfijo.
+
+OBSERVACIONES: Se emplea la libreria TADPilaDin.h o TADPilaEst.h
+
+*/
+
+
+#include "TADPilaDin.h"
 #include "expresion_posfija.h"
-/*Ver 1.2 */
 
 char *
 Expresion_Posfija (char cadena[150], char cadena_aux[150], int tam_cadena)
 {
-  pila operadores;
-  elemento aux;
-  elemento aux_2;
-  int i = 0;
-  int j = 0;
-  int h = 0;
+  pila operadores;       //Se declara una pila llamada operadores.
+  elemento aux;          //Elemento auxiliar que se usa para hacer Push de los elementos.
+  elemento aux_2;        //Elemento auxiliar que ayuda a comparar el Tope de la pila con las condiciones de la función.
+  int i = 0;             //Entero que sirve como contador de la cadena infijo.
+  int j = 0;             //Entero que sirve como contador de la cadena posfijo.
+  int k = 0;             //Entero auxiliar de j para contar los parentesis que van en la cadena auxiliar.
+  Initialize (&operadores);      //Inicializa la pila operadores.
 
-  Initialize (&operadores);
-
-  for (i = 0; i < tam_cadena; i++)
+  for (i = 0; i < tam_cadena; i++)  //Ciclo donde se compara el elemento de la cadena en la posición 'i' con las condiciones de la funcion.
     {
-      aux.c = cadena[i]; 
-      if ((aux.c == '^') || (aux.c == '/') || (aux.c == '*') || (aux.c == '+')
-          || (aux.c == '-') || (aux.c == '(') || (aux.c == ')'))
+
+      if ((cadena[i] == '^') || (cadena[i] == '/') || (cadena[i] == '*')        //Condicional if el cual separa los operadores de las letras
+          || (cadena[i] == '+') || (cadena[i] == '-') || (cadena[i] == '(')     //para asignarlos en la cadena posfijo de forma correcta.
+          || (cadena[i] == ')'))
         {
-          if (aux.c == '(')
-            {
+          if (cadena[i] == '(')         //Si el elemento en la cadena infijo en la posicion 'i' es igual a '('
+            {                           //entonces que haga Push del parentesis a la pila.
+
+              aux.c = '(';
               Push (&operadores, aux);
+              k++;                      //Suma uno al entero K para llevar el control de los elementos de la cadena.
+
             }
 
-          if (aux.c == ')')
-            {
-              aux_2 = Top (&operadores);
-              while (aux_2.c != '(')
-                {
-                  aux_2 = Pop (&operadores);
-                  cadena_aux[j] = aux_2.c;
-                  aux_2 = Top (&operadores);
-                  j++;
-                } 
-              Pop (&operadores);
-            }
+          if (cadena[i] == ')')         //Si el elemento en la cadena infijo en la posición 'i' es igual a ')'
+            {                           //entra dentro del bloque de condicional
 
-          if ((aux.c == '+') || (aux.c == '-'))
-            {
-              aux_2 = Top (&operadores); 
-              while ((aux_2.c == '*') || (aux_2.c == '/') || (aux_2.c == '^'))
+              aux_2 = Top (&operadores);        //Asigna al auxiliar 2 el elemento tope de la pila operadores.
+
+              while (aux_2.c != '(')            //Mientras auxiliar 2 sea diferente del parentesis que abre ejecuta el ciclo.
                 {
-                  aux_2 = Pop (&operadores);
-                  cadena_aux[j] = aux_2.c;
-                  aux_2 = Top (&operadores);
-                  j++;
-                  if (aux.c == '+')
-                    {
-                      Push (&operadores, aux);
-                    }
-                  if (aux.c == '-')
-                    {
-                      Push (&operadores, aux);
-                    }
+                  aux_2 = Pop (&operadores);    //Al auxiliar 2 se le asigna el elemento que se le hace Pop de la pila.
+                  cadena_aux[j] = aux_2.c;      //Asignamos ese valor a la cadena posfijo.
+                  aux_2 = Top (&operadores);    //Y volvemos asignar el valor tope de la pila al auxiliar 2 para la comparacion del ciclo.
+                  j++;                          //Aumentamos en uno al contador de la cadena posfijo.
                 }
-              if ( (aux_2.c != '(') && h != Empty(&operadores) )
+
+              Pop (&operadores);                //Hace Pop en la pila para quitar al parentesis que abre.
+              k++;                              //Aumenta el contador de los parentesis para no causar errores en el numero de la cadena posfijo.
+
+            }
+
+          if ((cadena[i] == '+') || (cadena[i] == '-')) //Si el elemento de la cadena infijo en la posición 'i' es igual al caracter
+            {                                           //de suma o de la resta se mete al bloque de instrucciones.
+
+              if (FALSE == Empty (&operadores))         //Si la Pila no esta vacia puede hacer este bloque de instrucciones.
                 {
-                  if ((aux.c == '+') || (aux.c == '-'))
+                  aux_2 = Top (&operadores);            //Asigna a auxiliar 2 el elemento tope de la pila.
+
+                  while ((aux_2.c == '*') || (aux_2.c == '/')   //Mientras el elemento del auxiliar 2 sea igual al caracter de la multiplicación,
+                         || (aux_2.c == '^'))                   //división o potencia, hará Pop de la pila y lo asigna a la cadena posfijo.
                     {
                       aux_2 = Pop (&operadores);
                       cadena_aux[j] = aux_2.c;
+                      aux_2 = Top (&operadores);                //Prepara al elemento auxiliar 2 para la comparacion del ciclo.
+                      j++;                                      //Suma uno al contador de la cadena posfijo.
+                    }
+
+                  if (aux_2.c != '(')           //Cuando sale del ciclo while verifica que no se encuentre en la pila un operador
+                    {                           //suma o resta, si lo hay hace Pop de este y hace Push del operador de la cadena infijo.
+                      aux_2 = Pop (&operadores);
+                      cadena_aux[j] = aux_2.c;
                       j++;
-                      if (aux.c == '+')
+
+                      if (cadena[i] == '+')     //Hace Push del operador suma si es el que se encuentra en la cadena infijo.
                         {
+                          aux.c = '+';
                           Push (&operadores, aux);
                         }
+
+                      if (cadena[i] == '-')     //Hace Push del operador resta si es el que se encuentra en la cadena infijo.
+                        {
+                          aux.c = '-';
+                          Push (&operadores, aux);
+                        }
+
+                    }
+
+                  if (aux_2.c == '(') //Si la pila no esta vacia y el elemento tope es un parentesis que abre
+                    {                 //hace push del operador de la cadena infijo en la posicion 'i'.
+
+                      if (cadena[i] == '+')
+                        {
+                          aux.c = '+';
+                          Push (&operadores, aux);
+                        }
+
                       if (cadena[i] == '-')
                         {
+                          aux.c = '-';
                           Push (&operadores, aux);
                         }
                     }
                 }
-              else
-                {
-                  if (aux.c == '+')
+              if (TRUE == Empty (&operadores)) //Si la pila esta vacia, hace push del elemento de la cadena infijo
+                {                              //en la posicion 'i'.
+
+                  if (cadena[i] == '+')
                     {
+                      aux.c = '+';
                       Push (&operadores, aux);
                     }
+
                   if (cadena[i] == '-')
                     {
+                      aux.c = '-';
+                      Push (&operadores, aux);
+                    }
+
+                }
+            }
+
+          if ((cadena[i] == '*') || (cadena[i] == '/')) //En caso de que el elemento de la cadena infijo sea un operador de 
+            {                                           //multiplicacion o division se ejecuta lo siguiente.
+
+              if (FALSE == Empty (&operadores))         //Si la pila no esta vacia, asigna al auxiliar 2 el elemento tope de la pila.
+                {
+                  aux_2 = Top (&operadores);            //Si el elemento es el operador de la potencia entonces hace Pop de la pila 
+                  while (aux_2.c == '^')                //y hace la asignacion del Pop a la cadena posfija y prepara al auxiliar 2
+                    {                                   //para su verificacion del ciclo while.
+                      aux_2 = Pop (&operadores);
+                      cadena_aux[j] = aux_2.c;
+                      aux_2 = Top (&operadores);
+                      j++;                              //Aumenta el contador j para llevar el control de la cadena posfijo.
+                    }
+
+                  if ((aux_2.c == '*') || (aux_2.c == '/')) //Si despues del ciclo while el elemento tope es el operador de multiplicacioo
+                    {                                       //o division, hace pop de la pila y lo asigna a la cadena posfijo.
+                      aux_2 = Pop (&operadores);
+                      cadena_aux[j] = aux_2.c;
+                      j++;
+
+                      if (cadena[i] == '*')                 //Si el elemento i de la cadena infijo es el operador de multiplicacion hace Push.
+                        {
+                          aux.c = '*';
+                          Push (&operadores, aux);
+                        }
+
+                      if (cadena[i] == '/')                 //Si el elemento i de la cadena infijo es el operador de division hace Push.
+                        {
+                          aux.c = '/';
+                          Push (&operadores, aux);
+                        }
+                    }
+
+                  if (aux_2.c == '(')   //Si el elemento de tope de la pila es un parentesis, hace push del operador en la posicion 'i'
+                    {                   //de la cadena infijo.
+
+                      if (cadena[i] == '*')
+                        {
+                          aux.c = '*';
+                          Push (&operadores, aux);
+                        }
+
+                      if (cadena[i] == '/')
+                        {
+                          aux.c = '/';
+                          Push (&operadores, aux);
+                        }
+                    }
+                }
+              if (TRUE == Empty (&operadores)) //Si la pila esta vacia, hace push del operador en la posicion 'i' de la cadena infijo.
+                {
+
+                  if (cadena[i] == '*')
+                    {
+                      aux.c = '*';
+                      Push (&operadores, aux);
+                    }
+                  if (cadena[i] == '/')
+                    {
+                      aux.c = '/';
                       Push (&operadores, aux);
                     }
                 }
             }
 
-          if ((aux.c == '*') || (aux.c == '/'))
-            {
-              aux_2 = Top (&operadores);
-              while (aux.c == '^')
-                {
-                  aux_2 = Pop (&operadores);
-                  cadena_aux[j] = aux_2.c;
-                  aux_2 = Top (&operadores);
-                  j++;
-                }
-              if (aux.c == '*')
-                {
-                  Push (&operadores, aux);
-                }
-              if (aux.c == '/')
-                {
-                  Push (&operadores, aux);
-                }
-            }
 
-          if (aux.c == '^')
+          if (cadena[i] == '^') //Si el operador en la posicion 'i' de la cadena infijo es la potencia, entonces hace lo siguente.
             {
-              Push (&operadores, aux);
+              if (FALSE == Empty (&operadores)) //Si la pila no esta vacia, asigna al auxiliar 2 el elemento tope de la pila
+                {
+                  aux_2 = Top (&operadores);
+                  if (aux_2.c == '^')           //Si ese elemento es la potencia, hace Pop, lo asigna a la cadena posfija
+                    {                           //suma el contador j y hace push del operador de la cadena infija en la posicion 'i'.
+                      aux_2 = Pop (&operadores);
+                      cadena_aux[j] = aux_2.c;
+                      j++;
+                      aux.c = '^';
+                      Push (&operadores, aux);
+                    }
+
+                  if (aux_2.c == '(')   //Si el elemento tope de la pila es el parentesis que abre, hace push del operador potencia. 
+                    {
+                      aux.c = '^';
+                      Push (&operadores, aux);
+                    }
+                }
+              if (TRUE == Empty (&operadores))  //En caso de que la pila este vacia, hace push del operador potencia a la pila.
+                {
+                  aux.c = '^';
+                  Push (&operadores, aux);
+                }
             }
         }
-      else
-        {
+
+      else               //En caso de que el elemento de la cadena infijo no sea un operador, asigna directamente la letra a la
+        {                //cadena posfijo.
+
           cadena_aux[j] = cadena[i];
-          j++;
+          j++;                          //Aumenta el contador de la cadena posfijo uno.
+
         }
-      printf ("%s \n", cadena_aux);
     }
-  while ((j < tam_cadena) && (h != Empty (&operadores)))
-    {
-      aux_2 = Pop (&operadores);
+
+  while ((j + k) < tam_cadena)          //Ciclo while que sirve para sacar todos los elementos faltantes de la pila en caso de que sea asi,
+    {                                   //Para eso son el entero j (que es el contador de la cadena posfijo) y el entero k (que cuenta los
+      aux_2 = Pop (&operadores);        //parentesis), mientras que la suma de j y k sea menor al tamaño de la cadena se ejecutara el ciclo.
       cadena_aux[j] = aux_2.c;
       j++;
     }
-  Destroy (&operadores);
-  printf ("%s \n", cadena_aux);
-  return cadena_aux;
+  Destroy (&operadores);                //Destruye la pila operadores.
+  return cadena_aux;                    //Retorna la cadena posfijo.
 }
-
