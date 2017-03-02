@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "TADPilaEst.h/TADPilaDin.h"
+#include "validar_expresion.h"
 
 boolean validar_expresion (char cadena[100], int tam_cadena)
 {
