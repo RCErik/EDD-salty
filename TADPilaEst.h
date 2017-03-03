@@ -12,7 +12,7 @@ OBSERVACIONES: Hablamos de una Estructura de datos estática cuando se le
 asigna una cantidad fija de memoria para esa estructura 
 antes de la ejecución del programa. 
 
-Codigo usado por "Salty Boys" con fines educacionales.
+Codigo usado por "Salty Boys" con fines educativos.
 */
 
 //DEFINICIONES DE CONSTANTES
