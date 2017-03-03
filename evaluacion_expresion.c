@@ -9,13 +9,8 @@
 	sin embargo esto puede cambiar según Erik me la haga de a tos xD
 */
 
-#include <stdio.h>
-#include <math.h>
-#include "TADPila_stc.h"
-
-#define TAMABECEDARIO 27
-#define ASCIIUNO 64
-#define ASCIIFIN 91
+#include "evaluacion_expresion.h"
+#include "TADPilaEst.h"
 
 void evaluar_expresion(char expresion[100], int tam_cadena){
 	Pila pila_evaluacion;
