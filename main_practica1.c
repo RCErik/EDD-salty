@@ -1,6 +1,7 @@
-#include "TADPila_stc.h"
+#include "TADPilaDin.h"
 #include "expresion_posfija.h"
-#include "evaluacion.h"
+#include "evaluacion_expresion.h"
+#include "validar_expresion.h"
 
 #define TAMANIO 100
 
@@ -11,7 +12,7 @@ int main(void){
 	printf("Bienvenido al mundo de la manzana\n\n");
 	printf("Seleccione alguna de las opciones del menu a continuación:\n");
 	printf("\n\t\tEscribe la expresión que deseas evaluar :3");
-	scanf("&s", &expresion);
+	scanf("%s", expresion);
 	tam_cadena = strlen(expresion); //Calculamos el tamaño de la expresión del usuario
 	/* 
 	    Ciclo que se ejecuta en caso de que exista un error en 
@@ -20,7 +21,7 @@ int main(void){
 	*/
 	while(validar_expresion(expresion, tam_cadena) == FALSE){
 		printf("\n\t\tEscribe la expresión que deseas evaluar :3");
-		scanf("&s", &expresion);
+		scanf("%s", expresion);
 		tam_cadena = strlen(expresion);
 		validar_expresion(expresion, tam_cadena);	
 	}
