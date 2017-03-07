@@ -27,7 +27,7 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 			//De corresponder a una letra entonces buscamos en el arreglo de valores el valor actual
 			//Si el valor es -1 entonces significa que no está inicializado y le asignamos un valor que de el usuario
 			//De lo contrario continúa recorriendo la expresión hasta encontrar una letra sin valor asignado
-			if(abecedario[caracter - ASCIIUNO] == -1){
+			if(abecedario[caracter - ASCIIUNO] != -1){
 				printf("Indique el valor que le quiere dar a %c por favor :3", expresion[i]);
 				scanf("%f", &valor);
 				abecedario[caracter - ASCIIUNO] = valor; //Asignamos un valor numérico al arreglo del abecedario en la posicion correspondiente a la letra en cuestión	
