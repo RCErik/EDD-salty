@@ -13,9 +13,9 @@
 #include "TADPilaEst.h"
 
 void evaluar_expresion(char expresion[100], int tam_cadena){
-	Pila pila_evaluacion; //Creamos la pila que va a contener los valores numéricos de los operandos
-	elemento valor_letra; //valor_letra será el sitio donde se guarden nuestros elementos de tipo int
-	int i, caracter, valor, operando_uno, operando_dos;
+	pila pila_evaluacion; //Creamos la pila que va a contener los valores numéricos de los operandos
+	elemento valor_letra, operando_uno, operando_dos; //valor_letra será el sitio donde se guarden nuestros elementos de tipo int
+	int i, caracter, valor;
 	int abecedario[TAMABECEDARIO] = {-1}; //Arreglo que ayudará a controlar los valores de cada operando, se inicializa en -1
 	Initialize(&pila_evaluacion); //Inicializamos nuestra pila para comenzar las operaciones
 	//Este ciclo se encarga de iterar sobre el arreglo de valores de cada operando
@@ -36,37 +36,37 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 	//Este ciclo itera sobre nuestra expresión en posfijo
 	for(i = 0; i < tam_cadena ; i++){
 		caracter = (int) expresion[i]; //Casteamos el caracter para saber su valor en ASCII
-		if(caracter > ASCIIUNO && caracter < ASCIIFIN) //Verificamos que el caracter corresponde a una letra del abecedario
+		if(caracter > ASCIIUNO && caracter < ASCIIFIN){ //Verificamos que el caracter corresponde a una letra del abecedario
 			valor_letra.r = abecedario[caracter - ASCIIUNO]; //Asignamos el valor del elemento int con el valor encontrado en al array de los valores de los operandos correspondiente
-			Push(&pila_evaluacion, valor_letra.r); //Agregamos el valor del operando a la pila
+			Push(&pila_evaluacion, valor_letra); //Agregamos el valor del operando a la pila
 		} else if (expresion[i] == '+'){ //Si encontramos un signo de + obtenemos dos valores de la pila y los sumamos
 			operando_uno = Pop(&pila_evaluacion);
 			operando_dos = Pop(&pila_evaluacion);
-			valor_letra.r = operando_uno + operando_dos; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
-			Push(&pila_evaluacion, valor_letra.r); //Volvemos a meter en la pila el resultado para su posterior uso
+			valor_letra.r = operando_uno.r + operando_dos.r; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
+			Push(&pila_evaluacion, valor_letra); //Volvemos a meter en la pila el resultado para su posterior uso
 		} else if (expresion[i] == '-'){ //Si encontramos un - obtenemos dos valores de la pila y los restamos
 			operando_uno = Pop(&pila_evaluacion);
 			operando_dos = Pop(&pila_evaluacion);
-			valor_letra.r = operando_uno - operando_dos; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
-			Push(&pila_evaluacion, valor_letra.r); //Volvemos a meter en la pila el resultado para su posterior uso
+			valor_letra.r = operando_uno.r - operando_dos.r; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
+			Push(&pila_evaluacion, valor_letra); //Volvemos a meter en la pila el resultado para su posterior uso
 		} else if (expresion[i] == '*'){ //Si encontramos un * obtenemos dos valores de la pila y los multiplicamos
 			operando_uno = Pop(&pila_evaluacion);
 			operando_dos = Pop(&pila_evaluacion);
-			valor_letra.r = operando_uno * operando_dos; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
-			Push(&pila_evaluacion, valor_letra.r); //Volvemos a meter en la pila el resultado para su posterior uso
+			valor_letra.r = operando_uno.r * operando_dos.r; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
+			Push(&pila_evaluacion, valor_letra); //Volvemos a meter en la pila el resultado para su posterior uso
 		} else if (expresion[i] == '/'){ //Si encontramos un / obtenemos dos valores de la pila y los dividimos
 			operando_uno = Pop(&pila_evaluacion);
 			operando_dos = Pop(&pila_evaluacion);
-			valor_letra.r = operando_uno / operando_dos; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
-			Push(&pila_evaluacion, valor_letra.r); //Volvemos a meter en la pila el resultado para su posterior uso
+			valor_letra.r = operando_uno.r / operando_dos.r; //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
+			Push(&pila_evaluacion, valor_letra); //Volvemos a meter en la pila el resultado para su posterior uso
 		} else if (expresion[i] == '^'){ //Si encontramos una potencia obtenemos dos valores de la pila y los elevamos
 			operando_uno = Pop(&pila_evaluacion);
 			operando_dos = Pop(&pila_evaluacion);
-			valor_letra.r = pow(operando_uno, operando_dos); //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
-			Push(&pila_evaluacion, valor_letra.r); //Volvemos a meter en la pila el resultado para su posterior uso
+			valor_letra.r = pow(operando_uno.r, operando_dos.r); //Asignamos a un elemento de tipo entero el resultado de la operacion entre los operandos
+			Push(&pila_evaluacion, valor_letra); //Volvemos a meter en la pila el resultado para su posterior uso
 		}
 	}
-	valor = Pop(&pila_evaluacion); //Sacamos de la pila el resultado final de la expresión evaluada
-	printf("El resultado de la expresión es: %d", valor);
+	valor_letra = Pop(&pila_evaluacion); //Sacamos de la pila el resultado final de la expresión evaluada
+	printf("El resultado de la expresión es: %d", valor_letra);
 	return;	
 }
