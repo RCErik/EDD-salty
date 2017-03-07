@@ -1,6 +1,6 @@
 /*
 	AUTOR: Equipo "Salty boys" (C) Febrero 2017
-	VERSIÓN: 1.3
+	VERSIÓN: 1.4
 	
 	DESCRIPCIÓN: Función que nos permite obtener los valores que el usuario
 	desea dar a la expresión postfija y nos permite calcular el resultado de dicha expresión
