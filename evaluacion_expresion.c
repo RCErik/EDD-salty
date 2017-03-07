@@ -36,7 +36,7 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 	//Este ciclo itera sobre nuestra expresión en posfijo
 	for(i = 0; i < tam_cadena ; i++){
 		caracter = (int) expresion[i]; //Casteamos el caracter para saber su valor en ASCII
-		if(caracter >= ASCIIUNO && caracter =< ASCIIFIN){ //Verificamos que el caracter corresponde a una letra del abecedario
+		if(caracter >= ASCIIUNO && caracter <= ASCIIFIN){ //Verificamos que el caracter corresponde a una letra del abecedario
 			valor_letra.r = abecedario[caracter - ASCIIUNO]; //Asignamos el valor del elemento int con el valor encontrado en al array de los valores de los operandos correspondiente
 			Push(&pila_evaluacion, valor_letra); //Agregamos el valor del operando a la pila
 		} else if (expresion[i] == '+'){ //Si encontramos un signo de + obtenemos dos valores de la pila y los sumamos
