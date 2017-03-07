@@ -1,6 +1,6 @@
 /*
 	AUTOR: Equipo "Salty boys" (C) Febrero 2017
-	VERSIÓN: 1.4
+	VERSIÓN: 1.5
 	
 	DESCRIPCIÓN: Función que nos permite obtener los valores que el usuario
 	desea dar a la expresión postfija y nos permite calcular el resultado de dicha expresión
@@ -22,7 +22,7 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 	for(i = 0; i < tam_cadena ; i++){
 		caracter = (int) expresion[i]; //Casteamos a entero el valor dentro de la expresión recibida, para obtener su valor en ASCII
 		//Evaluamos si el valor en ASCII del caracter corresponde a una letra del abecedario
-		if(caracter > ASCIIUNO && caracter < ASCIIFIN){
+		if(caracter >= ASCIIUNO && caracter <= ASCIIFIN){
 			//De corresponder a una letra entonces buscamos en el arreglo de valores el valor actual
 			//Si el valor es -1 entonces significa que no está inicializado y le asignamos un valor que de el usuario
 			//De lo contrario continúa recorriendo la expresión hasta encontrar una letra sin valor asignado
@@ -36,7 +36,7 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 	//Este ciclo itera sobre nuestra expresión en posfijo
 	for(i = 0; i < tam_cadena ; i++){
 		caracter = (int) expresion[i]; //Casteamos el caracter para saber su valor en ASCII
-		if(caracter > ASCIIUNO && caracter < ASCIIFIN){ //Verificamos que el caracter corresponde a una letra del abecedario
+		if(caracter >= ASCIIUNO && caracter =< ASCIIFIN){ //Verificamos que el caracter corresponde a una letra del abecedario
 			valor_letra.r = abecedario[caracter - ASCIIUNO]; //Asignamos el valor del elemento int con el valor encontrado en al array de los valores de los operandos correspondiente
 			Push(&pila_evaluacion, valor_letra); //Agregamos el valor del operando a la pila
 		} else if (expresion[i] == '+'){ //Si encontramos un signo de + obtenemos dos valores de la pila y los sumamos
