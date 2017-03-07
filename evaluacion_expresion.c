@@ -10,12 +10,13 @@
 */
 
 #include "evaluacion_expresion.h"
-#include "TADPilaEst.h"
+#include "TADPilaDin.h"
 
 void evaluar_expresion(char expresion[100], int tam_cadena){
 	pila pila_evaluacion; //Creamos la pila que va a contener los valores numéricos de los operandos
 	elemento valor_letra, operando_uno, operando_dos; //valor_letra será el sitio donde se guarden nuestros elementos de tipo int
-	int i, caracter, valor;
+	int i, caracter;
+	float valor;
 	float abecedario[TAMABECEDARIO] = {-1}; //Arreglo que ayudará a controlar los valores de cada operando, se inicializa en -1
 	Initialize(&pila_evaluacion); //Inicializamos nuestra pila para comenzar las operaciones
 	//Este ciclo se encarga de iterar sobre el arreglo de valores de cada operando
@@ -67,6 +68,6 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 		}
 	}
 	valor_letra = Pop(&pila_evaluacion); //Sacamos de la pila el resultado final de la expresión evaluada
-	printf("El resultado de la expresión es: %d", valor_letra);
+	printf("El resultado de la expresión es: %f", valor_letra.r);
 	return;	
 }
