@@ -1,5 +1,5 @@
 /*
-	AUTOR: Carlos Armando Ochoa Ginera
+	AUTOR: Equipo "Salty boys" (C) Marzo 2017
 	VERSIÓN: 1.2
 	
 	DESCRIPCIÓN: Función que nos permite obtener los valores que el usuario
