@@ -20,14 +20,18 @@ void evaluar_expresion(char expresion[100], int tam_cadena){
 	float abecedario[TAMABECEDARIO] = {-1}; //Arreglo que ayudará a controlar los valores de cada operando, se inicializa en -1
 	Initialize(&pila_evaluacion); //Inicializamos nuestra pila para comenzar las operaciones
 	//Este ciclo se encarga de iterar sobre el arreglo de valores de cada operando
+	for(i = 0; i < TAMABECEDARIO; i++){
+		abecedario[i] = -1;
+	}
+	
 	for(i = 0; i < tam_cadena ; i++){
 		caracter = (int) expresion[i]; //Casteamos a entero el valor dentro de la expresión recibida, para obtener su valor en ASCII
 		//Evaluamos si el valor en ASCII del caracter corresponde a una letra del abecedario
-		if(caracter >= ASCIIUNO && caracter <= ASCIIFIN){
+		if((caracter >= ASCIIUNO) && (caracter <= ASCIIFIN)){
 			//De corresponder a una letra entonces buscamos en el arreglo de valores el valor actual
 			//Si el valor es -1 entonces significa que no está inicializado y le asignamos un valor que de el usuario
 			//De lo contrario continúa recorriendo la expresión hasta encontrar una letra sin valor asignado
-			if(abecedario[caracter - ASCIIUNO] != -1){
+			if(abecedario[caracter - ASCIIUNO] == -1){
 				printf("Indique el valor que le quiere dar a %c por favor :3", expresion[i]);
 				scanf("%f", &valor);
 				abecedario[caracter - ASCIIUNO] = valor; //Asignamos un valor numérico al arreglo del abecedario en la posicion correspondiente a la letra en cuestión	
