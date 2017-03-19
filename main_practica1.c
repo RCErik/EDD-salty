@@ -28,7 +28,7 @@ int main(void){
 	//A partir de aquí se ejecutan las demás funciones de forma normal
 	printf("\n\n\t\tEstamos convirtiendo tu expresión a posfijo, espera porfi n.n\n\n\t\t");
 	//Recibimos en el arreglo de expresion_posfija la nueva cadena correctamente convertida a posfijo
-	expresion_posfija = Expresion_Posfija(expresion, expresion_posfija, tam_cadena);
+	 Expresion_Posfija(expresion, expresion_posfija, tam_cadena);
 	printf("\n\n\t\tTu expresión en forma posfija es la siguiente: \n\n\t\t %s", expresion_posfija);
 	printf("\n\n\t\tExcelente, ahora indica los valores de las letras UwU\n\n\t\t");
 	//Enviamos la expresion convertida a posfijo y el tamaño de la misma, los resultados los imprime la misma función
