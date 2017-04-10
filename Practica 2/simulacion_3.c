@@ -84,6 +84,7 @@ main (void)
 {
   int cont = 0;			//Contador para inicializar las cosas.
   int atendidos = 0;		//Contador para los que ya fueron atendidos.
+  int ClyPr = 0;		//Contador que de clientes y preferentes que no debe pasar el numero 5.
   int tiempomod = 0;		//Tiempo de la simulacion.
   int caja = 0;			//Valor de la caja en los arreglos.
   int numero = 0;		//Numero de cajeros disponibles que selecciono el usuario para la simulacion.
@@ -147,20 +148,39 @@ main (void)
 	  //Potencial crash en estatica, poner un if despues si queremos
 	  aux.n = clientes[2];
 	  aux.c = 'P';    
-	  Queue (&fila[2], aux);	//Mete al cliente 'n' a la cola.
+	  Queue (&fila[2], aux);	//Mete al cliente preferente 'n' a la cola.
       }
      
       if((tiempomod % tiempos[0]) == 0) //Modulo del tiempo con el que son atendidos es 0 hace push de los cajeros.
       {
-	  for(cont = 0; cont < numero; cont++)
+	  for(cont = 0; cont < numero; cont++)	//Primero saca a los que fueron atendidos
 	  {
-	      if(Empty(&cajero[cont]) == FALSE)
+	      if(Empty(&cajero[cont]) == FALSE)	//Verifica si no esta vacia la fila y evitar matar el programa.
 	      {
-		  Pop(&cajero[cont]);    
-	      }
-		       
+		  Pop(&cajero[cont]);    //Lo saca de la cajero en el que estaba.
+	      }       
 	  }
-	      
+	  cont = 0;	//Contador a 0 para verificar que en el while no exceda los cajeros disponibles
+	  
+	  while( (Empty(&fila[2]) == FALSE) && (ClyPr <= 4) && (cont<=(numero-1)) )
+	  /*menor a 4 para que el 5 sea el cliente y el 6 el usuario, el cont<=(numero-1) es para que por lo menos deje una caja 
+	  para los clientes y si es solo una caja, solo atienda a los importantes
+	  y el quinto sea el cliente y el sexto el usuario y no romper el sistema de atendido*/
+	  {//while para hacer Pop de los preferentes ya que son la maxima prioridad pero tambien los demas deben ser atendidos.
+	      aux = Pop (&fila[2]);
+	      for(cont = 0; cont < numero; cont++)//Verifica que cajeros estan vacios para atender al preferente.
+	      {
+		  if(Empty(&cajero[cont]) == TRUE)		//Si lo esta, lo acomodan en ese cajero y sale del for
+		  {
+		      Push(&cajero, aux);
+		      cont = 20;
+		  }
+		  else		//Si tiene a alguien en ese cajero pasa al siguente.
+		      cont++;
+	      }
+	      ClyPr++;  //Suma uno a los clientes/preferentes.
+	  }
+	      //Falta las condiciones para los clientes normales y usuarios
       }
  
       Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);	//pendiente
