@@ -87,7 +87,7 @@ main (void)
   int tiempomod = 0;		//Tiempo de la simulacion.
   int caja = 0;			//Valor de la caja en los arreglos.
   int tiempos[4];		//Tiempo de cada caja, 0 el tiempo de atencion de las cajas, 1-3 tiempo que llega la gente.
-  int clientes[3];		//Los clientes de las colas, 0 cliente, 1 usuario, 2 preferente.
+  int personas[3];		//Las personas de las colas, 0 cliente, 1 usuario, 2 preferente.
   elemento aux;			//Elemento auxiliar para meter elementos a la cola.
   elemento cajero[10];		//arreglo que sirve para la funcion de imprimir banco
   cola filas[3];		//Colas que son las filas de los usuarios, clientes y preferentes.
@@ -97,7 +97,7 @@ main (void)
   for (cont = 0; cont < 10; cont++)	//Ciclo que inicializa las colas y arreglos.
     {
       Initialize (&cajeros[cont]);
-      clientes[cont] = 0;
+      personas[cont] = 0;
       tiempos[cont] = 0;
     }
 
@@ -118,17 +118,31 @@ main (void)
       usleep (100000);		//Tiempo de pausa.
       tiempomod++;		//Tiempo de la simulacion
 	  
-      if()		//Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
+      if((tiempomod % tiempo[1]) == 0)		//Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
       {
-        
+	  personas[0] = personas[0] + 1;	//Sumar uno al valor de clientes en la cola que se formo.
+	  //Potencial crash en estatica, poner un if despues si queremos
+	  aux.n = clientes[0];
+	  aux.c = 'C';    
+	  Queue (&registradora[caja], aux);	//Mete al cliente 'n' a la cola.
       }
-      if()		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
+	  
+      if((tiempomod % tiempo[2]) == 0)		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
       {
-        
+          personas[1] = personas[1] + 1;	//Sumar uno al valor de usuarios en la cola que se formo.
+	  //Potencial crash en estatica, poner un if despues si queremos
+	  aux.n = clientes[1];
+	  aux.c = 'U';    
+	  Queue (&registradora[caja], aux);	//Mete al usuario 'n' a la cola.
       }
-      if()		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
+	  
+      if((tiempomod % tiempo[3]) == 0)		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
       {
-        
+          personas[2] = personas[2] + 1;	//Sumar uno al valor de preferentes en la cola que se formo.
+	  //Potencial crash en estatica, poner un if despues si queremos
+	  aux.n = clientes[2];
+	  aux.c = 'P';    
+	  Queue (&registradora[caja], aux);	//Mete al cliente 'n' a la cola.
       }
 
  
