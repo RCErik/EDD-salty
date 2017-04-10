@@ -86,14 +86,12 @@ main (void)
   int atendidos = 0;		//Contador para los que ya fueron atendidos.
   int tiempomod = 0;		//Tiempo de la simulacion.
   int caja = 0;			//Valor de la caja en los arreglos.
+  int numero = 0;		//Numero de cajeros disponibles que selecciono el usuario para la simulacion.
   int tiempos[4];		//Tiempo de cada caja, 0 el tiempo de atencion de las cajas, 1-3 tiempo que llega la gente.
   int personas[3];		//Las personas de las colas, 0 cliente, 1 usuario, 2 preferente.
   elemento aux;			//Elemento auxiliar para meter elementos a la cola.
-  /*OPCIONES:
-  Usar elemento cajero[10]; que solo es una linea que aparenta ser todas las cajas de atencion
-  O TAMBIEN
-  Usar cola cajero[10] y solo usar el front de las colas para ver quien esta siendo atendido en ese momento, 
-  y seria mas facil de manejar y de ver, por lo cual yo recomiendo esta pero ya me dices cual quieres tu charly.*/
+  elemento cajero[10];		//por si acaso se necesita
+  cola cajero[10];		//Colas que son los cajeros donde son atendidos las personas.
   cola filas[3];		//Colas que son las filas de los usuarios, clientes y preferentes.
 
   srand (time (NULL));		//a lo mejor se quita esta linea
@@ -105,8 +103,8 @@ main (void)
       tiempos[cont] = 0;
     }
   tiempos[3] = 0;
- /* for (cont = 0; cont < 10; cont++)	//Ciclo que inicializa los cajeros, en caso de que se prefiera la segunda ocpion
-      Initialize (&cajero[cont]);  */
+  for (cont = 0; cont < 10; cont++)	//Ciclo que inicializa los cajeros.
+      Initialize (&cajero[cont]);  
 
   //Instrucciones para obtener la informacion del usuario.
   printf ("Cuantas cajeros atienden:   ");
@@ -154,7 +152,15 @@ main (void)
      
       if((tiempomod % tiempos[0]) == 0) //Modulo del tiempo con el que son atendidos es 0 hace push de los cajeros.
       {
-	  k     
+	  for(cont = 0; cont < numero; cont++)
+	  {
+	      if(Empty(&cajero[cont]) == FALSE)
+	      {
+		  Pop(&cajero[cont]);    
+	      }
+		       
+	  }
+	      
       }
  
       Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);	//pendiente
