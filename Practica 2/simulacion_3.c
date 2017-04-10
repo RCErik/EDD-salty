@@ -22,7 +22,7 @@ void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, 
 	if (Size (&cajeros[cont]) >= 1)	//Si no esta vacia que imprima el de enfrente.
 	  {
 	    aux = Front (&cajeros[cont]);
-	    printf ("%d\t", aux.n);
+	    printf ("%c %d\t", aux.c, aux.n);
 	  }
 	else			//Si esta vacia que imprima "vacio".
 	  printf ("vacio\t");
@@ -31,10 +31,10 @@ void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, 
       printf ("\n\n\nEl 1 de la fila:\t");	//Ciclo que imprime el primero de la fila que no es atendido.
       for (cont = 0; cont < 10; cont++)
 	{
-	  if (Size (&registradora[cont]) >= 2)
+	  if (Size (&cajeros[cont]) >= 2)
 	    {
-	      aux = Element (&registradora[cont], 2);
-	      printf ("%d\t", aux.n);
+	      aux = Element (&cajeros[cont], 2);
+	      printf ("%c %d\t", aux.c, aux.n);
 	    }
 	  else
 	    printf ("vacio\t");
@@ -43,10 +43,10 @@ void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, 
       printf ("\n\nEl 2 de la fila:\t");
       for (cont = 0; cont < 10; cont++)	//Ciclo que imprime el segundo de la fila que no es atendido.
 	{
-	  if (Size (&registradora[cont]) >= 3)
+	  if (Size (&cajeros[cont]) >= 3)
 	    {
-	      aux = Element (&registradora[cont], 3);
-	      printf ("%d\t", aux.n);
+	      aux = Element (&cajeros[cont], 3);
+	      printf ("%c %d\t", aux.c aux.n);
 	    }
 	  else
 	    printf ("vacio\t");
@@ -55,10 +55,10 @@ void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, 
       printf ("\n\nEl 3 de la fila:\t");	//Ciclo que imprime el tercero de la fila que no es atendido.
       for (cont = 0; cont < 10; cont++)
 	{
-	  if (Size (&registradora[cont]) >= 4)
+	  if (Size (&cajeros[cont]) >= 4)
 	    {
-	      aux = Element (&registradora[cont], 4);
-	      printf ("%d\t", aux.n);
+	      aux = Element (&cajeros[cont], 4);
+	      printf ("%c %d\t",aux.c, aux.n);
 	    }
 	  else
 	    printf ("vacio\t");
@@ -67,7 +67,7 @@ void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, 
       printf ("\n\n\nTamaño de la fila:\t");	//Ciclo que imprime el tamaño de cada caja.
       for (cont = 0; cont < 10; cont++)
 	{
-	  printf ("%d\t", Size (&registradora[cont]));
+	  printf ("%d\t", Size (&cajeros[cont]));
 	}
       printf("\n\n\nTiempo caja atnd:\t");
       for (cont = 0; cont < 10; cont++)
@@ -87,13 +87,12 @@ main (void)
   int tiempomod = 0;		//Tiempo de la simulacion.
   int caja = 0;			//Valor de la caja en los arreglos.
   int tiempos[4];		//Tiempo de cada caja, 0 el tiempo de atencion de las cajas, 1-3 tiempo que llega la gente.
-  int clientes[10];		//Los clientes de las cajas.
-  int b = 0;			//Entero auxiliar para el for que verifica las colas vacias.
-  int numero = 0;		//Numero de cajas disponibles.
+  int clientes[3];		//Los clientes de las colas, 0 cliente, 1 usuario, 2 preferente.
   elemento aux;			//Elemento auxiliar para meter elementos a la cola.
-  cola cajeros[10];	//Colas que son las cajas.
+  elemento cajero[10];		//arreglo que sirve para la funcion de imprimir banco
+  cola filas[3];		//Colas que son las filas de los usuarios, clientes y preferentes.
 
-  srand (time (NULL));		//Semilla para el rand que acomoda a los clientes.
+  srand (time (NULL));		//a lo mejor se quita esta linea
 
   for (cont = 0; cont < 10; cont++)	//Ciclo que inicializa las colas y arreglos.
     {
@@ -114,10 +113,21 @@ main (void)
   printf ("Asigne el tiempo en que los clientes preferentes llegan:   ");
   scanf ("%d", &tiempos[3]);	//Obtiene el tiempo en que llegan los clientes preferentes.
 
-
+  if()		//Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
+  {
+    
+  }
+  if()		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
+  {
+    
+  }
+  if()		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
+  {
+    
+  }
 
  
-      Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);
+      Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);	//pendiente
      
   return 0;
 }
