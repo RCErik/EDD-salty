@@ -94,12 +94,13 @@ main (void)
 
   srand (time (NULL));		//a lo mejor se quita esta linea
 
-  for (cont = 0; cont < 10; cont++)	//Ciclo que inicializa las colas y arreglos.
+  for (cont = 0; cont < 3; cont++)	//Ciclo que inicializa las colas y arreglos.
     {
-      Initialize (&cajeros[cont]);
+      Initialize (&fila[cont]);
       personas[cont] = 0;
       tiempos[cont] = 0;
     }
+  tiempos[3] = 0;
 
   //Instrucciones para obtener la informacion del usuario.
   printf ("Cuantas cajeros atienden:   ");
@@ -124,7 +125,7 @@ main (void)
 	  //Potencial crash en estatica, poner un if despues si queremos
 	  aux.n = clientes[0];
 	  aux.c = 'C';    
-	  Queue (&registradora[caja], aux);	//Mete al cliente 'n' a la cola.
+	  Queue (&fila[0], aux);	//Mete al cliente 'n' a la cola.
       }
 	  
       if((tiempomod % tiempo[2]) == 0)		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
@@ -133,7 +134,7 @@ main (void)
 	  //Potencial crash en estatica, poner un if despues si queremos
 	  aux.n = clientes[1];
 	  aux.c = 'U';    
-	  Queue (&registradora[caja], aux);	//Mete al usuario 'n' a la cola.
+	  Queue (&fila[1], aux);	//Mete al usuario 'n' a la cola.
       }
 	  
       if((tiempomod % tiempo[3]) == 0)		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
@@ -142,9 +143,13 @@ main (void)
 	  //Potencial crash en estatica, poner un if despues si queremos
 	  aux.n = clientes[2];
 	  aux.c = 'P';    
-	  Queue (&registradora[caja], aux);	//Mete al cliente 'n' a la cola.
+	  Queue (&fila[2], aux);	//Mete al cliente 'n' a la cola.
       }
-
+     
+      if() //Modulo del tiempo con el que son atendidos es 0 hace push de las filas para estar en el cajero.
+      {
+	  k     
+      }
  
       Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);	//pendiente
   }   
