@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "TADColaDin.h"
 
-void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, int atendidos, elemento aux)
+void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, int atendidos, elemento aux)//pendiente
 {
       //Bloque que imprime la simulacion.
       system ("clear");		//Borra la pantalla.
@@ -112,22 +112,27 @@ main (void)
   scanf ("%d", &tiempos[2]);	//Obtiene el tiempo en que llegan los usuarios.
   printf ("Asigne el tiempo en que los clientes preferentes llegan:   ");
   scanf ("%d", &tiempos[3]);	//Obtiene el tiempo en que llegan los clientes preferentes.
-
-  if()		//Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
+  
+  while(1)
   {
-    
-  }
-  if()		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
-  {
-    
-  }
-  if()		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
-  {
-    
-  }
+      usleep (100000);		//Tiempo de pausa.
+      tiempomod++;		//Tiempo de la simulacion
+	  
+      if()		//Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
+      {
+        
+      }
+      if()		//Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
+      {
+        
+      }
+      if()		//Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
+      {
+        
+      }
 
  
       Imprimir_banco(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);	//pendiente
-     
+  }   
   return 0;
 }
