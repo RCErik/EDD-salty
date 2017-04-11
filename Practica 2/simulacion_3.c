@@ -1,82 +1,109 @@
-
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include "TADColaDin.h"
 
-void Imprimir_banco (cola cajeros[10], int tiempos[4], int cont, int tiempomod, int atendidos, elemento aux)//pendiente
+void Imprimir_banco (cola cajero[10], cola filas[3], int tiempos[4], int cont, int tiempomod, int atendidos, elemento aux)//pendiente
 {
       //Bloque que imprime la simulacion.
-      system ("clear");		//Borra la pantalla.
-      printf ("\t\t\t\t\t\t\t\tBanco Nacional Mexicano\n\n\t\t\t");	//Nombre del banco
+      system ("clear");         //Borra la pantalla.
+      printf ("\t\t\t\t\t\t\tBanco Nacional Mexicano\n\n\t\t\t\t\t");   //Nombre del banco
 
-      for (cont = 0; cont < 10; cont++)		//Ciclo que imprime las cajas.
+      for (cont = 0; cont < 10; cont++)         //Ciclo que imprime los cajeros.
       {
-	printf ("Cajero %d\t", cont + 1);
+        printf ("Caja %d\t", cont + 1);
       }
 
-      printf ("\n\nEn turno:\t\t");	//Ciclo que imprime el cliente en turno.
+      printf ("\n\nEn turno:\t\t\t\t"); //Ciclo que imprime a la persona que esta siendo atendido.
       for (cont = 0; cont < 10; cont++)
       {
-	if (Size (&cajeros[cont]) >= 1)	//Si no esta vacia que imprima el de enfrente.
-	  {
-	    aux = Front (&cajeros[cont]);
-	    printf ("%c %d\t", aux.c, aux.n);
-	  }
-	else			//Si esta vacia que imprima "vacio".
-	  printf ("vacio\t");
+        if (Size (&cajero[cont]) >= 1)  //Si no esta vacia la caja, imprime al atendido.
+          {
+            aux = Front (&cajero[cont]);
+            printf ("%c %d\t", aux.c, aux.n);
+          }
+        else                    //Si esta vacia que imprima "vacio".
+          printf ("vacio\t");
       }
 
-      printf ("\n\n\nEl 1 de la fila:\t");	//Ciclo que imprime el primero de la fila que no es atendido.
-      for (cont = 0; cont < 10; cont++)
-	{
-	  if (Size (&cajeros[cont]) >= 2)
-	    {
-	      aux = Element (&cajeros[cont], 2);
-	      printf ("%c %d\t", aux.c, aux.n);
-	    }
-	  else
-	    printf ("vacio\t");
-	}
+      printf("\n\n\n\n\t\t\t\t\t\tClientes\t\tUsuarios\t\tPreferentes");        //Encabezado de las filas
+      printf ("\nEl primero de la fila:\t\t\t\t");      //Ciclo que imprime el primero de la fila que no es atendido.
+      for (cont = 0; cont < 3; cont++)
+        {
+          if (Size (&filas[cont]) >= 1)
+            {
+              aux = Front (&filas[cont]);
+              printf ("%c %d\t\t\t", aux.c, aux.n);
+            }
+          else
+            printf ("vacio\t\t\t");
+        }
 
-      printf ("\n\nEl 2 de la fila:\t");
-      for (cont = 0; cont < 10; cont++)	//Ciclo que imprime el segundo de la fila que no es atendido.
-	{
-	  if (Size (&cajeros[cont]) >= 3)
-	    {
-	      aux = Element (&cajeros[cont], 3);
-	      printf ("%c %d\t", aux.c aux.n);
-	    }
-	  else
-	    printf ("vacio\t");
-	}
+      printf ("\n\nEl segundo de la fila:\t\t\t\t");
+      for (cont = 0; cont < 3; cont++)  //Ciclo que imprime el segundo de la fila que no es atendido.
+        {
+          if (Size (&filas[cont]) >= 2)
+            {
+              aux = Element (&filas[cont], 2);
+              printf ("%c %d\t\t\t", aux.c, aux.n);
+            }
+          else
+            printf ("vacio\t\t\t");
+        }
 
-      printf ("\n\nEl 3 de la fila:\t");	//Ciclo que imprime el tercero de la fila que no es atendido.
-      for (cont = 0; cont < 10; cont++)
-	{
-	  if (Size (&cajeros[cont]) >= 4)
-	    {
-	      aux = Element (&cajeros[cont], 4);
-	      printf ("%c %d\t",aux.c, aux.n);
-	    }
-	  else
-	    printf ("vacio\t");
-	}
+      printf ("\n\nEl tercero de la fila:\t\t\t\t");    //Ciclo que imprime el tercero de la fila que no es atendido.
+      for (cont = 0; cont < 3; cont++)
+        {
+          if (Size (&filas[cont]) >= 3)
+            {
+              aux = Element (&filas[cont], 3);
+              printf ("%c %d\t\t\t", aux.c, aux.n);
+            }
+          else
+            printf ("vacio\t\t\t");
+        }
 
-      printf ("\n\n\nTamaño de la fila:\t");	//Ciclo que imprime el tamaño de cada caja.
-      for (cont = 0; cont < 10; cont++)
-	{
-	  printf ("%d\t", Size (&cajeros[cont]));
-	}
-      printf("\n\n\nTiempo caja atnd:\t");
-      for (cont = 0; cont < 10; cont++)
-	{
-	  printf ("%d\t", tiempos[cont]);
-	}
-      printf("\nTiempo que llegan las personas: %d", tiempos[10]);
-      printf ("\nNumero de clientes atendidos en total:  %d", atendidos);	//Imprime el numero total de clientes atendidos.
-      printf ("\nTiempo de la simulacion: %d segundos\n", tiempomod);	//Imprime el tiempo que lleva la simulacion.
+      printf ("\n\nEl cuarto de la fila:\t\t\t\t");     //Ciclo que imprime el tercero de la fila que no es atendido.
+      for (cont = 0; cont < 3; cont++)
+        {
+          if (Size (&filas[cont]) >= 4)
+            {
+              aux = Element (&filas[cont], 4);
+              printf ("%c %d\t\t\t", aux.c, aux.n);
+            }
+          else
+            printf ("vacio\t\t\t");
+        }
+
+      printf ("\n\nEl quinto de la fila:\t\t\t\t");     //Ciclo que imprime el tercero de la fila que no es atendido.
+      for (cont = 0; cont < 3; cont++)
+        {
+          if (Size (&filas[cont]) >= 5)
+            {
+              aux = Element (&filas[cont], 5);
+              printf ("%c %d\t\t\t", aux.c, aux.n);
+            }
+          else
+            printf ("vacio\t\t\t");
+        }
+
+      printf ("\n\n\nTamaño de la fila:\t\t\t\t");      //Ciclo que imprime el tamaño de cada fila.
+      for (cont = 0; cont < 3; cont++)
+        {
+          printf ("%d\t\t\t", Size (&filas[cont]));
+        }
+
+      printf("\n\nTiempo en el que llegan:\t\t\t");             //Imprime los tiempos de llegada de las personas.
+      for (cont = 1; cont < 4; cont++)
+        {
+          printf ("%d\t\t\t", tiempos[cont]);
+        }
+
+      printf ("\n\n\nTiempo que atienden los cajeros: %d", tiempos[0]);
+      printf ("\nNumero de clientes atendidos en total:  %d", atendidos);       //Imprime el numero total de clientes atendidos.
+      printf ("\nTiempo de la simulacion: %d segundos\n", tiempomod);   //Imprime el tiempo que lleva la simulacion.
+      printf ("\nC = Cliente\t\tU = Usuario\t\tP = Preferente\n");      //Indicador de las personas de la simulacion.
 }
 
 int
