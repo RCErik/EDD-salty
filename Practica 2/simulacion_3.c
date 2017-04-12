@@ -110,6 +110,7 @@ int
 main (void)
 {
   int cont = 0;			//Contador para inicializar las cosas.
+  int cont2 = 0;		//Segundo contador para ciclos grandes.
   int atendidos = 0;		//Contador para los que ya fueron atendidos.
   int ClyPr = 0;		//Contador que de clientes y preferentes que no debe pasar el numero 5.
   int tiempomod = 0;		//Tiempo de la simulacion.
@@ -187,9 +188,9 @@ main (void)
 		  Pop(&cajero[cont]);    //Lo saca de la cajero en el que estaba.
 	      }       
 	  }
-	  cont = 0;	//Contador a 0 para verificar que en el while no exceda los cajeros disponibles
+	
 	  
-	  while( (Empty(&fila[2]) == FALSE) && (ClyPr <= 4) && (cont<=(numero-1)) )
+	  while( (Empty(&fila[2]) == FALSE) && (ClyPr <= 4) && (cont2<=(numero-1)) )
 	  /*menor a 4 para que el 5 sea el cliente y el 6 el usuario, el cont<=(numero-1) es para que por lo menos deje una caja 
 	  para los clientes y si es solo una caja, solo atienda a los importantes
 	  y el quinto sea el cliente y el sexto el usuario y no romper el sistema de atendido*/
@@ -206,6 +207,7 @@ main (void)
 		      cont++;
 	      }
 	      ClyPr++;  //Suma uno a los clientes/preferentes.
+	      cont2++;  //Contador 2 se suma uno para las cajas disponibles.
 	  }
 	      //Falta las condiciones para los clientes normales y usuarios
       }
