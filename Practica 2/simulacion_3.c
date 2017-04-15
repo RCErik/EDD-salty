@@ -199,14 +199,14 @@ main (void)
               aux = Dequeue (&filas[2]);
               for(cont = 0; cont < numero; cont++)              //Verifica que cajeros estan vacios para atender al preferente.
               {
-                  if(Empty(&cajero[cont]) == TRUE)              //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if(Empty(&cajero[cont]))              //Si lo esta, lo acomodan en ese cajero y sale del for
                   {
                       Queue (&cajero[cont], aux);
                       ClyPr++;  //Suma uno a los clientes/preferentes.
                       cont = 20;
                       cont2++;          //Suma uno al contador dos las cajas ocupadas
                   }
-                  if(Empty(&cajero[cont]) == FALSE)             //Si tiene a alguien en ese cajero pasa al siguente.
+                  else            //Si tiene a alguien en ese cajero pasa al siguente.
                       cont++;
               }
           }
@@ -220,14 +220,14 @@ main (void)
               aux = Dequeue (&filas[0]);
               for(cont = 0; cont < numero; cont++)              //Verifica que cajeros estan vacios para atender al cliente.
               {
-                  if(Empty(&cajero[cont]) == TRUE)              //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if(Empty(&cajero[cont]))              //Si lo esta, lo acomodan en ese cajero y sale del for
                   {
                       Queue (&cajero[cont], aux);
                       ClyPr++;  //Suma uno a los clientes/preferentes.
                       cont = 20;
                       cont2++;          //Suma uno al contador dos las cajas ocupadas
                   }
-                  if(Empty(&cajero[cont]) == FALSE)             //Si tiene a alguien en ese cajero pasa al siguente.
+                  else             //Si tiene a alguien en ese cajero pasa al siguente.
                       cont++;
               }
           }
@@ -240,19 +240,19 @@ main (void)
               aux = Dequeue (&filas[1]);
               for(cont = 0; cont < numero; cont++)              //Verifica que cajeros estan vacios para atender al preferente.
               {
-                  if(Empty(&cajero[cont]) == TRUE)              //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if(Empty(&cajero[cont]))              //Si lo esta, lo acomodan en ese cajero y sale del for
                   {
                       Queue (&cajero[cont], aux);
                       ClyPr = 0;  //Pone en cero el contador de clientes/preferentes porque 1 ya esta siendo atendidos.
                       cont = 20;
                       cont2++;          //Suma uno al contador dos las cajas ocupadas
                   }
-                  if(Empty(&cajero[cont]) == FALSE)             //Si tiene a alguien en ese cajero pasa al siguente.
+                  else             //Si tiene a alguien en ese cajero pasa al siguente.
                       cont++;
               }
               //En caso de que llegue un momento donde los usuarios son atendidos, tiene que haber una caja por lo menos para el cliente y el preferente en caso de que sus filas no esten vacias.
 
-              if( ((Empty(&filas[0]) == FALSE) || (Empty(&filas[2]) == FALSE)) && (cont2 == numero -1) )//Si sus filas no son vacias y solo queda una caja libre
+              if( ((Empty(&filas[0]) == FALSE) || (Empty(&filas[2]) == FALSE)) && (cont2 == numero - 1) )//Si sus filas no son vacias y solo queda una caja libre
               {
                   cont2++;              //Suma uno a las cajas ocupadas porque la va ocupar un cliente o un preferente
                   if(Empty(&filas[2]) == FALSE)
