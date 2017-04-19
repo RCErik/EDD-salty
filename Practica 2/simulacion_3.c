@@ -292,5 +292,3 @@ main (void)
     }
   return 0;
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                 294,1       Final
-
