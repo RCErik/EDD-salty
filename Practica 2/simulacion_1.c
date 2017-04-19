@@ -1,5 +1,5 @@
 /*
-	AUTOR: Equipo "Salty boys" (C) Marzo 2017
+	AUTOR: Equipo "Salty boys" (C) Abril 2017
 	VERSIÓN: 1.0
 	
 	DESCRIPCIÓN: Simulación que representa las cajas registradoras de un super mercado, las cajas
