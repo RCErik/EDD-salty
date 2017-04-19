@@ -6,7 +6,8 @@ VERSIÓN: 1.3
 DESCRIPCIÓN: Funcion que hace uso de la pila para convertir una expresion infijo
 dada por el usuario a una expresion posfijo.
 
-OBSERVACIONES: Se emplea la libreria TADPilaDin.h o TADPilaEst.h
+OBSERVACIONES: Se emplea la libreria TADPilaDin.h o TADPilaEst.h, regresa el apuntador de
+la cadena convertida a posfija
 
 */
 
