@@ -9,7 +9,7 @@
 	OBSERVACIONES: Puede que la simulacion nunca acabe, depende de los paramentros que el usuario asigne. 
   	Funciona con los diferentes TAD Cola.
   
-  	COMPILACION: gcc simulacion_1.c TADColaxxxx.o -o "Nombre del ejecutable"
+  	COMPILACION: gcc simulacion_1.c TADColaxxxx.o -o "Nombre del ejecutable" 
 */
 
 #include <stdio.h>
