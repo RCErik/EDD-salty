@@ -6,6 +6,7 @@
 	
 	OBSERVACIONES: El programa tiene que ser agradable y amigable con el usuario.
 	Se tiene que escribir la cadena con mayusculas y sin espacios.
+	Funciona con los 2 TADPila.
   
   	COMPILACION: gcc main_practica1.c evaluacion_expresion.o expresion_posfija.o 
 	validar_expresion.o TADPilaxxx.o -o "Nombre del ejecutable" -lm 
