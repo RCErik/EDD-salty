@@ -1,3 +1,17 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Marzo 2017
+	VERSIÓN: 1.0
+	
+	DESCRIPCIÓN: Simulación que representa las cajas registradoras de un super mercado, las cajas
+	son entre 1 a 10, la simulacion acaba cuando son atendidos 100 clientes o mas y las cajas estan
+	vacias.
+	
+	OBSERVACIONES: Puede que la simulacion nunca acabe, depende de los paramentros que el usuario asigne. 
+  	Funciona con los diferentes TAD Cola.
+  
+  	COMPILACION: gcc simulacion_1.c TADColaxxxx.o -o "Nombre del ejecutable"
+*/
+
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
@@ -119,7 +133,7 @@ main (void)
   while ((atendidos < 100) || (b == 1))
     {
       Imprimir_mercado(registradora, mercado, tiempos, cont, tiempomod, atendidos, aux);
-      usleep (100000);		//Tiempo de pausa.
+      usleep (100000);		//Tiempo de pausa, 100 milisegundos.
       tiempomod++;		//Tiempo de la simulacion
 
       if ((tiempomod % tiempos[10]) == 0)	//Llegan los clientes
