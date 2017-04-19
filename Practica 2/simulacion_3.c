@@ -1,3 +1,19 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Abril 2017
+	VERSIÓN: 1.0
+	
+	DESCRIPCIÓN: Simulación que representa la atencion a las personas de un banco, donde hay 3 diferentes
+  tipos de personas los cuales son los usuarios, los clientes y los preferentes, las reglas de atencion son
+  que no pueden ser atendidos mas de 5 clientes y preferentes sin haber atendido a un usuario, los preferentes
+  son la mayor prioridad, los clientes siempre son atendidos y los usuarios cada vez que se pueda y maximo cada 5 
+  clientes y preferentes es atendido uno de estos.
+	
+	OBSERVACIONES: Usa colas para el mostrador de cajeros pero tambien se pueden usar arreglos. Funciona con las
+  diferentes TAD Cola.
+  
+  COMPILACION: gcc simulacion_3.c TADColaxxxx.o -o "Nombre del ejecutable"
+*/
+
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
