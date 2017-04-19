@@ -8,8 +8,8 @@
   son la mayor prioridad, los clientes siempre son atendidos y los usuarios cada vez que se pueda y maximo cada 5 
   clientes y preferentes es atendido uno de estos.
 	
-	OBSERVACIONES: Usa colas para el mostrador de cajeros pero tambien se pueden usar arreglos. Funciona con las
-  diferentes TAD Cola.
+	OBSERVACIONES: Usa colas para el mostrador de cajeros pero tambien se pueden usar arreglos. 
+	Funciona con los diferentes TAD Cola, la simulacion nunca acaba.
   
   COMPILACION: gcc simulacion_3.c TADColaxxxx.o -o "Nombre del ejecutable"
 */
@@ -26,7 +26,7 @@ Imprimir_banco (cola cajero[10], cola filas[3], int tiempos[4], int cont,
 {
   //Bloque que imprime la simulacion.
   system ("clear");             //Borra la pantalla.
-  printf ("\t\t\t\t\t\t\tBanco Nacional Mexicano\n\n\t\t\t\t\t");       //Nombre del banco
+  printf ("\t\t\t\t\t\t\tBanco Nacional Mexicano\n\n\t\t\t\t\t");       //Nombre del banco.
 
   for (cont = 0; cont < 10; cont++)     //Ciclo que imprime los cajeros.
     {
@@ -45,7 +45,7 @@ Imprimir_banco (cola cajero[10], cola filas[3], int tiempos[4], int cont,
         printf ("vacio\t");
     }
 
-  printf ("\n\n\n\n\t\t\t\t\t\tClientes\t\tUsuarios\t\tPreferentes");   //Encabezado de las filas
+  printf ("\n\n\n\n\t\t\t\t\t\tClientes\t\tUsuarios\t\tPreferentes");   //Encabezado de las filas.
   printf ("\nEl primero de la fila:\t\t\t\t");  //Ciclo que imprime el primero de la fila que no es atendido.
   for (cont = 0; cont < 3; cont++)
     {
@@ -141,8 +141,6 @@ main (void)
   cola cajero[10];              //Colas que son los cajeros donde son atendidos las personas.
   cola filas[3];                //Colas que son las filas de los usuarios, clientes y preferentes.
 
-  srand (time (NULL));          //a lo mejor se quita esta linea
-
   for (cont = 0; cont < 3; cont++)      //Ciclo que inicializa las colas de personas y arreglos de tiempo.
     {
       Initialize (&filas[cont]);
@@ -169,13 +167,13 @@ main (void)
     {
       Imprimir_banco (cajero, filas, tiempos, cont, tiempomod, atendidos,
                       ClyPr, aux);
-      sleep (1);                //Tiempo de pausa.
-      tiempomod++;              //Tiempo de la simulacion
+      usleep (100000);                //Tiempo de pausa, 100 milisegundos.
+      tiempomod++;              //Tiempo de la simulacion.
       cont = 0;
       if ((tiempomod % tiempos[1]) == 0)        //Si el modulo del tiempo con la llegada del cliente es 0, hace push a la fila 1.
         {
           personas[0] = personas[0] + 1;        //Sumar uno al valor de clientes en la cola que se formo.
-          //Potencial crash en estatica, poner un if despues si queremos
+          //Potencial crash en estatica porque puede pasar de 100 la fila.
           aux.n = personas[0];
           aux.c = 'C';
           Queue (&filas[0], aux);       //Mete al cliente 'n' a la cola.
@@ -184,7 +182,7 @@ main (void)
       if ((tiempomod % tiempos[2]) == 0)        //Si el modulo del tiempo con la llegada del usuario es 0, hace push a la fila 2.
         {
           personas[1] = personas[1] + 1;        //Sumar uno al valor de usuarios en la cola que se formo.
-          //Potencial crash en estatica, poner un if despues si queremos
+          //Potencial crash en estatica porque puede pasar de 100 la fila.
           aux.n = personas[1];
           aux.c = 'U';
           Queue (&filas[1], aux);       //Mete al usuario 'n' a la cola.
@@ -193,14 +191,14 @@ main (void)
       if ((tiempomod % tiempos[3]) == 0)        //Si el modulo del tiempo con la llegada del preferente es 0, hace push a la fila 3.
         {
           personas[2] = personas[2] + 1;        //Sumar uno al valor de preferentes en la cola que se formo.
-          //Potencial crash en estatica, poner un if despues si queremos
+          //Potencial crash en estatica porque puede pasar de 100 la fila.
           aux.n = personas[2];
           aux.c = 'P';
           Queue (&filas[2], aux);       //Mete al cliente preferente 'n' a la cola.
         }
       if ((tiempomod % tiempos[0]) == 0)        //Modulo del tiempo con el que son atendidos es 0 hace push de los cajeros.
         {
-          for (cont = 0; cont < numero; cont++) //Primero saca a los que fueron atendidos
+          for (cont = 0; cont < numero; cont++) //Primero saca a los que fueron atendidos.
             {
               if (Empty (&cajero[cont]) == FALSE)       //Verifica si no esta vacia la fila y evitar matar el programa.
                 {
@@ -210,7 +208,7 @@ main (void)
           Imprimir_banco (cajero, filas, tiempos, cont, tiempomod, atendidos,
                           ClyPr, aux);
 
-          //Bloque preferentes
+          //Bloque preferentes.
           while ((Empty (&filas[2]) == FALSE) && (ClyPr < 4)
                  && (cont2 < numero))
             /*menor a 4 para que el 5 sea el cliente y el 6 el usuario, por lo menos deja una caja para los clientes y si es solo una caja, solo atienda a los importantes
@@ -220,19 +218,19 @@ main (void)
               aux = Dequeue (&filas[2]);
               for (cont = 0; cont < numero; cont++)     //Verifica que cajeros estan vacios para atender al preferente.
                 {
-                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for.
                     {
                       Queue (&cajero[cont], aux);
                       ClyPr++;  //Suma uno a los clientes/preferentes.
                       cont = 20;
-                      cont2++;  //Suma uno al contador dos las cajas ocupadas
+                      cont2++;  //Suma uno al contador dos las cajas ocupadas.
                     }
                   Imprimir_banco (cajero, filas, tiempos, cont, tiempomod,
                                   atendidos, ClyPr, aux);
                 }
             }
 
-          //Bloque clientes
+          //Bloque clientes.
           while ((Empty (&filas[0]) == FALSE) && (ClyPr <= 4)
                  && (cont2 != numero) )
             /*Cuando la fila de clientes no esta vacia, el contador clientes/preferentes no pasa los 5 y los preferentes ya se formaron,
@@ -242,19 +240,19 @@ main (void)
               aux = Dequeue (&filas[0]);
               for (cont = 0; cont < numero; cont++)     //Verifica que cajeros estan vacios para atender al cliente.
                 {
-                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for.
                     {
                       Queue (&cajero[cont], aux);
                       ClyPr++;  //Suma uno a los clientes/preferentes.
                       cont = 20;
-                      cont2++;  //Suma uno al contador dos las cajas ocupadas
+                      cont2++;  //Suma uno al contador dos las cajas ocupadas.
                     }
                   Imprimir_banco (cajero, filas, tiempos, cont, tiempomod,
                                   atendidos, ClyPr, aux);
                 }
             }
 
-          //Bloque usuarios
+          //Bloque usuarios.
           while ((Empty (&filas[1]) == FALSE) && (cont2 != numero))
             /*Si las fila de usuarios no esta vacia y cuando esten los cajeros disponibles van a ser atendidos
                While para hacer Pop de los usuarios cuando los clientes y preferentes ya estan siendo atendidos. */
@@ -262,12 +260,12 @@ main (void)
               aux = Dequeue (&filas[1]);
               for (cont = 0; cont < numero; cont++)     //Verifica que cajeros estan vacios para atender al preferente.
                 {
-                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for
+                  if (Empty (&cajero[cont]))    //Si lo esta, lo acomodan en ese cajero y sale del for.
                     {
                       Queue (&cajero[cont], aux);
                       ClyPr = 0;        //Pone en cero el contador de clientes/preferentes porque 1 ya esta siendo atendidos.
                       cont = 20;
-                      cont2++;  //Suma uno al contador dos las cajas ocupadas
+                      cont2++;  //Suma uno al contador dos las cajas ocupadas.
                     }
                   Imprimir_banco (cajero, filas, tiempos, cont, tiempomod,
                                   atendidos, ClyPr, aux);
@@ -278,20 +276,20 @@ main (void)
                 {
                   if (Empty (&filas[2]) == FALSE)
                     {
-                      aux = Dequeue (&filas[2]);        //Lo saca de su fila al preferente y lo forma en la caja vacia
+                      aux = Dequeue (&filas[2]);        //Lo saca de su fila al preferente y lo forma en la caja vacia.
                       Queue (&cajero[cont2], aux);
-                      ClyPr++;  //Suma uno al contador de ellos
-                      cont2++;  //Suma uno a las cajas ocupadas porque la va ocupar un cliente o un preferente
+                      ClyPr++;  //Suma uno al contador de ellos.
+                      cont2++;  //Suma uno a las cajas ocupadas porque la va ocupar un cliente o un preferente.
                       Imprimir_banco (cajero, filas, tiempos, cont, tiempomod,
                                       atendidos, ClyPr, aux);
                     }
 
-                  else          //Si no es preferente, entonces la fila que tiene gente es los clientes
+                  else          //Si no es preferente, entonces la fila que tiene gente es los clientes.
                     {
-                      aux = Dequeue (&filas[0]);        //Sacan a uno de la fila y lo pone en la caja vacia
+                      aux = Dequeue (&filas[0]);        //Sacan a uno de la fila y lo pone en la caja vacia.
                       Queue (&cajero[cont2], aux);
-                      ClyPr++;  //Suma uno al contador de ellos
-                      cont2++;  //Suma uno a las cajas ocupadas porque la va ocupar un cliente o un preferente
+                      ClyPr++;  //Suma uno al contador de ellos.
+                      cont2++;  //Suma uno a las cajas ocupadas porque la va ocupar un cliente o un preferente.
                       Imprimir_banco (cajero, filas, tiempos, cont, tiempomod,
                                       atendidos, ClyPr, aux);
                     }
