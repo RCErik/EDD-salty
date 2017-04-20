@@ -84,7 +84,7 @@ int main(void){
 	//Variables que almacenan respectivamente la cantidad de procesos a ejecutar, auxiliar de iteración, el tiempo para cada proceso
 	//y la suma del tiempo de todos los procesos juntos
 	int cantidad, i, tiempo, tiempo_total = 0;
-	char nombre[45], actividad[200], ID[45];
+	char nombre[45], actividad[200], ID[45], c;
 	cola c_listo, c_ejec, c_final;
 	elemento e, aux;
 	//Inicializamos las tres colas para los procesos
@@ -97,6 +97,7 @@ int main(void){
 	fflush(stdin);
 	//A continuación obtenemos los datos necesarios para nuestros procesos
 	for(i = 1; i <= cantidad ; i++){
+		c = getchar();
 		printf("Indica el nombre del proceso %d \n\n", i);
 		fgets(nombre,44,stdin);
 		printf("Indica la actividad que realiza el proceso: %d \n\n", i);
