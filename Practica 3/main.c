@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<iostream>
 #include<fstream>
-#include<locale>
+#include<locale.h>
 #include"TADLista.h"
 /*
 Nota: aux.d tiene que ser apuntador por la funcion strchr que devuelve el apuntador de la cadena a partir del caracter a localizar.
@@ -22,6 +22,15 @@ Ejemplo con la misma cadena anterior:
 strncpy(cadena2, cadena1, 4)
 devuelve cadena2 = "hola"               
 
+Funcion strtok divide la cadena en apuntadores detectando el caracter limite en forma de cadena que le da el usuario, 
+se pone la cadena y el limite cuando es de principio a fin:
+copia.def = strtok (buffer (cadena), ":"(cadena del caracter limite));
+buffer = "HOLA:QUE ONDA"
+la funcion guarda HOLA en copia def
+
+si es NULL y el caracter limite es de fin hasta el caracter limite
+copia.def=strtok(NULL,":");
+la funcion guarda QUE ONDA en copia def
 
 COMPILACION: g++ main.c TADListaDobleLigada.c -o "Nombre del programa" 
 */
@@ -29,17 +38,15 @@ COMPILACION: g++ main.c TADListaDobleLigada.c -o "Nombre del programa"
 using namespace std;
 
 elemento
-dividir_cadena (char buffer[1000], char auxiliar[50], char a)
+dividir_cadena (char buffer[1000], elemento copia)
 {
-  int numero = 0;
   elemento aux;
-  aux.d = strchr (buffer, a);   //Obtiene la cadena desde que detecta ':'.
-  numero = aux.d - buffer;      //Obtiene el numero de donde esta ':' y usar ese numero.
-  strncpy (auxiliar, buffer, numero);   //Copia la cadena desde el inicio hasta el numero de caracteres dado por numero.
-  auxiliar[numero + 1] = '\0';  //Pone el final de cadena a la cadena auxiliar.
-  strcpy (aux.p, auxiliar);     //Copia la cadena al elemento.
-  
-  return aux;
+  copia.pal = strtok (buffer, ":");     //Obtiene el apuntador de la cadena desde que detecta ':'.
+  copia.def = strtok (NULL, ":");       //Obiene el apuntador de la cadena de definicion.
+  strcpy(aux.p, copia.pal);             //Copia la cadena del apuntador de la palabra a un arreglo para las funciones
+  strcpy(aux.d, copia.def);             //Copia la cadena del apuntador de la definicion a un arreglo para las funciones
+
+  return aux;                           //Regresa el elemento con la palabra y definicion.
 }
 
 
@@ -55,6 +62,7 @@ main (void)
   char auxiliar[50];            //Auxiliar que guarda la cadena de la palabra y despues lo asigna al elemento.p.
   elemento aux;                 //Elemento que se usa para meter los datos en la lista.
   elemento aux2;                //Elemento que recibe el elemento de las funciones de la lista.
+  elemento copia;               //Elemento que se usa para los apuntadores.
   posicion p;                   //Obtiene la posicion de los elementos para las funciones de la lista.
   lista palabras[17];           //La lista de claves, el numero se puede cambiar.
   ifstream Diccionario;         //Hace un archivo de salida.
@@ -63,8 +71,9 @@ main (void)
   setlocale (LC_ALL, "es_ES");  //Cambia la localidad total al Español y pueda reconocer acentos y la ñ.
 
   for (cont = 0; cont < 17; cont++)     //Inicializa la tabla para su trabajo.
+{
     Initialize (&palabras[cont]);
-
+}
 
 
 
@@ -72,35 +81,38 @@ main (void)
 
 
 
-  //Si el usuario elige Lunfardo
+  //Si el usuario elige BIOQUANTUM
+  Diccionario.open ("Glosario BIOQUANTUM.txt"); //Abre el diccionario para su uso
+  while (!Diccionario.eof ())   // mientras no se terminen de las lineas del archivo sigue leyendo
+    {
+      getline (Diccionario, linea);     //toma la linea del archivo de entrada
+      strcpy (buffer, linea.c_str ());          //Copia el string en el arreglo.
+      aux = dividir_cadena (buffer, copia);     //Manda a llamar a la funcion de separar la cadena en palabra y significado.
+      Add (&palabras[0], aux);  //Añade al elemento en la lista con la clave generada por la funcion hash.
+    }
+  Diccionario.close ();         //Cierra el diccionario para no causar problemas
+
+  //Si elige Lunfardo
   Diccionario.open ("Lunfardo.txt");    //Abre el diccionario para su uso
   while (!Diccionario.eof ())   // mientras no se terminen de las lineas del archivo sigue leyendo
     {
       getline (Diccionario, linea);     //toma la linea del archivo de entrada
       cout << linea << endl;    //imprime la linea con cout, la cadena es linea y pasa al siguiente parrafo (\n) con endl
-                //Cambiar por hash y funcion separar cadena
+      //Cambiar por hash y funcion separar cadena
     }
   Diccionario.close ();         //Cierra el diccionario para no causar problemas
-
-  //Si elige Glosario BIOQUANTUM
-  Diccionario.open ("Glosario BIOQUANTUM.txt"); //Abre el diccionario para su uso
-  while (!Diccionario.eof ())   // mientras no se terminen de las lineas del archivo sigue leyendo
-    {
-      getline (Diccionario, linea);     //toma la linea del archivo de entrada
-      cout << linea << endl;    //imprime la linea con cout, la cadena es linea y pasa al siguiente parrafo (\n) con endl
-                //Cambiar por hash y funcion separar cadena
-    }
-  Diccionario.close ();         //Cierra el diccionario para no causar problemas
-
+  
+  
 //Inciso 2 de la practica, agrega una palabra y su definicion.
+  printf
+    ("Escriba la palabra que usted quiere insertar con su significado seprarado por dos puntos:\n");
+  fgets (buffer, 1000, stdin);  //Obtiene toda la cadena para dividirla.
+  aux = dividir_cadena (buffer, copia); //Manda a llamar a la funcion de separar la cadena en palabra y significado.
+//Aqui se mandaria a llamar a la funcion de hash y generar la clave para meterlo a la lista
+  Add (&palabras[1], aux);      //Añade al elemento en la lista con la clave generada por la funcion hash.
+  printf ("La palabra fue insertada. \n");
 
 //Bloque de instrucciones que obtiene la palabra con su significado y las separa en dos variables.
-  printf ("Escriba la palabra que usted quiere insertar con su significado:\n");
-  fgets (buffer, 1000, stdin);  //Obtiene toda la cadena para dividirla.
-  aux = dividir_cadena (buffer, auxiliar, a);   //Manda a llamar a la funcion de separar la cadena en palabra y significado.
-//Aqui se mandaria a llamar a la funcion de hash y generar la clave para meterlo a la lista
-  Add (&palabras[0], aux);      //Añade al elemento en la lista con la clave generada por la funcion hash.
-  printf ("La palabra fue insertada.\n");
 
 //Inciso 3 de la practica, busca una palabra y muestra su definicion.
   printf ("Escriba la palabra que usted busca:\n");
@@ -114,11 +126,9 @@ main (void)
       largo = strlen (aux2.p);  //Cuenta el largo de la palabra
       if (strncmp (aux.p, aux2.p, largo) == 0)  //Si la comparacion de las palabras es igual, imprime la definicion de la palabra.
         {
-          printf ("\nLa definicion de %s es%s", aux2.p, aux2.d);
+          printf ("\nLa definicion de %s es: %s\n", aux2.p, aux2.d);
           cont = 2000;          //Asignacion para salir del ciclo.
         }
-      else                      //Si no es la palabra, suma cont uno para seguir buscando
-        cont++;
     }
   if (cont >= num && cont < 2000)
     printf
@@ -137,19 +147,17 @@ main (void)
       if (strncmp (aux.p, aux2.p, largo) == 0)  //Si la comparacion de las palabras es igual, cambia la definicion de la palabra.
         {
           printf
-            ("\nEscriba la nueva definicion de %s empezando con el signo de dos puntos.\n",
+            ("\nEscriba la nueva definicion de %s\n",
              aux.p);
-          fgets (buffer, 300, stdin);
-          aux.d = strchr (buffer, ':'); //Obtiene la cadena desde que detecta ':'.
+          fgets (buffer, 1000, stdin);
+          strcpy(aux.d, buffer);                //Copia la cadena del apuntador de la palabra a un arreglo para las funciones
           p = ElementPosition (&palabras[0], cont);     //Obtiene la posicion del elemento que se busca cambiar
           Replace (&palabras[0], p, aux);       //Cambia al elemento con el nuevo significado
           aux2 = Element (&palabras[0], cont);  //Lo obtiene de nuevo para comprobar que se cambio la definicion
-          printf ("\nAhora el nuevo significado de la palabra %s es%s\n",
+          printf ("\nAhora el nuevo significado de la palabra %s es: %s\n",
                   aux2.p, aux2.d);
           cont = 2000;          //Asignacion para salir del ciclo.
         }
-      else                      //Si no es la palabra, suma cont uno para seguir buscando
-        cont++;
     }
   if (cont >= num && cont < 2000)
     printf
@@ -171,17 +179,19 @@ main (void)
           p = ElementPosition (&palabras[0], cont);     //Obtiene la posicion del elemento a borrar
           Remove (&palabras[0], p);     //Borra el elemento
           printf ("\nLa palabra fue borrada.\n");
-          largo = Size (&palabras[0]);
+          num = Size (&palabras[0]);
           cont = 2000;          //Asignacion para salir del ciclo.
         }
-      else                      //Si no es la palabra, suma cont uno para seguir buscando
-        cont++;
     }
   if (cont >= num && cont < 2000)
     printf
       ("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
 
 //Inciso 6 de la practica, sale del programa.
-
+  for(cont=0;cont<17;cont++)
+  Destroy(&palabras[cont]);
   return 0;
 }
+
+
+
