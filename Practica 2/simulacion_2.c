@@ -11,12 +11,12 @@ void imprimirFinalizados(cola *c){
 	elemento e; //elemento auxiliar para los dequeues
 	printf("Procesos finalizados\n\n\n");
 	//recorremos desde el numero de elementos de nuestra cola hacia atras
-	for(i = c -> num_elem; i > 0 ; i--){
+	for(i = c -> num_elem; i > 1 ; i--){
 		e = Dequeue(c); //desencolamos cada uno de los procesos finalizados
 		//Imprimimos los datos principales de cada uno de los elementos
 		printf("Proceso: %s \n", e.nombre);
 		printf("ID: %s \n", e.ID);
-		printf("Tiempo total de ejecucion: %d \n\n\n", e.tiempo_ejec);
+		printf("Tiempo total de ejecucion: %d \n\n\n", e.tiempo_ejec + 1);
 	}
 	return;
 }
