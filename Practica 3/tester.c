@@ -2,7 +2,11 @@
 #include<math.h>
 #include<stdlib.h>
 #include<string.h>
-
+#include<unistd.h>
+#include<iostream>
+#include<fstream>
+#include<locale.h>
+#include"TADLista.h"
 
 using namespace std;
 
