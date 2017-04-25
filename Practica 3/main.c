@@ -192,6 +192,3 @@ main (void)
   Destroy(&palabras[cont]);
   return 0;
 }
-
-
-
