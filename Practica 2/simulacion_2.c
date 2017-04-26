@@ -83,10 +83,10 @@ void evaluarEstadoColas(cola *c_listo, cola *c_ejec, cola *c_fin, int i){
 int main(void){
 	//Variables que almacenan respectivamente la cantidad de procesos a ejecutar, auxiliar de iteración, el tiempo para cada proceso
 	//y la suma del tiempo de todos los procesos juntos
-	int cantidad, i, tiempo, tiempo_total = 0;
-	char nombre[45], actividad[200], ID[45], c;
-	cola c_listo, c_ejec, c_final;
-	elemento e, aux;
+	int cantidad, i, tiempo, tiempo_total = 0; //enteros que almacenan la cantidad de procesos a correr, el auxiliar de iteración, el tiempo de cada proceso y el tiempo de todos los procesos sumados
+	char nombre[45], actividad[200], ID[45], c; //Almacenan el nombre, actividad y ID del proceso
+	cola c_listo, c_ejec, c_final; //Cola de procesos listos a ejecutar, los que estpan en ejecución actual y los finalizados
+	elemento e, aux; //Elementos para encolar los procesos
 	//Inicializamos las tres colas para los procesos
 	Initialize(&c_listo); //Cola lista para los procesos a ejecutar
 	Initialize(&c_ejec); //Cola de procesos en ejecución
