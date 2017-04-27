@@ -41,6 +41,7 @@ void menuArchivos(){
     			 }
  			 Diccionario.close ();         //Cierra el diccionario para no causar problemas
 			break;
+	system("cls");
 	return;
 }
 
@@ -112,6 +113,7 @@ int main(void){
 	scanf("%d", &opcion);
 	switch(opcion){
 		case 1:
+			system("cls");
 			menuArchivos();
 			break;
 		case 2:
