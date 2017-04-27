@@ -1,3 +1,14 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Abril 2017
+	VERSIÓN: 1.3
+	
+	DESCRIPCIÓN: Simulación que representa el manejo de colas de procesos en un sistema operativo sin manejo de prioridades
+	
+	OBSERVACIONES: Creo que por ahora nada
+  
+  	COMPILACION: gcc simulacion_2.c TADColaxxxx.o -o "Nombre del ejecutable" 
+*/
+
 #include<stdio.h>
 #include<unistd.h>
 #include<string.h>
