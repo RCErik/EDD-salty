@@ -23,7 +23,9 @@ typedef struct elemento
 	int n;
 	char c;
 	char p[50];
-	char *d;
+	char d[1000];
+	char *pal;
+	char *def;
 }elemento;
 
 //Tipo de dato boolean (Modelado con un char)
