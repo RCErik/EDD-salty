@@ -11,7 +11,11 @@
 using namespace std;
 
 void menuArchivos(){
-	int opcion = 0;
+	int opcion = 0;		      //UN entero que guarda la opción de menú que desea el usuario
+	char a = ':';                 //Char para las funciones que detectan caracteres.
+	char buffer[1000];            //Cadena que guarda toda la cadena.
+	char auxiliar[50];            //Auxiliar que guarda la cadena de la palabra y despues lo asigna al elemento.p.
+	string linea;                 //Una cadena auxiliar para recibir las lineas de texto con getline
 	ifstream Diccionario;
 	printf("Elija el archivo que desea abrir\n\n");
 	printf("1.- Lunfardo\n");
