@@ -295,7 +295,7 @@ boolean Empty(lista *l)
 void Insert(lista *l, elemento e, posicion p,boolean b)
 {
 	posicion aux;
-	aux = malloc(sizeof(nodo));
+	aux = (nodo *) malloc(sizeof(nodo));
 		if (aux==NULL)
 		{
 			printf("ERROR (Insert): No se pudo crear un nuevo nodo");
@@ -346,7 +346,7 @@ void Insert(lista *l, elemento e, posicion p,boolean b)
 void Add(lista *l,elemento e)
 {
 	posicion aux;
-	aux = malloc(sizeof(nodo));
+	aux = (nodo *) malloc(sizeof(nodo));
 	if (aux==NULL)
 	{
 		printf("ERROR (Add): No se pudo crear un nuevo nodo");
