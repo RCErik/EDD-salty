@@ -72,7 +72,7 @@ Agayas, de: Valiente.
 Agayudo: Valiente.
 Agrampar: Atrapar, asir.
 Agrandado: Ostentoso.
-Aguantiñar: Afrontar, soportar.
+Aguantinar: Afrontar, soportar.
 Aguila / Aguilero: Indigente.
 Ainenti: Piedritas (Juego de niños).
 Al bardo: Salir a robar sin un plan determinado:
@@ -771,7 +771,7 @@ Cupula: Cabeza.
 Curado: Ebrio
 Curda (Español): Borrachera
 Curdela: Borracho / Borrachera.
-Curdelin / curdelún: Borracho.
+Curdelin / curdelun: Borracho.
 Currar: Estafar
 Curro: Estafa, fraude.
 Cusifai: Tipo innominado
@@ -1187,7 +1187,7 @@ Ganchos: Dedos.
 Gansada: Tontería.
 Garaba, Garabita: Muchacha
 Garabito: Vago. Muchachito
-Garbía: Llovizna.
+Garbia: Llovizna.
 Garca: Tramposo, estafador
 Garcador / garcaino: Informal, tramposo.
 Garchar: Fornicar.
