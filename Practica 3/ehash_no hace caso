@@ -1,0 +1,10 @@
+int largo = 0;
+    int cont = 0;
+    float clave = 0;
+    largo = strlen(p);
+    while(cont < largo)
+    clave = clave + (int)p[cont];
+    clave=clave * 31.415;
+    clave=clave/27.182;
+    clave = (int)clave % 97;
+    return (int)clave;
