@@ -370,7 +370,7 @@ Bufonazo: Balazo.
 Bufoso: Revolver
 Bule: Puñetazo.
 Bulevar: calle ancha con plazoleta en el medio.
-Bulín: Habitación, cuarto, aposento, vivienda de soltero.
+Bulin: Habitación, cuarto, aposento, vivienda de soltero.
 Buque sin mancada: Disimulo
 Buraco: Agujero
 Burrero: Ladrón de cajas registradoras.
