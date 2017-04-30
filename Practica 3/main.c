@@ -34,6 +34,7 @@ la funcion guarda QUE ONDA en copia def
 
 COMPILACION: g++ main.c TADListaDobleLigada.c -o "Nombre del programa" 
 */
+using namespace std;
 void Imprimir_Datos(lista palabras[17])
 {
 return 0;
