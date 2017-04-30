@@ -77,23 +77,23 @@ Aguila / Aguilero: Indigente.
 Ainenti: Piedritas (Juego de niños).
 Al bardo: Salir a robar sin un plan determinado:
 Al pucho: De inmediato.
-Alacrán: Chismoso.
+Alacran: Chismoso.
 Alacranear: Chismosear.
 Alacransar: Hablar mal
 Alambrada: Guitarra.
 Alca: Alcahuete.
 Alcachofa: Alcahuete.
-Alcagüetería: Delación.
-Alcancía: Cárcel.
+Alcagueteria: Delación.
+Alcancia: Cárcel.
 Alcaucil: Alcahuete.
 Alce: Ocasión.
-Alfajía: Alto.
+Alfajia: Alto.
 Alfiler: Arma blanca.
 Aliviar: Robar.
 Almanaques: Edad, años
-Alpedología: Hablar sobre un tema sin conocimiento.
+Alpedologia: Hablar sobre un tema sin conocimiento.
 Alpiste: Bebida alcohólica.
-Alpistería: Bar, licorería.
+Alpisteria: Bar, licorería.
 Alpistero: Ebrio.
 Altiyero: Excelente.
 Altiyo: Cabeza.
@@ -121,16 +121,16 @@ Amuro: Cárcel.
 Ana-Ana: Por mitades.
 Analfa: Ignorante.
 Analfabestia: Ignorante.
-Añapar: Atrapar.
+Anapar: Atrapar.
 Ancu: Como araca, voz de alarma.
 Andante: Peatón.
 Anduma: Vamos
 Angelito: Cándido.
 Angelito: Herramienta para abrir cerraduras desde afuera.
 Antenas: Orejas.
-Antropófago: Invertido.
+Antropofago: Invertido.
 Apampada: Desorientado.
-Apañado: Encarcelado.
+Apanado: Encarcelado.
 Apaparse: Desorientarse.
 Apedado: Ebrio.
 Apedarse: Embriagarse.
@@ -150,7 +150,7 @@ Apuntar: Delatar / Conquistar amor.
 Apunte, llevar el: Atender.
 Apunte: Delación.
 Araca: Atención! Cuidado
-Araña: Voz de alarma, lo mismo que araca.
+Arana: Voz de alarma, lo mismo que araca.
 Arbolito: Levanta juego clandestino.
 Archivado: Encarcelado.
 Argoya: Crica.
@@ -162,13 +162,13 @@ Arrayar: Arreglar
 Arrebezarse: enojarse, insolentarse.
 Arreglo: Soborno.
 Arriba, de: Gratuitamente.
-Arribeño, de: Gratuitamente.
+Arribeno, de: Gratuitamente.
 Arrimado: Amancebado.
 Arroyarse: Asustarse.
 Arrugado: Bandoneón / Asustado
 Arrugarse: Asustarse.
 Arrugue: Temor.
-Artículo, dar: Atender.
+Articulo, dar: Atender.
 Asfalto: Experiencia.
 Asnaf: Por mitades.
 Asoleado: Chambón.
@@ -191,7 +191,7 @@ Atorro: Vivienda del tipo vago o del soltero.
 Atracar: Acercar, arrimar
 Atrasado: despistado, distraído, tonto.
 Ave Negra: Abogado
-Avería, de: Malhechor.
+Averia, de: Malhechor.
 Avivada: Viveza / Engañifa
 Avivado: despabilado, desvergonzado.
 Avivar: Advertir, despabilar.
@@ -200,7 +200,7 @@ Avivato: Despabilado, aprovechador.
 Azotarse: Arrojarse, decidirse.
 Azotea: Cabeza ; tener gente en la azotea ; facultades mentales alteradas.
 Azotetis: Somatización de origen psíquico.
-Bacán: Concubinario; hombre que mantiene una mujer; bien de plata
+Bacan: Concubinario; hombre que mantiene una mujer; bien de plata
 Bacanaje: poderosos, oligarcas.
 Bacanazo: Refinado.
 Bachicha: gordo, panzón. El que siempre piensa en comer.
@@ -210,7 +210,7 @@ Bagayito: Equipaje
 Bagayo: Mujer desgarbada; paquete envoltorio; deportista torpe
 Bagre: Estómago ("me está picando el bagre" )
 Baile: Desorden (Merengue).
-Bailetín: Fiesta bailable modesta.
+Bailetin: Fiesta bailable modesta.
 Bailongo: baile nombrado despectivamente / desorden, pelea.
 Balconear: Observar, mirar.
 Baldosa / balero: Cabeza.
@@ -251,7 +251,7 @@ Batimento: Delación.
 Batir: Decir, delatar
 Batista: Delator.
 Batistela: Delator.
-Batistín: indiscreto, incapaz de guardar un secreto.
+Batistin: indiscreto, incapaz de guardar un secreto.
 Batitú: Delator.
 Batuque: Desorden, lío, confusión.
 Bebe: Prostíbulo, quibebe.
@@ -260,17 +260,17 @@ Bebestible: Bebida alcohólica.
 Beguen: Capricho amoroso con deseo vehemente; cariño
 Bejarano: Viejo.
 Beligerancia: Dar, atender.
-Belín: Nada.
+Belin: Nada.
 Belinún: Tonto.
 Berreta: Ordinario. Cualquier objeto falsificado.
-Berretín: Capricho, ilusión
+Berretin: Capricho, ilusión
 Bestia: Mujer (arcaísmo)
-Betún: Soborno.
+Betun: Soborno.
 Biaba: paliza
 Biabado: Zurrado. Drogado
 Biabazo: Puñetazo.
 Biandazo: Puñetazo.
-Biandún: Puñetazo.
+Biandun: Puñetazo.
 Bichicome: Tipo que juta desperdicios, vagabundo.
 Bichoco: Achacoso. De mucha edad o con apariencia a viejo.
 Bicicleatear: Eludir, trampa comercial.
@@ -279,7 +279,7 @@ Bicicletero: Informal comercial.
 Bienudo: Adinerado.
 Bife: Cachetada a mano abierta
 Bigotear: Observar fijamente.
-Biógrafo: Aspaviento.
+Biografo: Aspaviento.
 Biorse: baño.
 Biromista: Levanta juego clandestino.
 Bisagra: Alcahuete.
@@ -292,16 +292,16 @@ Blandengue: Blando; alusión a una erención a medida
 Bobo: Reloj, corazón
 Boca de: Trampa que permite ver la boca del mazo sobre una esponja.
 Bocado: Soborno.
-Bochín: Cabeza.
+Bochin: Cabeza.
 Bochinche: Algarabía
 Bocho/a: Cabeza.
 Bocina: Alcahuete.
 Bocinazo: Delación.
-Bocón: Soplón.
+Bocon: Soplón.
 Bodega: Estómago.
-Bodegón (Esp.): Taberna
+Bodegon (Esp.): Taberna
 Boga: Abogado.
-Bogólico: Tonto.
+Bogolico: Tonto.
 Bola, dar: Atender, prestar atención.
 Bola: Impotancia
 Bolacear: Mentir.
@@ -320,7 +320,7 @@ Boletear: Matar / Asesinar. Mentir.
 Boletero: Mentiroso.
 Boleto: Mentira.
 Boliche: Cantina
-Bólido: Tonto, lento.
+Bolido: Tonto, lento.
 Bolilla: Noticia, chisme
 Boliya, dar: Atender.
 Bolo: Mentira.
@@ -330,7 +330,7 @@ Bombear: Fornicar. Estafar, defraudar.
 Bombero: arbitro que perjudica a un equipo.
 Bombo, ir al: Componenda.
 Bombo: Nalgas, asentaderas.
-Bombón: Beldad.
+Bombon: Beldad.
 Bonafide: Cándido.
 Boncha: Chabón, tonto
 Bondi: Ómnibus
@@ -352,7 +352,7 @@ Bramaje: Mujeres.
 Breca: Enojado.
 Breto: Sobretodo / Ataúd.
 Breva: Beldad / Ocasión.
-Brígido: Tonto.
+Brigido: Tonto.
 Brilllos: Alhajas
 Brique: Fósforo.
 Brisco: Invertido.
@@ -361,8 +361,8 @@ Brodo, al: Arruinarse económicamente.
 Brodo: Estafa, fraude.
 Bronca: Rabia
 Broncar: Enojarse.
-Buchón: persona delatora.
-Budín: Mujer hermosa
+Buchon: persona delatora.
+Budin: Mujer hermosa
 Budinazo: Beldad.
 Buenudo: Tonto.
 Bufa: Bujarrón, sadomita.
@@ -380,25 +380,25 @@ Busca: Pícaro, despabilado / Ramera.
 Buscaglia: Buscavidas.
 Buscapleitos: Abogado.
 Bute: Excelencia, gran calidad
-Buyón: Alimento, comida
+Buyon: Alimento, comida
 Buyonear: Comer.
 Buzarda: barriga, panza, Estómago.
-Buzón: Sodomita / Boca grande / Cárcel.
+Buzon: Sodomita / Boca grande / Cárcel.
 Cabalete: Bolsillo superior externo del saco.
 Cable, tirar un: Socorrer.
 Cabrear: enojar, molestar con bromas de mal gusto.
 Cabrearse: Enojarse.
 Cabrero: Enojado.
-Cabrón / cabronazo: Cornudo.
-Cábula: Cábala.
+Cabron / cabronazo: Cornudo.
+Cabula: Cábala.
 Cabulear: Presentir, agorar.
 Cachaba: Asía, atrapaba.
 Cachaciento: despacioso, lento para ejecutar cualquier acción.
 Cachada: Broma, mofa.
 Cachador: Burlón.
 Cachar: burlar, timar
-Caché: Cursi.
-Cachería: Cursilería.
+Cache: Cursi.
+Cacheria: Cursilería.
 Cachetada / cachetazo: Bofetada.
 Cachiporra: pegar.
 Cachirulo: Cándido.
@@ -408,38 +408,38 @@ Cachusiento: Achacoso, deteriorado.
 Cachuso: Achacoso, deteriorado.
 Cadenero: Proxeneta.
 Caduta, la: Decadencia.
-Cafaña: Rústicos, ordinarios.
-Café: Reprimenda.
+Cafana: Rústicos, ordinarios.
+Cafe: Reprimenda.
 Caferata: Rufián, proxeneta.
 Cafetear: Reprender.
 Cafetera: Vehículo desvencijado
 Cafiolo: Cantinflero, vivir de la mujer prostituta
 Cafirulo: Rufián, proxeneta.
 Cafisho: Gigoló, vividor
-Cafúa: Cárcel.
+Cafua: Cárcel.
 Cajetear: Estafar, defraudar.
 Cajetiya: Petimetre.
 Calabaza: Cabeza.
 Calabocear: Apresar.
 Calado: Conocido.
-Cálalo: Estudio de lo que se ha de robar.
+Calalo: Estudio de lo que se ha de robar.
 Calandraca: Achacoso, deteriorado.
 Calar: Observar; examinar atentamente
 Calavera: trasnochador, licencioso, desenfrenado.
 Calce: Ocasión.
 Caldosa: Puñetazo que provoca sangre.
-Calentón: Rijoso.
+Calenton: Rijoso.
 Calentura: Apetito sexual / Enojo.
 Caliente: Rijoso, enojado.
 Calle: Experiencia.
 Calo: Trozo.
-Caló: Jerga de la delincuencia.
+Calo: Jerga de la delincuencia.
 Calor: Vergüenza.
 Calotear: Robar.
 Camambuses: Zapatos.
 Camasutra: Cama
 Camba: forma vésrica de bacán.
-Cambusería: Poderosos, oligarcas
+Cambuseria: Poderosos, oligarcas
 Camelo: engaño, trampa, farsa.
 Caminantes: Zapatos.
 Camisulinero: Especialista en sustraer desde el bolsillo del chaleco.
@@ -451,7 +451,7 @@ Campante: despreocupado, impávido.
 Cana: prisión
 Canal: Cicatriz de arma blanca en el rostro.
 Canasta: Cárcel
-Cañazo: Cópula.
+Canazo: Cópula.
 Cancel: Verja o puerta que cierra el zaguán
 Cancha: patio, corral o recinto más o menos espacioso.
 Canchereada: Aspaviento, alarde.
@@ -466,11 +466,11 @@ Canflia: Proxenestismo, rufianismo
 Cangrejo: Sodomita.
 Canguela: Temor / Indigencia / Prostíbulo.
 Canillita: chico vendedor de diarios en la vía pública.
-Caño: Vivienda de soltero.
+Cano: Vivienda de soltero.
 Canoa: Cárcel.
 Canoas: Zapatos.
-Caños, a los: Indigencia.
-Cañota: Cárcel.
+Canos, a los: Indigencia.
+Canota: Cárcel.
 Cantar: Delatar. Confesar un delito.
 Cantor: Elegante / Alcahuete.
 Canusa: Afectivo de cana, cárcel
@@ -483,7 +483,7 @@ Capelun: Aumentativo de capelo, sombrero
 Capiya: Cabeza.
 Capo: Jefe
 Caquero: Petimetre.
-Caracúlico: Enojado, pesimista.
+Caraculico: Enojado, pesimista.
 Caraculismo: Enojo, pesimismo.
 Caradura: Desfachatado.
 Caralisa: Rufián, proxeneta.
@@ -491,7 +491,7 @@ Carata: Desfachatado.
 Carbura: Funciona.
 Carburadora: Cabeza.
 Carburar: pensar, idear.
-Carcamán: italiano de mal aspecto
+Carcaman: italiano de mal aspecto
 Careta: Persona atrevida, desfachatada.
 Cargada: Mofa / Chance.
 Cargador: Promiscuo.
@@ -499,7 +499,7 @@ Cargar: Mofarse.
 Cargosear: Fastidiar.
 Caripela: Cara.
 Carnavales: Años / Edad.
-Carón: Cara grande.
+Caron: Cara grande.
 Carozos: Ojos.
 Carpa: Astucia
 Carpeta: Categoría
@@ -508,15 +508,15 @@ Carpetero: Ducho, habilidoso.
 Carpusa: Experiencia.
 Carreteles: Años / Edad.
 Carrindanga: Armatoste / Vehículo desvencijado.
-Cartabón: Prontuario.
-Cartero: Delincuente que coloca y revisa el correo.
-Cartón: Chabón.
+Cartabon: Prontuario.
+Cartero: Delincuente que coloca y revisa el correo.
+Carton: Chabón.
 Carucha: Cara.
 Casa del Pueblo: Cementerio.
 Casatero: Cumnilinguo.
 Cascada: Zurra, paliza.
 Cascar: Castigar, pegar
-Cáscara: Aspaviento.
+Cascara: Aspaviento.
 Cascarazo: Bofetada.
 Cascarria: Trompo viejo, ya inservible.
 Cascarriento: Raído, sucio.
@@ -528,7 +528,7 @@ Casiorarse: Casarse.
 Caso: Tonto
 Casoriado: Casado.
 Caspera: Cabeza.
-Castaña / castañazo: Puñetazo.
+Castana / castanazo: Puñetazo.
 Catanga: Persona de color
 Cataplasma: Latoso, fastidioso.
 Catar: Atrapar, agarrar.
@@ -543,7 +543,7 @@ Cazote: Puñetazo, golpe.
 Centro, tiene: Experiencia.
 Cepiyada: Reprimenda.
 Cerebrar: Función mental
-Chabón: Tonto
+Chabon: Tonto
 Chabona: Mujer.
 Chabonada: Torpeza.
 Chabonaje: Tontos (Grupo).
@@ -571,11 +571,11 @@ Chanchada: Vileza, deslealtad.
 Chancho: Informal, tramposo, raído, sucio / inspector de transporte.
 Changa: Trabajo breve.
 Changar: Trabajar brevemente, trabajo pasajero.
-Changüí: ventaja, engañoso
+Changui: ventaja, engañoso
 Chanta: Informal, tramposo.
 Chantapufi: Informal, tramposo. Persona que contrae deudas sin intención de saldarlas.
 Chantar: Endilgar, enjaretar.
-Chantún: Informal, tramposo.
+Chantun: Informal, tramposo.
 Chantunazo: Informal, tramposo
 Chapaliar: Pisar, caminar
 Chapar: Agarrar, tomar, asir
@@ -587,12 +587,12 @@ Charamusca: Fruslería.
 Charleta: Charlatán, tipo que habla sin fundamento.
 Chata: Carruaje de caballos
 Chaucha: Ocasión / pene / tonto / centavo.
-Chauchón: Tonto.
+Chauchon: Tonto.
 Checonato: Cheque.
 Chefun: Aumentativo de funche, que es inversion silábica de Funge o Funyi, sombrero
 Chicato: Miope, cegatón
 Chiche: Revólver.
-Chichipió: Tonto.
+Chichipio: Tonto.
 Chichonear: Bromear, mofarse de alguien.
 Chichoneo: Broma, mofa.
 Chiflado: Loco
@@ -606,9 +606,9 @@ Chingada: Yerro.
 Chingar: Errar, fracasar.
 Chingolo: Cándido.
 Chipola: Excelente.
-Chiqué: Aspaviento.
+Chique: Aspaviento.
 Chiquetero: Exagerado, "largo"
-Chiquilín: Chiquillo / Bolsillo chico del pantalón (adelante).
+Chiquilin: Chiquillo / Bolsillo chico del pantalón (adelante).
 Chiquilinada: Chiquillada.
 Chirlo: Bofetada.
 Chirola: Monedita.
@@ -638,24 +638,24 @@ Chuchi: Muchacha.
 Chucho: Temor / Cabello.
 Chumbazo: Balazo.
 Chumbo: Balazo / Revólver.
-Chupadín: Borracho.
+Chupadin: Borracho.
 Chupado: Borracho.
 Chupamedias: Obsecuente.
 Chupandina: Borrachera.
 Chupar: Beber.
 Chupe /i: Bebida alcohólica.
-Chupería: Bar, despacho de bebidas alcohólicas.
+Chuperia: Bar, despacho de bebidas alcohólicas.
 Chupete: Ebrio
-Chupín: Ebrio.
+Chupin: Ebrio.
 Churrasca: Beldad.
 Churros: Beldad.
 Chusmaje: Cáfila.
 Chusmear: Chismear.
-Chusmón: Murmurador
+Chusmon: Murmurador
 Chuza: Látigo sin lonja
 Ciego: Carente de dinero es término de juego del truco
-Cien, número: Retrete.
-Cimarrón: nombre con que se designa al mate amargo.
+Cien, numero: Retrete.
+Cimarron: nombre con que se designa al mate amargo.
 Cinchar: dar fuerza, vigor. Trabajo duro.
 Cinchar: Trabajar, esforzar.
 Circulado: Baquiano, experto.
@@ -679,9 +679,9 @@ Cocinado: Muerto, asesinado.
 Cocinar: Matar.
 Cocinero: Cinco pesos.
 Coco: Cabeza.
-Cocó: Cocaína.
+Cocoo: Cocaína.
 Cocota: Ramera.
-Codeguín: Tonto.
+Codeguin: Tonto.
 Cogote: Gratuitamente.
 Cogotudo: Adinerado, oligarca.
 Coima: Soborno.
@@ -695,25 +695,25 @@ Colgado: Despedido, cesanteado.
 Colibriyo: loco, insensato, perturbado mental.
 Cometa: Soborno.
 Cometar: Boca.
-Comilón / comipini: Sodomita.
-Comisión: Soborno.
+Comilon / comipini: Sodomita.
+Comision: Soborno.
 Compadrada: Bravuconada, acción propia de un compadre o compadrito.
 Compadraje: Grupo de compadres
 Compadre (adj.): Bonito, coqueto
 Compadrear: Baladronear, alardear.
 Compadrito: Valentón, fanfarrón.
-Compadrón: Fatuo, presumido
+Compadron: Fatuo, presumido
 Computadora: Cabeza.
 Comunacho /comunardo: Comunista.
 Concurdaneo: Colega del ebrio.
-Condón: Preservativo.
+Condon: Preservativo.
 Coneja, correr la: Indigencia.
 Conejo: Asistente social de la cárcel.
 Confite: Balazo.
 Conga: Fiesta.
 Conserva: Conservador.
-Consulín /consultorro: Consultorio.
-Consumisión: Consumo.
+Consulin /consultorro: Consultorio.
+Consumision: Consumo.
 Contreras: Opositor.
 Conventillo: Casa de inquilinos. Casa de vecindad de aspecto pobre y de muchas habitaciones
 Conversa, la: Conversación.
@@ -729,7 +729,7 @@ Cornelio: Cornudo.
 Corneta: Alcahuete.
 Corno, un: Nada, no importar / Ignorar adrede.
 Coroniya: Cabeza.
-Corpíño: Sostén.
+Corpino: Sostén.
 Corrido: Baquiano.
 Corso: Locura.
 Cortada: Calle
@@ -739,15 +739,15 @@ Corte, darse: Aspaviento.
 Cortina /corto: De baja estatura.
 Coso: Tipo, individuo
 Costiya: Mujer.
-Coté / cotele / cotén: Costado, lado.
-Cotín, el: Cama.
+Cote / cotele / coten: Costado, lado.
+Cotin, el: Cama.
 Cotizarse: Pago o prorrateo.
 Cotorrear: Chismear.
 Cotorro: Cuarto pobre
-Cráneo: Cabeza / Inteligencia.
+Craneo: Cabeza / Inteligencia.
 Crema: Refinados, poderosos.
 Crepar: Morir
-Crepó: Murió.
+Crepo: Murió.
 Croqueta: Cabeza.
 Crosta: Chambón / Vago.
 Croto: Vago.
@@ -765,9 +765,9 @@ Cufa: Cárcel.
 Culastro: Sodomita.
 Culata: Bolsillo trasero del pantalón.
 Culo: Suerte / Infortunio.
-Cuña: Influencia / Pene
+Cunna: Influencia / Pene
 Cuore: Corazón
-Cúpula: Cabeza.
+Cupula: Cabeza.
 Curado: Ebrio
 Curda (Español): Borrachera
 Curdela: Borracho / Borrachera.
@@ -779,7 +779,7 @@ Dandy: Correctos y buenos mozos
 Dante: Bujarrón, pederasta activo.
 Dar dique: Engañar con falsas apariencias.
 Darique: Invercion silabica de querida
-Dátiles: Dedos de las manos o pies.
+Datiles: Dedos de las manos o pies.
 Debute: Excelente.
 Deca: Decadencia.
 Dechavar: Delatar.
@@ -821,7 +821,7 @@ Despiolado: Desordenado.
 Despiole /despiporre: Desorden, lío.
 Desprendido: Despreocupado, indiferente.
 Desquicio: Desorden, lío.
-Desteñir: Traicionar informalmente.
+Destenir: Traicionar informalmente.
 Dichero: Cobista
 Dientudo: Piano
 Dilatar: Confusión, desorden.
@@ -838,7 +838,7 @@ Dragonear: Enamorar, cortejar.
 Dragoneo: Galanteo.
 Drogui: Bebida alcohólica.
 Droguista: Borracho.
-Durañona: Chambóm.
+Duranona: Chambóm.
 Durazno: Chambón.
 Duro: Chambón.
 Elemento: Mujer.
@@ -976,8 +976,8 @@ Escolaseador: Jugador por dinero, timbero.
 Escolasiarse: jugarse, entregarse
 Escombrero: Ostentoso.
 Escombro: Ostentación.
-Escoñado: Achacoso, deteriorado. Zurrado.
-Escoñar: Zurrar.
+Esconado: Achacoso, deteriorado. Zurrado.
+Esconar: Zurrar.
 Escorchador: Latoso, pesado.
 Escorchar: Fastidiar, molestar.
 Escrachado: Zurrado.
@@ -996,7 +996,7 @@ Esgunfiar: Fastidiar.
 Espamento: Aspaviento.
 Espamentoso: Ostentoso
 Esparo: Colaborador del punguista distrayendo la vista
-Espárragos: Dedos.
+Esparragos: Dedos.
 Espiantar: Quitar
 Espiantarse: Irse, huir.
 Espiante: Escape, huida, partida, retirada
@@ -1009,14 +1009,14 @@ Espirarse: Irse, alejarse.
 Espiro: Escape, huida.
 Espor: Ganancia, sport, dividendo turfístico.
 Esputza: Tufo, hedor.
-Esquenún: Vago.
+Esquenun: Vago.
 Esquifuso: Raído, sucio.
 Esquillo: Rabieta.
 Esquina: Experiencia.
 Esquinazo: Abandono
 Esquiyo: Berrinche, enojo
 Estancia: Cortujo
-Estaño: Mostrador de boliches y bares
+Estano: Mostrador de boliches y bares
 Estarado: Apresado.
 Estaribel: Cárcel.
 Estaro: Cárcel.
@@ -1033,14 +1033,14 @@ Estrolar: Zurrar.
 Estrole: Zurra, paliza.
 Estufado: Fastidiado.
 Estufar: Fastidiar.
-Excómunica: infortunio reiterado.
+Excomunica: infortunio reiterado.
 Faca: Arma blanca.
 Facha: Rostro, cara.
 Fachada: Cara.
 Fachatosta: Desfachatado.
 Facheta / fachenda: Cara.
 Fachinero: Valiente, resoluto.
-Facón (Español): Cuchillo
+Facon (Español): Cuchillo
 Fajada: Paliza.
 Fajado: Drogado
 Fajar: Castigar
@@ -1070,9 +1070,9 @@ Farrear: Divertirse / Mofarse.
 Farrista: Juerguista.
 Faseando: Fumando.
 Fasear: Fumar.
-Fasería: Cigarrería.
+Faseria: Cigarrería.
 Faso: Cigarrillos
-Fastrás: Puñetazo.
+Fastras: Puñetazo.
 Fasules: Dinero (Pesos).
 Fatigante: Trabajador.
 Fatigar: Trabajar esforzadamente. Andar, caminar.
@@ -1089,15 +1089,15 @@ Felpa: Zurra.
 Felpeada: Zurra, reprimenda.
 Felpear: Zurrar / Reprender.
 Felpudo: Obsecuente.
-Fémina: Mujer.
-Fenómeno: Obsecuente.
+Femina: Mujer.
+Fenomeno: Obsecuente.
 Fesa: Tonto.
 Festichola: Fiesta.
-Fetén: Excelente.
+Feten: Excelente.
 Fiaca: Pereza, holganza.
-Fiacún: Haragán, Indolente.
+Fiacun: Haragán, Indolente.
 Fiambre: Muerte.
-Fiambrería: Cementerio.
+Fiambreria: Cementerio.
 Fica: Crica.
 Fichar: Observar detenidamente.
 Fideos: Cabellos.
@@ -1105,7 +1105,7 @@ Fierrazo: Coito.
 Fierrito: Temor.
 Fierro: Arma blanca.
 Fifar: Fornicar.
-Fifí: Galante
+Fifi: Galante
 Filado: Embrollado.
 Filar: Embaucar / Observar detenidamente.
 Filo: Estafa, fraude. Noviazgo. Novio, festejante
@@ -1139,7 +1139,7 @@ Franelero: El que pasa el tiempo en una casa de tolerancia sin hacer uso de ning
 Frangoyo: Asunto turbio, dudoso.
 Fratachar / fregar: Roce amoroso.
 Fresquete: Frío.
-Frilán: Tonto.
+Frilan: Tonto.
 Frilo: Tonto.
 Frío: Vanidad.
 Fruncido: Engreído.
@@ -1151,10 +1151,10 @@ Fula: Mujer sin atractivos.
 Fulana: Mujer innominada.
 Fule: Ordinario, mala calidad.
 Fulera: Fea
-Fulería: Indigencia, ordinario, mala calidad / Deslealtad, viveza.
-Fulerín: Fulero, malo, feo.
+Fuleria: Indigencia, ordinario, mala calidad / Deslealtad, viveza.
+Fulerin: Fulero, malo, feo.
 Fulminante: Fósforo.
-Fúlmine: Aciago, de mala suerte.
+Fulmine: Aciago, de mala suerte.
 Fulo: Enojado.
 Fumante: Cigarrillo.
 Fumista: Charlatán.
@@ -1171,7 +1171,7 @@ Furca: Acción de distraer a un persona para que la otra la ataque de una manera
 Fusilado: Deprimido.
 Gabion: Pretendiente, amante
 Gacho: Sombrero masculino flexible cuya ala se inclina hacia abajo.
-Gagá: viejo, arruinado, debilitado mentalmente.
+Gaga: viejo, arruinado, debilitado mentalmente.
 Gaita: Gallego
 Galerudo: Refinado.
 Galguear: Sentir apetito de algo
@@ -1191,16 +1191,16 @@ Garbía: Llovizna.
 Garca: Tramposo, estafador
 Garcador / garcaíno: Informal, tramposo.
 Garchar: Fornicar.
-Garfiña: Robo.
-Garfiñar: Robar.
+Garfina: Robo.
+Garfinar: Robar.
 Garfios: los dedos del punguista (ladrón)
 Garpar: pagar dinero o algunas cuentas de amor
 Garqueta: Informal, tramposo.
-Garrón, de: Gratuitamente.
-Garrón: gratuito.
+Garron, de: Gratuitamente.
+Garroon: gratuito.
 Garronear: vivir a costa ajena.
 Garronero: Gorrón
-Garúa: Llovizna.
+Garua: Llovizna.
 Garuar: Lloviznar.
 Garufa: Diversión, fiesta. Muchacho divertido
 Garufear: Divertirse.
@@ -1210,8 +1210,8 @@ Gasolero: Económico, tacaño.
 Gastar: Mofarse.
 Gatiyar: Pagar.
 Gato: Indigente, pobre.
-Gavilán: Picaflor, seductor.
-Gavión: Burlador que seduce a las mujeres
+Gavilan: Picaflor, seductor.
+Gavion: Burlador que seduce a las mujeres
 Gay: Invertido.
 Gayeta, colgar la: Despido.
 Gayeta: Desaire o rechazo de la mujer al que requiere su mano
@@ -1220,32 +1220,32 @@ Gayina: Cobarde.
 Gayinero: Popular.
 Gayola: Cárcel
 Ghirante: Yirante, propio de las mujeres de vida aireada.
-Gigoló: Rufián.
+Gigolo: Rufián.
 Gil: Tonto
 Gilada: Grupo de tontos.
 Gilardo / gilastro / gilastrúm: Tonto.
-Gilería: Grupo de tontos.
-Gilí: Corrido, astuto, experimentado.
+Gileria: Grupo de tontos.
+Gili: Corrido, astuto, experimentado.
 Giliberto: Tonto.
 Gilimursi: Tonto.
-Gilún / gilurdo: Tonto.
+Gilun / gilurdo: Tonto.
 Globear: Mentir.
 Globo: Mentira.
 Golpista: Militar y adepto al golpe militar.
 Goma: Preservativo.
 Gomera: Tirador.
-Gomía: Forma vérsica de amigo.
+Gomia: Forma vérsica de amigo.
 Gorda, se armó la: Enojo.
 Gorila: Fascista.
 Gorra, de: Gratuitamente.
-Gorrión: Gorronero.
+Gorrion: Gorronero.
 Gozar: Mofarse.
 Grajera: Atorrante distinguido, favorecido por los señores y familias.
-Granfiñar: Robar.
+Granfinar: Robar.
 Grasa: Obrero, mersa
-Graserío: Cáfila, grupo mersa.
+Graserio: Cáfila, grupo mersa.
 Grasienta: Billetera.
-Grasún: Ordinario, rústico.
+Grasun: Ordinario, rústico.
 Grata: Ladrón.
 Gratarola: Gratuitamente.
 Grela: mujer de medio ambiente. Mugre. Suciedad.
@@ -1253,13 +1253,13 @@ Grillero: Ladrón que sustrae desde el grillo.
 Grillo: Bolsillo lateral del pantalón.
 Grilo: Cartera
 Groncho: Ordinario, rústico.
-Grúa: Levanta juego clandestino / Ramera
+Grua: Levanta juego clandestino / Ramera
 Grupos: Cuentos, mentiras
 Gruyera: Billetera.
 Gruyos: Pesos, dinero.
 Guacho: Huerfano.
-Guadaña, la: Muerte.
-Guadañar: Atrapar, ganar, asir, agarrar.
+Guadana, la: Muerte.
+Guadanar: Atrapar, ganar, asir, agarrar.
 Guapeada: Guapeza.
 Guapeando: Valientemente.
 Guapear: Afrontar
@@ -1274,13 +1274,13 @@ Guardar: Apresar.
 Guasada: Grosería.
 Guaso: Grosero.
 Guay: Estafa, fraude.
-Güevear: Tontear.
-Güevón: Tonto.
-Güevudo: Indolente.
-Guía: Acomodo tramposo de una carta del mazo como referencia.
+Guevear: Tontear.
+Guevon: Tonto.
+Guevudo: Indolente.
+Guia: Acomodo tramposo de una carta del mazo como referencia.
 Guillar: Cosechar, hacer ganancia
 Guinchero: Levanta juego.
-Guiñe: Infortunio.
+Guine: Infortunio.
 Guiso: Tonto
 Guita: Dinero
 Guitarreada / guitarreo: Charlatanería.
@@ -1291,8 +1291,8 @@ Guiyado: Adinerado.
 Guiyar: Estafar, defraudar.
 Guiye: Fraude / Locura.
 Gurda: Excelencia, gran calidad
-Gurí: Chiquillo.
-Gurrumín: Chiquillo, pequeño.
+Guri: Chiquillo.
+Gurrumin: Chiquillo, pequeño.
 Hacer Sapo: Fracasar
 Hacer: Robar.
 Hamacarse: Trabajar esforzadamente.
@@ -1308,7 +1308,7 @@ Hinchado: Fastidiado.
 Hinchaguindas: Fastidioso.
 Hinchapelotas: Fastidioso.
 Hinchar: Fastidiar.
-Hinchún: Fastidioso.
+Hinchun: Fastidioso.
 Hocicar: Flaquear
 Hocicar: Fracasar / Errar.
 Hojaldra, de: Gratuito.
@@ -1332,14 +1332,14 @@ Inflar: Hastiar, fastidiar.
 Inflarse: Engreírse.
 Invernizzio: Sobretodo
 Isa: Atención.
-Jabón: Miedo, susto
+Jabon: Miedo, susto
 Jabonearse: Asustarse.
 Jacobo: Hebreo, judío
 Jai: Lechuguino, petimetre, abreviatura de jaileife.
 Jailaife: Petimetre
 Jamar: Mirar fijamente.
-Jamón: Violín.
-Jarangón: Fiesta.
+Jamon: Violín.
+Jarangon: Fiesta.
 Jaula: Vivienda de soltero / bandoneón / cárcel.
 Jeringa: Fastidioso, cargoso / Rijoso.
 Jeta, de: Gratuitamente.
@@ -1347,7 +1347,7 @@ Jeta: Cara, rostro.
 Jetatore: Infortunio, influencia maléfica.
 Jeteador: Gorronero.
 Jetear: Gorronear.
-Jetón: Cara grande. Persona de cara grande y rasgos pronunciados.
+Jeton: Cara grande. Persona de cara grande y rasgos pronunciados.
 Jetudo: Cara grande / enojado.
 Jilguero: Tonto.
 Jiquero: Delincuente que opera por medio de jicas, a distancia.
@@ -1356,7 +1356,7 @@ Joda: Broma, mofa / Fiesta.
 Joder: Divertirse. Bromear, mofarse. Perjudicarse
 Joderse: Perjudicarse.
 Jodido: Achacoso, deteriorado / Maligno.
-Jodón: Burlón.
+Jodon: Burlón.
 Jonca: Ataúd
 Jovato: Viejo
 Jugado: Achacoso.
@@ -1387,14 +1387,14 @@ Ladeado: Enojado.
 Ladero: Compañía.
 Ladiya: Fastidioso.
 Ladrillo: Ladrón.
-Laícero / lápiz: Levanta juego (clandestino).
+Laicero / lápiz: Levanta juego (clandestino).
 Lambeculos: Obsecuente.
 Lampar: Dar / pegar.
 Lance: Acción que se ejecuta sin seguridad de éxito
 Lancear: Robar.
 Lancero: Ladrón (opera con dos dedos) / Galanteador.
 Lancero: ladrón, ratero
-Lánguido: Indigente / pobre.
+Languido: Indigente / pobre.
 Lapicero: pasador clandestino de apuestas.
 Largar: Delatar / Despedir, echar.
 Largavistas: Prismáticos.
@@ -1410,8 +1410,8 @@ Lechero / a: Afortunado.
 Lechero: Billetera, cartera.
 Lechusear: Agorar, dar mala suerte.
 Lechuza: Agorero, tipo de mal agüero.
-Leña / leñada: Zurra, paliza.
-Leñar: Zurrar.
+Lena / lenada: Zurra, paliza.
+Lenar: Zurrar.
 Lengo: Pañuelo de uso masculino.
 Lenguaraz: Tipo que practica el cunnilinguo.
 Lengue (italiano): Pañuelo
@@ -1445,7 +1445,7 @@ Llantas: Zapatos.
 Llenar: Fastidiar.
 Llenarse: Malhumorarse.
 Lleno: Malhumorado.
-Llorón: Violín.
+Lloron: Violín.
 Locatelli: Loco.
 Lofiar: Estafar.
 Logi: Gil
@@ -1459,12 +1459,12 @@ Loro: Mujer sin atractivos.
 Luca: Billete de mil pesos
 Lufanía: La musa lunfa.
 Lunfa: Lunfardo.
-Lunfamanía: Costumbre de hablar en lunfa.
-Lunfapoesía: Poética lunfa.
+Lunfamania: Costumbre de hablar en lunfa.
+Lunfapoesia: Poética lunfa.
 Lunfardesco: Relacionado con el lunfa.
-Lunfardía: Mundo del lunfa.
+Lunfardia: Mundo del lunfa.
 Lunfardo: Ladrón, maleante.
-Lunfardología: Inventario del lunfa.
+Lunfardologia: Inventario del lunfa.
 Lunfaverseante: Poeta lunfa.
 Lunfo/ a: Alto.
 Lurpiar: Defraudar, estafar.
@@ -1475,7 +1475,7 @@ Macanudo: Excelente.
 Maceta: Torpe
 Macharse: Embriagarse.
 Machete: ayuda memoria.
-Macró: Alcahuete que prostituye mujeres
+Macro: Alcahuete que prostituye mujeres
 Madama: Regente de prostíbulo.
 Madrugado: Anticipado.
 Magallanes: Tonto
@@ -1497,16 +1497,16 @@ Mamao: Borracho
 Mamarse: Embriagarse.
 Mamchimbre / macho: Concubino.
 Mamerto: Torpe.
-Mamón: Ebrio.
-Mamúa: Ebriedad.
+Mamon: Ebrio.
+Mamua: Ebriedad.
 Mancada: Yerro.
 Mancado: Conocido.
 Mancar: Entender, comprender.
 Mancar: Fracasar en un robo al ser descubierto el ladrón
-Mancarrón: Achacoso, viejo.
+Mancarron: Achacoso, viejo.
 Mancusado: Conocido.
 Mancusar: Conocer.
-Mandamás: Autoridad, patrón, jefe.
+Mandamas: Autoridad, patrón, jefe.
 Manduque: Comida.
 Manflora / o: Invertido.
 Manflorita: Invertido.
@@ -1524,25 +1524,25 @@ Manguero: Sablista.
 Manguiyos: Dinero.
 Manija: Influencia, poder.
 Manijear: Impulsar, influenciar.
-Manú: Tonto.
-Manyacaña: Borracho.
+Manu: Tonto.
+Manyacana: Borracho.
 Manyado: Conocido.
 Manyamiento: Reconocimiento policial.
 Manyaoreja: Obsecuente.
 Manyapapeles: Abogado.
 Manyar: Comer. Darse cuenta
-Manyín: Ebrio, consuetudinario.
+Manyin: Ebrio, consuetudinario.
 Máquina: Beldad.
 Maranfio: Asunto, hecho dudoso.
-Marcha atrás: Invertido, gay.
+Marcha atras: Invertido, gay.
 Marchanta: Arrebatiña
 Marciano: Idiota.
 Marengos: Dinero, pesos.
-María muñeca: Masturbación.
+María muneca: Masturbación.
 Mariano: Valiente.
 Marimba: Zurra, paliza.
 Marinante / maringote: Marinero.
-Mariposón: Afeminado / Galanteador, enamoradizo, voluble.
+Mariposon: Afeminado / Galanteador, enamoradizo, voluble.
 Marmote: Torpe
 Maroma: Situación de riesgo, suscitarse
 Marote: Cabeza.
@@ -1578,23 +1578,23 @@ Mayorengo: Oficial mayor (policía), comisario.
 Mechera: Ladrona en tiendas.
 Mejicaneada: robo o atraco a contrabandistas u otros delincuentes apropiándose de su motín.
 Melenudo: Pelilargo, desgreñado.
-Melón: Cabeza.
+Melon: Cabeza.
 Melonazo: Tonto.
 Menega: Dinero
 Meneguina: Dinero.
 Menesunda: Droga / Desorden, lío.
 Menta: Fama, voz u opinión acerca de un persona.
-Meódromo: Retrete.
+Meodromo: Retrete.
 Merengue: Afeminado / Desorden, lío.
 Meresunda: Droga.
-Merlín / merlo / merluza: Tonto.
+Merlin / merlo / merluza: Tonto.
 Merluza: Borrachera
 Mersa: Conjunto de personas de baja condición
 Mersada: Cáfila, grupo mersa.
-Mersún: Ordinario, rústico.
+Mersun: Ordinario, rústico.
 Merza: Peña
 Mestizo: Piano
-Metejón: Cariño, pasión, amor
+Metejon: Cariño, pasión, amor
 Metejonearse / meterse: Enamoramiento.
 Meterse: Encariñarse
 Metido /a: Enamorado apasionadamente.
@@ -1603,20 +1603,20 @@ Milanesa: Mentira.
 Milanesero: Mentiroso.
 Millonaria: Sífilis.
 Milonga: Cabaret, baile, festín
-Milongón: Fiesta bailable.
+Milongon: Fiesta bailable.
 Milonguera: Joven cabaretera
 Milonguita: Mujer de vida aireada
 Mina: Mujer
 Minaje: Grupo de mujeres.
-Miñango: Trozo.
-Minerío: Grupo de mujeres.
+Minango: Trozo.
+Minerio: Grupo de mujeres.
 Minerva: Mujer.
 Minga: Nada, no.
 Mino: Invertido.
 Minola / minón / minusa: Mujer.
 Miqueta: Puñetazo.
 Mirantes / mirones: Ojos.
-Mirón: Ojos.
+Miron: Ojos.
 Mishe: Hombre maduro que paga generosamente favores de mujeres
 Mishiadura: Indigencia, miseria, pobreza
 Mishio: Indigente.
@@ -1635,7 +1635,7 @@ Molde, en el: Quieto.
 Mondonguera: Estómago.
 Mongo Aurelio: Incredulidad. Personajes inexistentes utilizados en el lenguaje popular.
 Mono: Enseres del linyera en un atado.
-Monseñor: Herramienta para violar cerraduras.
+Monsenor: Herramienta para violar cerraduras.
 Montonera: Mucho, en cantidad.
 Montoto: Personaje inexistente utilizado en el lenguaje popular.
 Mopio: Tonto.
@@ -1658,7 +1658,7 @@ Mosaico: Moza, mujer.
 Mosca, quedarse: Impasible, quieto.
 Mosca: Dinero.
 Moscarda: Dinero.
-Moscón: Fastidioso.
+Moscon: Fastidioso.
 Mosqueta: Dinero.
 Mostaza: Enojo.
 Mostrador: Senos / Experiencia.
@@ -1676,7 +1676,7 @@ Muñequear: Influenciar.
 Murga: Comparsa que actúa en los carnavales con diversos instrumentos y vistosos trajes.
 Mus: Silencio.
 Musa: Mentira.
-Música: Cartera, billetera / Dinero.
+Musica: Cartera, billetera / Dinero.
 Musicante: Músicos.
 Musiqueros: Músicos.
 Muzarela: Silencio.
@@ -1688,24 +1688,24 @@ Naife: Arma blanca.
 Najar: Irse / echar / despedir.
 Najusar: Echar / despedir / irse / observar.
 Napia: Nariz.
-Napiún: Narigón.
+Napiun: Narigón.
 Naranja: Nada.
 Narigada / narigazo: Porción de droga.
 Narigueta: Narigón.
 Nariguetearse: Drogarse.
 Naso: Nariz.
-Nasún: Narigón.
+Nasun: Narigón.
 Navo: Persona de poco valor.
 Negraje: Cáfila, mersa.
 Neura: Neurastenia.
-Nísperos: Pies
+Nisperos: Pies
 Nuria: Voz infrecuente de significado incierto
-Ñaupa: Antiguo,del tiempo del ñaupa.
-Ñapar: Atrapar, agarrar.
-Ñata, la: Muerte.
-Ñata: Nariz.
-Ñato: Tipo innominado.
-Ñudo, al: Inútilmente.
+Naupa: Antiguo,del tiempo del ñaupa.
+Napar: Atrapar, agarrar.
+Nata, la: Muerte.
+Nnata: Nariz.
+Nato: Tipo innominado.
+Nudo, al: Inútilmente.
 Oblar: Pegar.
 Ojete: Suerte.
 Ojetudo: Afortunado.
@@ -1741,7 +1741,7 @@ Pamela: Bombín, sombrero hongo.
 Pan Dulce: Pavo.
 Papa: Información beneficiosa; cosa hermosa, de gran calidad
 Papusa: Muy bonita
-Paralítico: Automóvil robado, impedido de circular.
+Paralitico: Automóvil robado, impedido de circular.
 Pato: Pobre
 Patota: peña, pandilla
 Pavadas: tonterías
@@ -1790,17 +1790,17 @@ Ponchazo: Verdad, reto
 Popa: Asentadores.
 Posta: Magnifica
 Primus: Calentador de mesa a Kerosén.
-Prisé: Pulgarada de cocaína.
+Prise: Pulgarada de cocaína.
 Prontuario: Record, historia, archivo
-Púa: Astuto, sagaz, piola.
+Pua: Astuto, sagaz, piola.
 Pucho: Colilla
 Punga: Ladrón
 Pungia: Hurto, perpetrado en el bolsillo de la victima
 Pur- sang: Francés, designación de caballo pura sangre.
 Purretada: Chiquillada
 Purrete: Niño.
-Purria minga: Expresión que significa no se podrá.
-Purriá: Podrá
+Purria minga: Expresión que significa no se podrá.
+Purria: Podrá
 Quebracho: Vino.
 Queco: Prostíbulo.
 Quemado: Desprestigiado.
@@ -1809,7 +1809,7 @@ Quemera: Mujer que trabaja en los vaciadores o quemas
 Quemo: Desprestigio, descrédito (neologismo)
 Queseras: Medias.
 Queso: Tonto.
-Quía: Tipo innominado.
+Quia: Tipo innominado.
 Quilombear /quilombificar: Alborotar.
 Quilombera: Alborotador.
 Quilombo, tener: Experiencia.
@@ -1822,7 +1822,7 @@ Rabona: Ratearse, espantarse.
 Radicha / radicheta: Radical.
 Rafa: Inverción silábica de farra
 Rafiñar: Robar.
-Ragú: Hambre.
+Ragu: Hambre.
 Raja: Escapar, huir. Correr.
 Rajado: Despedido / Echado.
 Rajar: Despedir / Echar
@@ -1835,20 +1835,20 @@ Ranada: Viveza.
 Ranchitos: Casitas
 Rancho: Sombrero de paja
 Ranero: Del barrio de Las ranas
-Ranfaña: Raído, sucio.
-Ranfañosa: Raído, sucio.
-Ranfiña: Robo / Ladrón.
-Ranfiñar: Robar.
+Ranfana: Raído, sucio.
+Ranfanosa: Raído, sucio.
+Ranfina: Robo / Ladrón.
+Ranfinar: Robar.
 Rante: Aferesis de atorrante, vago y mal entretenido
-Rantería: Indigencia.
-Ranterío: Cáfila, grupo mersa.
+Ranteria: Indigencia.
+Ranterio: Cáfila, grupo mersa.
 Rantifusa: Despreciable, vil
 Rantifuso: Sucio, despabilado.
 Ranun: Aumento de rana, que se dice de la persona astuta y avispada
 Rasca / rascabuche: Indigente.
 Rascada: Beneficio exiguo, trabajo ocasional.
 Rascar: Atrapar.
-Rascún: Buscavidas.
+Rascun: Buscavidas.
 Raspa: Reprimenda / Ladrón.
 Raspar: Reprender / Robar.
 Rasposo: Raído, sucio.
@@ -1863,7 +1863,7 @@ Rayadura: Locura.
 Raye: Locura.
 Rea: Ramera.
 Rebaje de naipe: Trampa que consiste en preparar ciertos naipes con un mínimo rebaje de sus bordes.
-Reblán: Achacoso, deteriorado.
+Reblan: Achacoso, deteriorado.
 Rebusques: Medios de vida
 Rechalarse: Es el verbo chalarse enloquecerse con el prefijo re
 Rechiflar: Enloquecer, predisponer, perturbar
@@ -1902,7 +1902,7 @@ Repuntar: Progresar.
 Requintado: Sombrero inclinado o ladeado.
 Reseco: Sin dinero
 Retacear: Mezquinar.
-Retacón: De baja estatura y grueso.
+Retacon: De baja estatura y grueso.
 Retambufa: Bujarrón, homosexual activo.
 Retobar: Oponer
 Retobarse: Revelarse.
