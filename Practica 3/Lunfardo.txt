@@ -225,7 +225,7 @@ Bandearse: Fracasar.
 Bandera / banderola: Aspaviento.
 Banderudo: Ostentoso.
 Bandola: Bandoneón.
-Baño: Retrete.
+Bano: Retrete.
 Baranda: Olor desagradable
 Baratieri: Ocasión.
 Barato, es un: Ordinario.
@@ -261,7 +261,7 @@ Beguen: Capricho amoroso con deseo vehemente; cariño
 Bejarano: Viejo.
 Beligerancia: Dar, atender.
 Belin: Nada.
-Belinún: Tonto.
+Belinun: Tonto.
 Berreta: Ordinario. Cualquier objeto falsificado.
 Berretin: Capricho, ilusión
 Bestia: Mujer (arcaísmo)
@@ -336,7 +336,7 @@ Boncha: Chabón, tonto
 Bondi: Ómnibus
 Borbona: Guitarra.
 Border: Se dice del paciente fronterizo entre neurosis y psicosis.
-Borrachería: Bar, despacho de bebidas alcohólicas.
+Borracheria: Bar, despacho de bebidas alcohólicas.
 Borrado: Retirado. Muerto.
 Borrarse: Irse.
 Borregada: Muchachada.
@@ -344,7 +344,7 @@ Borrego: Muchacho.
 Botas, ponerse las: Progresar.
 Botijas: Niño.
 Botón, al divino: Inútilmente.
-Botón: Agente policial, guardia
+Boton: Agente policial, guardia
 Botonazo: Alcahuete.
 Botoneo: Delación.
 Boyo: Puñetazo.
@@ -671,7 +671,7 @@ Clines: Cabellos largos y desprolijos.
 Clinudo: Pelilargo, desprolijo.
 Cobrar: Recibir castigo.
 Coca: Cocaína.
-Cocacolonización: Coloniaje.
+Cocacolonizacion: Coloniaje.
 Cocear: Presentir.
 Coceo: Cábala.
 Cocina: Estómago.
@@ -771,7 +771,7 @@ Cupula: Cabeza.
 Curado: Ebrio
 Curda (Español): Borrachera
 Curdela: Borracho / Borrachera.
-Curdelín / curdelún: Borracho.
+Curdelin / curdelún: Borracho.
 Currar: Estafar
 Curro: Estafa, fraude.
 Cusifai: Tipo innominado
@@ -1046,7 +1046,7 @@ Fajado: Drogado
 Fajar: Castigar
 Fajarse: Drogarse.
 Falocracia: Supremacía del hombre.
-Falócrata: Partidario de la falocracia.
+Falocrata: Partidario de la falocracia.
 Falopa: Droga / cosa de poca calidad
 Falopero: Drogadicto.
 Falopiarse: Drogarse.
@@ -1054,10 +1054,10 @@ Faltazo: Informalidad, falta a una cita o compromiso.
 Fame: Hambre, apetito.
 Fana: Fanático.
 Fanar: Robar.
-Fane (Francés): Marchita
+Fane (Frances): Marchita
 Fane: Desgastado, venido a menos
 Fanega: Tonto.
-Fanfa: Ostentoso (Fanfarrón).
+Fanfa: Ostentoso (Fanfarron).
 Fangos / fangushes: Zapatos.
 Fangote: Mucho, en cantidad.
 Fanguyos: Zapatos.
@@ -1141,7 +1141,7 @@ Fratachar / fregar: Roce amoroso.
 Fresquete: Frío.
 Frilan: Tonto.
 Frilo: Tonto.
-Frío: Vanidad.
+Frio: Vanidad.
 Fruncido: Engreído.
 Fruncirse: Engreírse, asustarse
 Fuelle: bandoneón
@@ -1189,7 +1189,7 @@ Garaba, Garabita: Muchacha
 Garabito: Vago. Muchachito
 Garbía: Llovizna.
 Garca: Tramposo, estafador
-Garcador / garcaíno: Informal, tramposo.
+Garcador / garcaino: Informal, tramposo.
 Garchar: Fornicar.
 Garfina: Robo.
 Garfinar: Robar.
@@ -1223,7 +1223,7 @@ Ghirante: Yirante, propio de las mujeres de vida aireada.
 Gigolo: Rufián.
 Gil: Tonto
 Gilada: Grupo de tontos.
-Gilardo / gilastro / gilastrúm: Tonto.
+Gilardo / gilastro / gilastrum: Tonto.
 Gileria: Grupo de tontos.
 Gili: Corrido, astuto, experimentado.
 Giliberto: Tonto.
@@ -1264,7 +1264,7 @@ Guapeada: Guapeza.
 Guapeando: Valientemente.
 Guapear: Afrontar
 Guapo (Español): Valiente
-Guarangada / guaranguería: Grosería.
+Guarangada / guarangueria: Grosería.
 Guarango: Grosero, ordinario.
 Guarda, a la: Mucho, en cantidad.
 Guarda: Atención!
@@ -1318,7 +1318,7 @@ Horizontal: Cama.
 Hornaya: Nariz.
 Huesuda: Muerte.
 Huevos: Testículos.
-Húmedo: Ebrio.
+Humedo: Ebrio.
 Humo, se hizo: Escape, huída.
 Humo: Engreimiento.
 I.B.M.: Cabeza.
@@ -1402,7 +1402,7 @@ Largo: Alto.
 Lastrar: Comer.
 Lastre: Comida.
 Lata: Ficha metálica por la que la pupila canjeaba a la madame el dinero recibido por el cliente.
-Latería: Relojería, joyería.
+Lateria: Relojería, joyería.
 Lavandero: Abogado.
 Leche: Suerte.
 Lechera: En el juego de las bolitas, la predilecta del jugador, por lo común es blanca.
@@ -1457,7 +1457,7 @@ Lora: Mujer de costumbres livianas.
 Lorenzo: Mujer sin atractivos.
 Loro: Mujer sin atractivos.
 Luca: Billete de mil pesos
-Lufanía: La musa lunfa.
+Lufania: La musa lunfa.
 Lunfa: Lunfardo.
 Lunfamania: Costumbre de hablar en lunfa.
 Lunfapoesia: Poética lunfa.
@@ -1532,13 +1532,13 @@ Manyaoreja: Obsecuente.
 Manyapapeles: Abogado.
 Manyar: Comer. Darse cuenta
 Manyin: Ebrio, consuetudinario.
-Máquina: Beldad.
+Maquina: Beldad.
 Maranfio: Asunto, hecho dudoso.
 Marcha atras: Invertido, gay.
 Marchanta: Arrebatiña
 Marciano: Idiota.
 Marengos: Dinero, pesos.
-María muneca: Masturbación.
+Maria muneca: Masturbación.
 Mariano: Valiente.
 Marimba: Zurra, paliza.
 Marinante / maringote: Marinero.
@@ -1865,7 +1865,7 @@ Rea: Ramera.
 Rebaje de naipe: Trampa que consiste en preparar ciertos naipes con un mínimo rebaje de sus bordes.
 Reblan: Achacoso, deteriorado.
 Rebusques: Medios de vida
-Rechalarse: Es el verbo chalarse enloquecerse con el prefijo re
+Rechalarse: Es el verbo chalarse enloquecerse con el prefijo re
 Rechiflar: Enloquecer, predisponer, perturbar
 Rechiflarse: Enojarse.
 Rechifle: Enojo / Locura.
@@ -2186,7 +2186,7 @@ Vivo: Despabilado, astuto.
 Viyuya: Dinero.
 Viyuyera: Billetera, cartera.
 Voracero: Valentón.
-Votacén: Centavo.
+Votacen: Centavo.
 Vovi / vovina: Despabilado, astuto.
 Vuelo: Experiencia.
 Yanta, en: Indigente.
