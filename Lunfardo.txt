@@ -651,11 +651,11 @@ Churrasca: Beldad.
 Churros: Beldad.
 Chusmaje: Cáfila.
 Chusmear: Chismear.
-Chusmón: Murmurador
+Chusmon: Murmurador
 Chuza: Látigo sin lonja
 Ciego: Carente de dinero es término de juego del truco
-Cien, número: Retrete.
-Cimarrón: nombre con que se designa al mate amargo.
+Cien, numero: Retrete.
+Cimarron: nombre con que se designa al mate amargo.
 Cinchar: dar fuerza, vigor. Trabajo duro.
 Cinchar: Trabajar, esforzar.
 Circulado: Baquiano, experto.
@@ -679,9 +679,9 @@ Cocinado: Muerto, asesinado.
 Cocinar: Matar.
 Cocinero: Cinco pesos.
 Coco: Cabeza.
-Cocó: Cocaína.
+Cocoo: Cocaína.
 Cocota: Ramera.
-Codeguín: Tonto.
+Codeguin: Tonto.
 Cogote: Gratuitamente.
 Cogotudo: Adinerado, oligarca.
 Coima: Soborno.
@@ -695,25 +695,25 @@ Colgado: Despedido, cesanteado.
 Colibriyo: loco, insensato, perturbado mental.
 Cometa: Soborno.
 Cometar: Boca.
-Comilón / comipini: Sodomita.
-Comisión: Soborno.
+Comilon / comipini: Sodomita.
+Comision: Soborno.
 Compadrada: Bravuconada, acción propia de un compadre o compadrito.
 Compadraje: Grupo de compadres
 Compadre (adj.): Bonito, coqueto
 Compadrear: Baladronear, alardear.
 Compadrito: Valentón, fanfarrón.
-Compadrón: Fatuo, presumido
+Compadron: Fatuo, presumido
 Computadora: Cabeza.
 Comunacho /comunardo: Comunista.
 Concurdaneo: Colega del ebrio.
-Condón: Preservativo.
+Condon: Preservativo.
 Coneja, correr la: Indigencia.
 Conejo: Asistente social de la cárcel.
 Confite: Balazo.
 Conga: Fiesta.
 Conserva: Conservador.
-Consulín /consultorro: Consultorio.
-Consumisión: Consumo.
+Consulin /consultorro: Consultorio.
+Consumision: Consumo.
 Contreras: Opositor.
 Conventillo: Casa de inquilinos. Casa de vecindad de aspecto pobre y de muchas habitaciones
 Conversa, la: Conversación.
@@ -729,7 +729,7 @@ Cornelio: Cornudo.
 Corneta: Alcahuete.
 Corno, un: Nada, no importar / Ignorar adrede.
 Coroniya: Cabeza.
-Corpíño: Sostén.
+Corpino: Sostén.
 Corrido: Baquiano.
 Corso: Locura.
 Cortada: Calle
@@ -739,15 +739,15 @@ Corte, darse: Aspaviento.
 Cortina /corto: De baja estatura.
 Coso: Tipo, individuo
 Costiya: Mujer.
-Coté / cotele / cotén: Costado, lado.
-Cotín, el: Cama.
+Cote / cotele / coten: Costado, lado.
+Cotin, el: Cama.
 Cotizarse: Pago o prorrateo.
 Cotorrear: Chismear.
 Cotorro: Cuarto pobre
-Cráneo: Cabeza / Inteligencia.
+Craneo: Cabeza / Inteligencia.
 Crema: Refinados, poderosos.
 Crepar: Morir
-Crepó: Murió.
+Crepo: Murió.
 Croqueta: Cabeza.
 Crosta: Chambón / Vago.
 Croto: Vago.
@@ -765,9 +765,9 @@ Cufa: Cárcel.
 Culastro: Sodomita.
 Culata: Bolsillo trasero del pantalón.
 Culo: Suerte / Infortunio.
-Cuña: Influencia / Pene
+Cunna: Influencia / Pene
 Cuore: Corazón
-Cúpula: Cabeza.
+Cupula: Cabeza.
 Curado: Ebrio
 Curda (Español): Borrachera
 Curdela: Borracho / Borrachera.
@@ -779,7 +779,7 @@ Dandy: Correctos y buenos mozos
 Dante: Bujarrón, pederasta activo.
 Dar dique: Engañar con falsas apariencias.
 Darique: Invercion silabica de querida
-Dátiles: Dedos de las manos o pies.
+Datiles: Dedos de las manos o pies.
 Debute: Excelente.
 Deca: Decadencia.
 Dechavar: Delatar.
@@ -821,7 +821,7 @@ Despiolado: Desordenado.
 Despiole /despiporre: Desorden, lío.
 Desprendido: Despreocupado, indiferente.
 Desquicio: Desorden, lío.
-Desteñir: Traicionar informalmente.
+Destenir: Traicionar informalmente.
 Dichero: Cobista
 Dientudo: Piano
 Dilatar: Confusión, desorden.
@@ -838,7 +838,7 @@ Dragonear: Enamorar, cortejar.
 Dragoneo: Galanteo.
 Drogui: Bebida alcohólica.
 Droguista: Borracho.
-Durañona: Chambóm.
+Duranona: Chambóm.
 Durazno: Chambón.
 Duro: Chambón.
 Elemento: Mujer.
@@ -976,8 +976,8 @@ Escolaseador: Jugador por dinero, timbero.
 Escolasiarse: jugarse, entregarse
 Escombrero: Ostentoso.
 Escombro: Ostentación.
-Escoñado: Achacoso, deteriorado. Zurrado.
-Escoñar: Zurrar.
+Esconado: Achacoso, deteriorado. Zurrado.
+Esconar: Zurrar.
 Escorchador: Latoso, pesado.
 Escorchar: Fastidiar, molestar.
 Escrachado: Zurrado.
@@ -996,7 +996,7 @@ Esgunfiar: Fastidiar.
 Espamento: Aspaviento.
 Espamentoso: Ostentoso
 Esparo: Colaborador del punguista distrayendo la vista
-Espárragos: Dedos.
+Esparragos: Dedos.
 Espiantar: Quitar
 Espiantarse: Irse, huir.
 Espiante: Escape, huida, partida, retirada
@@ -1009,14 +1009,14 @@ Espirarse: Irse, alejarse.
 Espiro: Escape, huida.
 Espor: Ganancia, sport, dividendo turfístico.
 Esputza: Tufo, hedor.
-Esquenún: Vago.
+Esquenun: Vago.
 Esquifuso: Raído, sucio.
 Esquillo: Rabieta.
 Esquina: Experiencia.
 Esquinazo: Abandono
 Esquiyo: Berrinche, enojo
 Estancia: Cortujo
-Estaño: Mostrador de boliches y bares
+Estano: Mostrador de boliches y bares
 Estarado: Apresado.
 Estaribel: Cárcel.
 Estaro: Cárcel.
@@ -1033,14 +1033,14 @@ Estrolar: Zurrar.
 Estrole: Zurra, paliza.
 Estufado: Fastidiado.
 Estufar: Fastidiar.
-Excómunica: infortunio reiterado.
+Excomunica: infortunio reiterado.
 Faca: Arma blanca.
 Facha: Rostro, cara.
 Fachada: Cara.
 Fachatosta: Desfachatado.
 Facheta / fachenda: Cara.
 Fachinero: Valiente, resoluto.
-Facón (Español): Cuchillo
+Facon (Español): Cuchillo
 Fajada: Paliza.
 Fajado: Drogado
 Fajar: Castigar
@@ -1070,9 +1070,9 @@ Farrear: Divertirse / Mofarse.
 Farrista: Juerguista.
 Faseando: Fumando.
 Fasear: Fumar.
-Fasería: Cigarrería.
+Faseria: Cigarrería.
 Faso: Cigarrillos
-Fastrás: Puñetazo.
+Fastras: Puñetazo.
 Fasules: Dinero (Pesos).
 Fatigante: Trabajador.
 Fatigar: Trabajar esforzadamente. Andar, caminar.
@@ -1089,15 +1089,15 @@ Felpa: Zurra.
 Felpeada: Zurra, reprimenda.
 Felpear: Zurrar / Reprender.
 Felpudo: Obsecuente.
-Fémina: Mujer.
-Fenómeno: Obsecuente.
+Femina: Mujer.
+Fenomeno: Obsecuente.
 Fesa: Tonto.
 Festichola: Fiesta.
-Fetén: Excelente.
+Feten: Excelente.
 Fiaca: Pereza, holganza.
-Fiacún: Haragán, Indolente.
+Fiacun: Haragán, Indolente.
 Fiambre: Muerte.
-Fiambrería: Cementerio.
+Fiambreria: Cementerio.
 Fica: Crica.
 Fichar: Observar detenidamente.
 Fideos: Cabellos.
@@ -1105,7 +1105,7 @@ Fierrazo: Coito.
 Fierrito: Temor.
 Fierro: Arma blanca.
 Fifar: Fornicar.
-Fifí: Galante
+Fifi: Galante
 Filado: Embrollado.
 Filar: Embaucar / Observar detenidamente.
 Filo: Estafa, fraude. Noviazgo. Novio, festejante
@@ -1139,7 +1139,7 @@ Franelero: El que pasa el tiempo en una casa de tolerancia sin hacer uso de ning
 Frangoyo: Asunto turbio, dudoso.
 Fratachar / fregar: Roce amoroso.
 Fresquete: Frío.
-Frilán: Tonto.
+Frilan: Tonto.
 Frilo: Tonto.
 Frío: Vanidad.
 Fruncido: Engreído.
@@ -1151,10 +1151,10 @@ Fula: Mujer sin atractivos.
 Fulana: Mujer innominada.
 Fule: Ordinario, mala calidad.
 Fulera: Fea
-Fulería: Indigencia, ordinario, mala calidad / Deslealtad, viveza.
-Fulerín: Fulero, malo, feo.
+Fuleria: Indigencia, ordinario, mala calidad / Deslealtad, viveza.
+Fulerin: Fulero, malo, feo.
 Fulminante: Fósforo.
-Fúlmine: Aciago, de mala suerte.
+Fulmine: Aciago, de mala suerte.
 Fulo: Enojado.
 Fumante: Cigarrillo.
 Fumista: Charlatán.
@@ -1171,7 +1171,7 @@ Furca: Acción de distraer a un persona para que la otra la ataque de una manera
 Fusilado: Deprimido.
 Gabion: Pretendiente, amante
 Gacho: Sombrero masculino flexible cuya ala se inclina hacia abajo.
-Gagá: viejo, arruinado, debilitado mentalmente.
+Gaga: viejo, arruinado, debilitado mentalmente.
 Gaita: Gallego
 Galerudo: Refinado.
 Galguear: Sentir apetito de algo
@@ -1191,16 +1191,16 @@ Garbía: Llovizna.
 Garca: Tramposo, estafador
 Garcador / garcaíno: Informal, tramposo.
 Garchar: Fornicar.
-Garfiña: Robo.
-Garfiñar: Robar.
+Garfina: Robo.
+Garfinar: Robar.
 Garfios: los dedos del punguista (ladrón)
 Garpar: pagar dinero o algunas cuentas de amor
 Garqueta: Informal, tramposo.
-Garrón, de: Gratuitamente.
-Garrón: gratuito.
+Garron, de: Gratuitamente.
+Garroon: gratuito.
 Garronear: vivir a costa ajena.
 Garronero: Gorrón
-Garúa: Llovizna.
+Garua: Llovizna.
 Garuar: Lloviznar.
 Garufa: Diversión, fiesta. Muchacho divertido
 Garufear: Divertirse.
@@ -1210,8 +1210,8 @@ Gasolero: Económico, tacaño.
 Gastar: Mofarse.
 Gatiyar: Pagar.
 Gato: Indigente, pobre.
-Gavilán: Picaflor, seductor.
-Gavión: Burlador que seduce a las mujeres
+Gavilan: Picaflor, seductor.
+Gavion: Burlador que seduce a las mujeres
 Gay: Invertido.
 Gayeta, colgar la: Despido.
 Gayeta: Desaire o rechazo de la mujer al que requiere su mano
@@ -1220,32 +1220,32 @@ Gayina: Cobarde.
 Gayinero: Popular.
 Gayola: Cárcel
 Ghirante: Yirante, propio de las mujeres de vida aireada.
-Gigoló: Rufián.
+Gigolo: Rufián.
 Gil: Tonto
 Gilada: Grupo de tontos.
 Gilardo / gilastro / gilastrúm: Tonto.
-Gilería: Grupo de tontos.
-Gilí: Corrido, astuto, experimentado.
+Gileria: Grupo de tontos.
+Gili: Corrido, astuto, experimentado.
 Giliberto: Tonto.
 Gilimursi: Tonto.
-Gilún / gilurdo: Tonto.
+Gilun / gilurdo: Tonto.
 Globear: Mentir.
 Globo: Mentira.
 Golpista: Militar y adepto al golpe militar.
 Goma: Preservativo.
 Gomera: Tirador.
-Gomía: Forma vérsica de amigo.
+Gomia: Forma vérsica de amigo.
 Gorda, se armó la: Enojo.
 Gorila: Fascista.
 Gorra, de: Gratuitamente.
-Gorrión: Gorronero.
+Gorrion: Gorronero.
 Gozar: Mofarse.
 Grajera: Atorrante distinguido, favorecido por los señores y familias.
-Granfiñar: Robar.
+Granfinar: Robar.
 Grasa: Obrero, mersa
-Graserío: Cáfila, grupo mersa.
+Graserio: Cáfila, grupo mersa.
 Grasienta: Billetera.
-Grasún: Ordinario, rústico.
+Grasun: Ordinario, rústico.
 Grata: Ladrón.
 Gratarola: Gratuitamente.
 Grela: mujer de medio ambiente. Mugre. Suciedad.
@@ -1253,13 +1253,13 @@ Grillero: Ladrón que sustrae desde el grillo.
 Grillo: Bolsillo lateral del pantalón.
 Grilo: Cartera
 Groncho: Ordinario, rústico.
-Grúa: Levanta juego clandestino / Ramera
+Grua: Levanta juego clandestino / Ramera
 Grupos: Cuentos, mentiras
 Gruyera: Billetera.
 Gruyos: Pesos, dinero.
 Guacho: Huerfano.
-Guadaña, la: Muerte.
-Guadañar: Atrapar, ganar, asir, agarrar.
+Guadana, la: Muerte.
+Guadanar: Atrapar, ganar, asir, agarrar.
 Guapeada: Guapeza.
 Guapeando: Valientemente.
 Guapear: Afrontar
