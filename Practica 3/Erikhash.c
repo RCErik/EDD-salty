@@ -14,10 +14,58 @@ using namespace std;
 Estadisticas de la tabla hash, orden maximo de busqueda, tamaño de la tabla, numero de celdas vacias, numero de pasos
 al consultar una palabra, modificarla o eliminarla, el numero de colisiones y el resultado de la funcion hash para cada palabra.
 */
-int
+void
 Estadisticas (lista palabras[83])
 {
-  return 0;
+  int mayor = 0;
+  int lugar_mayor=0;
+  int menor = 0;
+  int lugar_menor=0;
+  int cont = 0;
+  int celdas_vacias[83];
+  int vacias = 0;
+  mayor = Size(&palabras[0]);
+  for(cont = 0; cont<83; cont++)	//Inicializa el arreglos de celdas vacias.
+	  celdas_vacias[cont]=-1;
+  for(cont = 1; cont<83; cont++)	//Ciclo que obtiene a la lista con mas colisiones
+  {
+	  if(mayor<Size(&palabra[cont]))
+	  {
+		  mayor=Size(&palabra[cont]);
+		  lugar_mayor=cont;
+	  }
+  }
+  menor = Size(&palabras[0]);
+  for(cont = 1; cont<83; cont++)	//Ciclo que obtiene a la lista con menos colisiones
+  {
+	  if(menor>Size(&palabra[cont]))
+	  {
+		  menor=Size(&palabra[cont]);
+		  lugar_menor=cont;
+	  }
+  }
+  for(cont = 0; cont<83; cont++)	//Ciclo que obtiene las listas vacias
+  {
+	  if(Size(&palabra[cont]) == 0)
+		  celdas_vacias[cont]=1;
+  }
+	printf("La lista con mas colisiones es %d con %d\n", lugar_mayor, mayor);
+	printf("La lista con menos colisiones es %d con %d\n", lugar_menor, menor);
+	printf("El tamaño de la tabla es de 83 claves.\n");
+	printf("Las listas vacias son:\n");
+	for(cont=0;cont<83;cont++)
+	{
+		if(celdas_vacias[cont]!=-1)	//Si es diferente de -1 imprime la celda vacia.
+		{
+			printf("%d ", cont);
+			vacias++;
+		}
+	}
+	if(vacias==0)
+		printf("Ninguna, todas tienen por lo menos un elemento.\n");
+	else
+		printf("\n");	//Salto de linea para las celdas vacias
+  return;
 }
 
 elemento
@@ -86,6 +134,7 @@ main (void)
       printf ("4.- Modificar una definicion\n");
       printf ("5.- Eliminar una palabra\n");
       printf ("6.- Salir\n\n");
+      Estadisticas(palabras);
       scanf ("%d", &opcion);
       switch (opcion)
 	{
@@ -137,6 +186,7 @@ main (void)
 	  Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
 	  printf ("La palabra fue insertada. \n");
 
+
 	  break;
 
 	case 3:
@@ -155,6 +205,8 @@ main (void)
 		{
 		  printf ("\nLa definicion de %s es: %s\n\n", aux2.p, aux2.d);
 		  pasos = cont;	//Numero de pasos que se hizo para encontrar la palabra.
+		  printf("El numero de pasos necesarios para encontrar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
 		}
 	    }
@@ -189,6 +241,8 @@ main (void)
 		    ("\nAhora el nuevo significado de la palabra %s es: %s\n",
 		     aux2.p, aux2.d);
 		  pasos = cont;	//Numero de pasos que dio para modificar la definicion de la palabra.
+		  printf("El numero de pasos necesarios para modificar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
 		}
 	    }
@@ -217,6 +271,8 @@ main (void)
 		  printf ("\nLa palabra fue borrada.\n");
 		  num = Size (&palabras[clave]);	//Asigna a num el nuevo tamaño de la lista para las estadisticas.
 		  pasos = cont;	//Numero de pasos que dio para borrar la palabra.
+		  printf("El numero de pasos necesarios para eliminar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
 		}
 	    }
