@@ -14,57 +14,82 @@ using namespace std;
 Estadisticas de la tabla hash, orden maximo de busqueda, tamaño de la tabla, numero de celdas vacias, numero de pasos
 al consultar una palabra, modificarla o eliminarla, el numero de colisiones y el resultado de la funcion hash para cada palabra.
 */
+
+boolean
+palabras_repetidas (elemento aux, int clave, lista palabras[83])
+{
+  int num = 0;			//Entero que obtiene el tamaño de la lista en donde va a buscar.
+  int cont = 0;			//Contador del ciclo.
+  int largo = 0;		//Entero que obtiene el largo de la palabra.
+  elemento aux2;		//Elemento auxiliar para la comparacion de repeticion.
+  num = Size (&palabras[clave]);	//Obtiene el tamaño de la lista de va a buscar.
+  for (cont = 1; cont <= num; cont++)
+    {
+      aux2 = Element (&palabras[clave], cont);	//Copia al elemento n de la lista
+      largo = strlen (aux2.p);	//Cuenta el largo de la palabra
+      if (strncmp (aux.p, aux2.p, largo) == 0)	//Si la comparacion de las palabras es igual, entonces la palabra es repetida.
+	{
+	  return TRUE;
+	}
+    }
+  if (cont > num)
+    return FALSE;
+
+}
+
+
 void
 Estadisticas (lista palabras[83])
 {
   int mayor = 0;
-  int lugar_mayor=0;
+  int lugar_mayor = 0;
   int menor = 0;
-  int lugar_menor=0;
+  int lugar_menor = 0;
   int cont = 0;
   int celdas_vacias[83];
   int vacias = 0;
-  mayor = Size(&palabras[0]);
-  for(cont = 0; cont<83; cont++)	//Inicializa el arreglos de celdas vacias.
-	  celdas_vacias[cont]=-1;
-  for(cont = 1; cont<83; cont++)	//Ciclo que obtiene a la lista con mas colisiones
-  {
-	  if(mayor<Size(&palabra[cont]))
-	  {
-		  mayor=Size(&palabra[cont]);
-		  lugar_mayor=cont;
-	  }
-  }
-  menor = Size(&palabras[0]);
-  for(cont = 1; cont<83; cont++)	//Ciclo que obtiene a la lista con menos colisiones
-  {
-	  if(menor>Size(&palabra[cont]))
-	  {
-		  menor=Size(&palabra[cont]);
-		  lugar_menor=cont;
-	  }
-  }
-  for(cont = 0; cont<83; cont++)	//Ciclo que obtiene las listas vacias
-  {
-	  if(Size(&palabra[cont]) == 0)
-		  celdas_vacias[cont]=1;
-  }
-	printf("La lista con mas colisiones es %d con %d\n", lugar_mayor, mayor);
-	printf("La lista con menos colisiones es %d con %d\n", lugar_menor, menor);
-	printf("El tamaño de la tabla es de 83 claves.\n");
-	printf("Las listas vacias son:\n");
-	for(cont=0;cont<83;cont++)
+  mayor = Size (&palabras[0]);
+  for (cont = 0; cont < 83; cont++)	//Inicializa el arreglos de celdas vacias.
+    celdas_vacias[cont] = -1;
+  for (cont = 1; cont < 83; cont++)	//Ciclo que obtiene a la lista con mas colisiones
+    {
+      if (mayor < Size (&palabras[cont]))
 	{
-		if(celdas_vacias[cont]!=-1)	//Si es diferente de -1 imprime la celda vacia.
-		{
-			printf("%d ", cont);
-			vacias++;
-		}
+	  mayor = Size (&palabras[cont]);
+	  lugar_mayor = cont;
 	}
-	if(vacias==0)
-		printf("Ninguna, todas tienen por lo menos un elemento.\n");
-	else
-		printf("\n");	//Salto de linea para las celdas vacias
+    }
+  menor = Size (&palabras[0]);
+  for (cont = 1; cont < 83; cont++)	//Ciclo que obtiene a la lista con menos colisiones
+    {
+      if (menor > Size (&palabras[cont]))
+	{
+	  menor = Size (&palabras[cont]);
+	  lugar_menor = cont;
+	}
+    }
+  for (cont = 0; cont < 83; cont++)	//Ciclo que obtiene las listas vacias
+    {
+      if (Size (&palabras[cont]) == 0)
+	celdas_vacias[cont] = 1;
+    }
+  printf ("La lista con mas colisiones es %d con %d\n", lugar_mayor, mayor);
+  printf ("La lista con menos colisiones es %d con %d\n", lugar_menor, menor);
+  printf ("El tamaño de la tabla es de 83 claves.\n");
+  printf ("Las listas vacias son:\n");
+  for (cont = 0; cont < 83; cont++)
+    {
+      if (celdas_vacias[cont] != -1)	//Si es diferente de -1 imprime la celda vacia.
+	{
+	  printf ("%d ", cont);
+	  vacias++;
+	}
+    }
+  if (vacias == 0)
+    printf
+      ("Ninguna, todas tienen por lo menos un elemento.\n\n\nElija la opción que desee.\n");
+  else
+    printf ("\n\n\nElija la opción que desee.\n");	//Salto de linea para las celdas vacias
   return;
 }
 
@@ -103,8 +128,8 @@ main (void)
   int clave = 0;		//int para guardar la clave que genere la funcion hash.
   int opcion = 0;		//Un entero que guarda la opción de menú que desea el usuario.
   int pasos = 0;		//int que es usasdo para saber en cuantos pasos encuentra una palabra.
-  int sumas=0;
-  int elem=0;
+  int sumas = 0;
+  int elem = 0;
   int claves[83];
   char a;			//Char para las funciones que detectan caracteres.
   char buffer[1000];		//Cadena que guarda toda la cadena.
@@ -119,7 +144,7 @@ main (void)
 
 
   setlocale (LC_ALL, "es_ES");	//Cambia la localidad total al Español y pueda reconocer acentos y la ñ.
-
+  system("clear");
   for (cont = 0; cont < 83; cont++)	//Inicializa la tabla para su trabajo.
     {
       Initialize (&palabras[cont]);
@@ -134,7 +159,7 @@ main (void)
       printf ("4.- Modificar una definicion\n");
       printf ("5.- Eliminar una palabra\n");
       printf ("6.- Salir\n\n");
-      Estadisticas(palabras);
+      Estadisticas (palabras);
       scanf ("%d", &opcion);
       switch (opcion)
 	{
@@ -153,9 +178,12 @@ main (void)
 		  strcpy (buffer, linea.c_str ());	//Copia el string en el arreglo.
 		  aux = dividir_cadena (buffer, copia);	//Manda a llamar a la funcion de separar la cadena en palabra y significado.
 		  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave.
-		  Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
+		  if (palabras_repetidas (aux, clave, palabras) == FALSE)	//Si no es repetida:
+		    Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
 		}
 	      Diccionario.close ();	//Cierra el diccionario para no causar problemas
+	      printf
+		("El diccionario Glosario BIOQUANTUM ha sido cargado exitosamente\n\n\n");
 	    }
 
 	  if (opcion == 2)	//Si elige Lunfardo
@@ -167,24 +195,40 @@ main (void)
 		  strcpy (buffer, linea.c_str ());	//Copia el string en el arreglo.
 		  aux = dividir_cadena (buffer, copia);	//Manda a llamar a la funcion de separar la cadena en palabra y significado.
 		  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave.
-		  Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
+		  if (palabras_repetidas (aux, clave, palabras) == FALSE)	//Si no es repetida:
+		    Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
 		}
 	      Diccionario.close ();	//Cierra el diccionario para no causar problemas
+	      printf
+		("El diccionario Lunfardo ha sido cargado exitosamente\n\n\n");
 	    }
 
 	  break;
 
 	case 2:
 	  //Inciso 2 de la practica, agrega una palabra y su definicion.
-	  printf
-	    ("Escriba la palabra que usted quiere insertar con su significado seprarado por dos puntos:\n");
+	  printf ("Escriba la palabra que usted quiere insertar:\n");
 	  a = getchar ();
 	  getline (cin, linea);	//Obtener la cadena de la palabra a buscar
-	  strcpy (buffer, linea.c_str());	//Copia la cadena de auxiliar al elemento.      
-	  aux = dividir_cadena (buffer, copia);	//Manda a llamar a la funcion de separar la cadena en palabra y significado.
+	  strcpy (aux.p, linea.c_str ());	//Copia la cadena de auxiliar al elemento.      
 	  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave.
-	  Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
-	  printf ("La palabra fue insertada. \n");
+	  if (palabras_repetidas (aux, clave, palabras) == FALSE)	//Si no es repetida:
+	    {
+	      printf ("Escriba la definición de la palabra %s: \n", aux.p);
+	      getline (cin, linea);	//Obtener la cadena de la palabra a buscar
+	      strcpy (aux.d, linea.c_str ());	//Copia la cadena de auxiliar al elemento.      
+	      Add (&palabras[clave], aux);	//Añade al elemento en la lista con la clave generada por la funcion hash.
+	      printf ("La palabra fue insertada. \n");
+	      getchar ();	//Espera para mostrar el texto.
+	      system ("clear");	//Borra la pantalla.
+	    }
+	  else
+	    {
+	      printf
+		("La palabra ya existe, intente cambiar su definición o inserte otra palabra\n");
+	      getchar ();	//Espera para mostrar el texto.
+	      system ("clear");	//Borra la pantalla.
+	    }
 
 
 	  break;
@@ -194,7 +238,7 @@ main (void)
 	  a = getchar ();
 	  printf ("Escriba la palabra que usted busca:\n");
 	  getline (cin, linea);	//Obtener la cadena de la palabra a buscar
-	  strcpy (aux.p, linea.c_str());	//Copia la cadena de auxiliar al elemento.      
+	  strcpy (aux.p, linea.c_str ());	//Copia la cadena de auxiliar al elemento.      
 	  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave y buscar la palabra.
 	  num = Size (&palabras[clave]);	//Obtiene el tamaño de la lista de va a buscar
 	  for (cont = 1; cont <= num; cont++)
@@ -205,14 +249,24 @@ main (void)
 		{
 		  printf ("\nLa definicion de %s es: %s\n\n", aux2.p, aux2.d);
 		  pasos = cont;	//Numero de pasos que se hizo para encontrar la palabra.
-		  printf("El numero de pasos necesarios para encontrar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
-		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf
+		    ("El numero de pasos necesarios para encontrar la palabra fueron: %d\n",
+		     pasos);
+		  //Imprime los pasos necesarios para cumplir la accion.
+		  printf ("La clave de la palabra %s fue: %d\n", aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
+		  getchar ();	//Espera para mostrar el texto.
+		  system ("clear");	//Borra la pantalla.
 		}
 	    }
 	  if (cont >= num && cont < 2000)
-	    printf
-	      ("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	    {
+	      printf
+		("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	      getchar ();	//Espera para mostrar el texto.
+	      system ("clear");	//Borra la pantalla.
+	    }
+
 
 	  break;
 
@@ -222,7 +276,7 @@ main (void)
 	  printf
 	    ("Escriba la palabra que usted busca cambiar de definicion:\n");
 	  getline (cin, linea);	//Obtener la cadena de la palabra a buscar
-	  strcpy (aux.p, linea.c_str());	//Copia la cadena de auxiliar al elemento.      
+	  strcpy (aux.p, linea.c_str ());	//Copia la cadena de auxiliar al elemento.      
 	  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave y buscar la palabra.
 	  num = Size (&palabras[clave]);	//Obtiene el tamaño de la lista de va a buscar
 	  for (cont = 1; cont <= num; cont++)
@@ -241,14 +295,20 @@ main (void)
 		    ("\nAhora el nuevo significado de la palabra %s es: %s\n",
 		     aux2.p, aux2.d);
 		  pasos = cont;	//Numero de pasos que dio para modificar la definicion de la palabra.
-		  printf("El numero de pasos necesarios para modificar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
-		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf ("El numero de pasos necesarios para modificar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf ("La clave de la palabra %s fue: %d\n", aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
+		  getchar ();	//Espera para mostrar el texto.
+		  system ("clear");	//Borra la pantalla.
 		}
 	    }
 	  if (cont >= num && cont < 2000)
-	    printf
-	      ("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	    {
+	      printf
+		("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	      getchar ();	//Espera para mostrar el texto.
+	      system ("clear");	//Borra la pantalla.
+	    }
 
 	  break;
 
@@ -257,7 +317,7 @@ main (void)
 	  printf ("Escriba la palabra que usted busca eliminar:\n");
 	  a = getchar ();
 	  getline (cin, linea);	//Obtener la cadena de la palabra a buscar
-	  strcpy (aux.p, linea.c_str());	//Copia la cadena de auxiliar al elemento.      
+	  strcpy (aux.p, linea.c_str ());	//Copia la cadena de auxiliar al elemento.      
 	  clave = Clavehash (aux.p);	//Manda a ejecutar la funcion hash para generar la clave y buscar la palabra.
 	  num = Size (&palabras[clave]);	//Obtiene el tamaño de la lista de va a buscar
 	  for (cont = 1; cont <= num; cont++)
@@ -271,18 +331,27 @@ main (void)
 		  printf ("\nLa palabra fue borrada.\n");
 		  num = Size (&palabras[clave]);	//Asigna a num el nuevo tamaño de la lista para las estadisticas.
 		  pasos = cont;	//Numero de pasos que dio para borrar la palabra.
-		  printf("El numero de pasos necesarios para eliminar la palabra fueron: %d\n", pasos);	//Imprime los pasos necesarios para cumplir la accion.
-		  printf("La clave de la palabra %s fue: %d\n",aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf
+		    ("El numero de pasos necesarios para eliminar la palabra fueron: %d\n",
+		     pasos);
+//Imprime los pasos necesarios para cumplir la accion.
+		  printf ("La clave de la palabra %s fue: %d\n", aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
 		  cont = 2000;	//Asignacion para salir del ciclo.
+		  getchar ();	//Espera para mostrar el texto.
+		  system ("clear");	//Borra la pantalla.
 		}
 	    }
 	  if (cont >= num && cont < 2000)
-	    printf
-	      ("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	    {
+	      printf
+		("\nLa palabra que usted busca no se encuentra.\nUsted puede agregar la palabra que usted busca o intente en otro lugar.\n");
+	      getchar ();	//Espera para mostrar el texto.
+	      system ("clear");	//Borra la pantalla.
+	    }
 	  break;
 
 	case 6:
-	  for (cont = 0; cont < 17; cont++)
+	  for (cont = 0; cont < 83; cont++)
 	    Destroy (&palabras[cont]);
 	  return 0;
 	  break;
