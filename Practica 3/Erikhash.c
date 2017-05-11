@@ -104,7 +104,13 @@ dividir_cadena (char buffer[1000], elemento copia)
   return aux;			//Regresa el elemento con la palabra y definicion.
 }
 
+/*
+Función Hash que cuenta los numeros de caracteres de la palabra, después ese número le suma el numero ASCII del tercer 
+caracter del final, luego lo multupilica con la suma de Pi con el ASCII de la primera letra, el resultado lo divide entre 
+el numero Euler, finalmente hace modulo a la clave para que entre en el rango de la tabla.
+porque para evitar las repeticiones de clave
 
+*/
 int
 Clavehash (char aux[50])
 {
