@@ -74,10 +74,14 @@ int hashCharly(char palabra[50]){
 	for(i = 0; i < caracteres; i++)
 		suma = suma + (int)palabra[i];
 	random = rand() % 40;
-	aux = ((suma * mult) / resta) / (rand() % suma);
+	if(random == 0)
+		random = suma / resta;
+	aux = ((suma * mult) / resta) / random;
 	random = rand() % 5;
 	potencia = pow(aux, random);
 	clave = potencia % tam;
+	if(clave < 0)
+		clave = clave * -1;
 	printf("clave %d \n", clave);
 	return clave;	
 }
