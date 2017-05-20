@@ -11,41 +11,41 @@ verificar_reinas_diagonales (char *tablero, int referencia, int numero )
   columna = referencia%numero; //Obtiene la coordenada vertical de la pieza.
   //Primero verificar diagonales superiores.
   //Diagonal superior izquierda.
-  lugar = referencia - numero - 1;  //Obtiene el lugar de la esquina superior izquierda a la pieza.
+  lugar = referencia - numero - 1;
   while ((lugar >= 0) && (lugar%numero < columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;            //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar - numero - 1; //Si no hay nada, vuelve a verificar la esquina superior izquierda.
+      lugar = lugar - numero - 1;
   }
   //Diagonal superior derecha.
-  lugar = referencia - numero + 1;  //Obtiene el lugar de la esquina superior derecha a la pieza.
+  lugar = referencia - numero + 1;
   while ((lugar >= 0) && (lugar%numero > columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar - numero + 1;  //Si no hay nada, vuelve a verificar la esquina superior derecha.
+      lugar = lugar - numero + 1;
   }
   //Ahora las diagonales inferiores
   //Diagonal inferior izquierda
-  lugar = referencia + numero - 1;  //Obtiene el lugar de la esquina inferior izquierda a la pieza.
+  lugar = referencia + numero - 1;
   while ((lugar < numero*numero) && (lugar%numero < columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar + numero - 1; //Si no hay nada, vuelve a verificar la esquina inferior izquierda.
+      lugar = lugar + numero - 1;
   }
   //Diagonal inferior derecha
-  lugar = referencia + numero + 1;  //Obtiene el lugar de la esquina inferior derecha a la pieza.
+  lugar = referencia + numero + 1;
   while ((lugar < numero*numero) && (lugar%numero > columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar + numero + 1; //Si no hay nada, vuelve a verificar la esquina inferior derecha.
+      lugar = lugar + numero + 1;
   }
   /*Si salida es 1, entonces encontro una reina que la esta atacando
   por lo tanto ese lugar no es valido.
@@ -62,41 +62,41 @@ verificar_reinas_vh (char *tablero, int referencia, int numero )
   columna = referencia%numero;
   //Primero verificar verticales.
   //Vertical superior.
-  lugar = referencia - numero;  //Obtiene el lugar superior a la pieza.
+  lugar = referencia - numero;
   while ((lugar >= 0) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar - numero; //Si no hay nada, vuelve a verificar el lugar superior.
+      lugar = lugar - numero;
   }
   //Vertical inferior.
-  lugar = referencia + numero;  //Obtiene el lugar inferior a la pieza.
+  lugar = referencia + numero;
   while ((lugar < numero*numero) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar + numero; //Si no hay nada, vuelve a verificar el lugar inferior.
+      lugar = lugar + numero;
   }
   //Ahora las horizontales
   //Horizontal derecha
-  lugar = referencia + 1; //Obtiene el lugar horizontal derecha a la pieza.
+  lugar = referencia + 1;
   while ((lugar < numero*numero) &&(lugar%numero > columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar + 1;  //Si no hay nada, vuelve a verificar el lugar horizontal derecha.
+      lugar = lugar + 1;
   }
   //Horizontal izquierda.
-  lugar = referencia - 1; //Obtiene el lugar horizontal izquierda a la pieza.
+  lugar = referencia - 1;
   while ((lugar >= 0) && (lugar%numero < columna) && (salida == 0))
   {
     if (*(tablero+lugar) == 'R') 
-      salida = 1;             //Si existe una reina en ese lugar, entonces la verificacion acaba.
+      salida = 1;
     else
-      lugar = lugar - 1;  //Si no hay nada, vuelve a verificar el lugar horizontal izquierda.
+      lugar = lugar - 1;
   }
   
   /*Si salida es 1, entonces encontro una reina que la esta atacando
@@ -108,25 +108,24 @@ verificar_reinas_vh (char *tablero, int referencia, int numero )
 void
 Imprimir (char *tablero, int numero)
 {
-  int cont = 0;   //Entero para el ciclo for de impresion.
-  system("cls");  //Borra la pantalla.
-  for(cont=0; cont<(numero*numero); cont++)   //Imprime el tablero.
+  int cont = 0;
+  system("cls");
+  for(cont=0; cont<(numero*numero); cont++)
   {
-    printf("%c ", *(tablero + cont));
+    printf("%c  ", *(tablero + cont));
     if((cont+1)%numero==0)
-      printf("\n");
-  }
-  return;
+      printf("\n\n");
+  }         
 }
 
 int
 validar_lugar (char *tablero, int referencia, int numero)
 {
-  int salida = 0; //Entero que detecta cuando se encontro una reina.
-  salida = verificar_reinas_vh (tablero, referencia, numero); //Primero verifica la horizontal y vertical de la pieza.
-  if(salida == 0)            //Si es 0 significa que no ha encontrado una reina, ahora se verifican las diagonales.
+  int salida = 0;
+  salida = verificar_reinas_vh (tablero, referencia, numero);
+  if(salida == 0)           
     salida = verificar_reinas_diagonales (tablero, referencia, numero);
-  return salida;      //Si salida es 1 encontro una reina, si es 0 el lugar es valido.        
+  return salida;              
 }
 
 int
@@ -146,11 +145,11 @@ N_reinas (char *tablero, int referencia, int numero)
      }
      else           //Si encontro la solucion, entonces regresa la TRUE (0) e indica al usuario la solucion.
      {
-       printf("Esta es una solucion del tablero %d x %d. \n");
+       printf("Esta es una solucion del tablero %d x %d. \n", numero, numero);
        printf("Gracias por usar nuestro programa\n");
        return 0;
      }
-     validar = N_reinas (tablero, (referencia%numero) + 1 , numero);    //Recursividad para explorar más la solucion. 
+     validar = N_reinas (tablero, (referencia%numero) + 1 , numero);    //Recursividad para explorar m�s la solucion. 
      if (validar == 1)            //Si saliendo de la funcion la solucion no fue la correcta.
      { 
        Imprimir (tablero, numero);
@@ -168,7 +167,7 @@ N_reinas (char *tablero, int referencia, int numero)
      Imprimir (tablero, numero);
      printf("Este lugar no es valido, probemos con la siguiente casilla. \n");
      *(tablero + referencia) = (char)254;      //Borra el error y sigue buscando.
-     referencia = referencia + numero;     //Cambia el lugar de la pieza a la siguiente casilla.
+     referencia = referencia + numero;
      getchar();
    }
   }
@@ -182,14 +181,14 @@ int
 main (void)
 {
   int cont = 0;        //Contador de inicializar el tablero.
-  int numero = 0;      //Tamaño del tablero.
+  int numero = 0;      //Tama�o del tablero.
   int referencia = 0;  //Lugar que sire para verificar las reinas.
   char *tablero = 0;   //El tablero.
-  printf ("Bienvenido usuario.\nEste programa le permite encontrar una solución al problema de las reinas que no se atacan.\n");
-  printf ("Para introducir el tamaño del tablero basta con solo poner el numero de la longitud. Ejemplo, el tablero de 4x4 solo basta con poner 4\n");
-  printf ("¿Cual es el tamaño del tablero que usted desea?\n");
-  scanf ("%d", &numero);      //Obtiene el tamaño que quiere el usuario.
-  tablero = (char *)malloc(sizeof(char)*(numero*numero));    //Aparta el tamaño del tablero.
+  printf ("Bienvenido usuario.\nEste programa le permite encontrar una soluci�n al problema de las reinas que\nno se atacan.\n");
+  printf ("Para introducir el tama�o del tablero basta con solo poner el numero de la\nlongitud. Ejemplo, el tablero de 4x4 solo basta con poner 4\n");
+  printf ("Cual es el tamano del tablero que usted desea?\n");
+  scanf ("%d", &numero);      //Obtiene el tama�o que quiere el usuario.
+  tablero = (char *)malloc(sizeof(char)*(numero*numero));    //Aparta el tama�o del tablero.
   for(cont = 0; cont<(numero*numero); cont++)                //Inicializa el tablero.
     *(tablero + cont) = (char)254; 
   getchar();
