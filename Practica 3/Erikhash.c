@@ -259,7 +259,7 @@ main (void)
 		    ("El numero de pasos necesarios para encontrar la palabra fueron: %d\n",
 		     pasos);
 		  //Imprime los pasos necesarios para cumplir la accion.
-		  printf ("La clave de la palabra %s fue: %d\n", aux.p, clave);	//Imprime los pasos necesarios para cumplir la accion.
+		  printf ("La clave de la palabra %s fue: %d\n", aux.p, clave);	//Imprime la clave de la palabra.
 		  cont = 2000;	//Asignacion para salir del ciclo.
 		  getchar ();	//Espera para mostrar el texto.
 		  system ("clear");	//Borra la pantalla.
