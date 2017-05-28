@@ -14,8 +14,6 @@ antes de la ejecución del programa.
 
 COMPILACIÓN PARA GENERAR EL CÓDIGO OBJETO: gcc -c TADPilaEst.c
 
-Usado por "Salty Boys" solo para las practicas escolares que necesiten Pila.
-El autor del codigo nos dio permiso de poder usarlo.
 */
 
 //LIBRERAS
