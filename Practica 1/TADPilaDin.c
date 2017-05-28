@@ -15,7 +15,6 @@ no queda fija durante la compilación.
 
 COMPILACIÓN PARA GENERAR EL CÓDIGO OBJETO: gcc -c TADPilaDin.c
 
-Codigo usado por "Salty Boys" solo con fines educativos.
 */
 
 //LIBRERAS
