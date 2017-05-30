@@ -1,3 +1,17 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Mayo 2017
+	VERSIÓN: 1.0
+	
+	DESCRIPCIÓN: Se encuentra una solución al problema de n-reinas para un tablero NxN mediante backtracking.
+  El usuario puede introducir el tamaño de tablero que desee.
+	
+	OBSERVACIONES: Por cuestiones graficas solo puede resolver visualmente tableros de tamaño 4x4 hasta 10x10, pero
+  el programa esta hecho para resolver tableros de mayor tamaño, cuidado con eso. 
+  Programado siguiendo el formato ANSI C.
+	
+	COMPILACION: gcc n_reinas.c -o "nombre del ejecutable" o directamente compilar de Dev C++ u otro porgrama parecido. 
+*/
+
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -149,7 +163,7 @@ N_reinas (char *tablero, int referencia, int numero)
        printf("Gracias por usar nuestro programa\n");
        return 0;
      }
-     validar = N_reinas (tablero, (referencia%numero) + 1 , numero);    //Recursividad para explorar m�s la solucion. 
+     validar = N_reinas (tablero, (referencia%numero) + 1 , numero);    //Recursividad para explorar más la solucion. 
      if (validar == 1)            //Si saliendo de la funcion la solucion no fue la correcta.
      { 
        Imprimir (tablero, numero);
@@ -181,14 +195,14 @@ int
 main (void)
 {
   int cont = 0;        //Contador de inicializar el tablero.
-  int numero = 0;      //Tama�o del tablero.
+  int numero = 0;      //Tamaño del tablero.
   int referencia = 0;  //Lugar que sire para verificar las reinas.
   char *tablero = 0;   //El tablero.
-  printf ("Bienvenido usuario.\nEste programa le permite encontrar una soluci�n al problema de las reinas que\nno se atacan.\n");
-  printf ("Para introducir el tama�o del tablero basta con solo poner el numero de la\nlongitud. Ejemplo, el tablero de 4x4 solo basta con poner 4\n");
+  printf ("Bienvenido usuario.\nEste programa le permite encontrar una solución al problema de las reinas que\nno se atacan.\n");
+  printf ("Para introducir el tamaño del tablero basta con solo poner el numero de la\nlongitud. Ejemplo, el tablero de 4x4 solo basta con poner 4\n");
   printf ("Cual es el tamano del tablero que usted desea?\n");
-  scanf ("%d", &numero);      //Obtiene el tama�o que quiere el usuario.
-  tablero = (char *)malloc(sizeof(char)*(numero*numero));    //Aparta el tama�o del tablero.
+  scanf ("%d", &numero);      //Obtiene el tamaño que quiere el usuario.
+  tablero = (char *)malloc(sizeof(char)*(numero*numero));    //Aparta el tamaño del tablero.
   for(cont = 0; cont<(numero*numero); cont++)                //Inicializa el tablero.
     *(tablero + cont) = (char)254; 
   getchar();
