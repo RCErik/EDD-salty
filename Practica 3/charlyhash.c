@@ -120,12 +120,13 @@ dividir_cadena (char buffer[1000], elemento copia)
 }
 
 /*
-Función Hash que cuenta los numeros de caracteres de la palabra, después ese número le suma el numero ASCII del tercer 
-caracter del final, luego lo multupilica con la suma de Pi con el ASCII de la primera letra, el resultado lo divide entre 
-el numero Euler, finalmente hace modulo a la clave para que entre en el rango de la tabla.
-porque para evitar las repeticiones de clave
-
+Función Hash que cuenta los números de caracteres de la palabra, después ese número lo multiplica por la constante 1.686229
+y con el entero ASCII de la antepenúltima letra, luego hace la suma del entero ASCII de la 3 letra antes de que acabe 
+la palabra y la segunda letra, el resultado de la suma y la multiplicación anterior les aplica la operación de multiplicación, 
+finalmente aplica módulo 83 al resultado para generar la clave. 
+En caso de que la clave sea menor a 0 se multiplica por -1 y evitar errores en el programa.
 */
+
 int
 Clavehash (char palabra[50])
 {
