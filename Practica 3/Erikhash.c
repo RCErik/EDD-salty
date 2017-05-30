@@ -10,7 +10,7 @@
 	OBSERVACIONES: El programa presenta problemas con palabras con acentos, evite el uso de ellas o pruebe una accion
 	con ellas pero sin acento. Hace uso de la estructura TAD Lista Doble Ligada y esta en lenguaje C++.
 	
-	COMPILACION: g++ main.c TADListaDobleLigada.c hash1.c/hash2.c -o "Nombre del ejecutable" 
+	COMPILACION: g++ Erikhash.c TADListaDobleLigada.c -o "Nombre del ejecutable" 
 */
 
 #include<stdio.h>
