@@ -1,3 +1,18 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Mayo 2017
+	VERSIÓN: 1.1
+	
+	DESCRIPCIÓN: Programa que permite cargar dos archivos con palabras y sus significados, también permite
+	agregrar, consultar, modificar y eliminar palabras con su significado, a su vez muestra las estadisticas
+	del diccionario como la clave de la palabra, la lista con más y menos colisiones, y el numero de pasos
+	dados para realizar la acción elegida.
+	
+	OBSERVACIONES: El programa presenta problemas con palabras con acentos, evite el uso de ellas o pruebe una accion
+	con ellas pero sin acento. Hace uso de la estructura TAD Lista Doble Ligada y esta en lenguaje C++.
+	
+	COMPILACION: g++ charlyhash.c TADListaDobleLigada.c -o "Nombre del ejecutable" 
+*/
+
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
