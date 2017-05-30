@@ -1,3 +1,14 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Mayo 2017
+	VERSIÓN: 1.0
+	
+	DESCRIPCIÓN: 
+	
+	OBSERVACIONES: 
+	
+	COMPILACION:  
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
