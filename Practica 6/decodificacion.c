@@ -22,7 +22,7 @@ char* obtener_codigo()
     return caracteres;
 }
 
-void decodificar(arbol_bin *a, char caracteres[6000]){
+char* decodificar(arbol_bin *a, char caracteres[6000]){
 	int i = 0, j = 0;
 	char mensaje[5000];
 	posicion p, letra;
@@ -49,5 +49,5 @@ void decodificar(arbol_bin *a, char caracteres[6000]){
 		derecho = aux -> der;
 		i++;
 	}
-	return;
+	return mensaje;
 }
