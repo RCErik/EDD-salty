@@ -3,7 +3,9 @@
 #include<iostream>
 #include<fstream>
 #include"TADArbolBin.h"
-
+#define PESOBIT(bpos) 1<<bpos
+#define PONE_1(var,bpos) *(unsigned*)&var |= PESOBIT(bpos)
+#define PONE_0(var,bpos) *(unsigned*)&var &= ~(PESOBIT(bpos))
 using namespace std;
 
 elemento *
@@ -138,13 +140,58 @@ referencia_bits(arbol_bin *Arbol_f, posicion pos)	//Funcion que pone la referenc
   return Arbol_f;
 }
 
+char*
+transformar_mensaje(arbol_bin *Arbol_f, char bytes[751], char texto[6000], elemento alfabeto[53])
+{
+  int contador = 0;
+  int contador_2 = 0;
+  int contador_3 = 0;
+  int contador_bits = 0;
+  int numero = 0;		//Longitud del texto.
+  int referencia[21];		//COmbinacion de refencia binaria de la letra.
+  unsigned char byte = 0; 	//Variable de tipo char (byte)
+  elemento auxiliar;		//Auxiliar que lee los nodos del arbol.
+  posicion pos_h;		//Posicion que obtiene los elementos del arbol.
+  numero = strlen(texto);	//Cuenta el largo del texto.
+  for(contador = 0; contador<21; contador++)	//Inicializamos la referencia.
+    referencia[contador] = 0;
+  for(contador = 0; contador<numero; contador++)
+  {
+    for(contador_2 = 0; texto[contador] != alfabeto[contador_2].caracter; contador_2++); //Obtiene el lugar de la letra en el arreglo alfabeto.
+    pos_h = Search(Arbol_f, alfabeto[contador_2]);	//Obtiene su posicion en el arbol.
+    for(contador_2 = 0; pos_h != NULL; contador_2++)	//Obtenemos la combinacion de la referencia para pasarla a binario.
+      {
+	auxiliar = ReadNode(Arbol_f, pos_h);	//Leemos el nodo y vemos si es 0 o 1.
+        referencia[contador_2] = auxiliar.bit;	//Lo ponemos en la referencia
+	pos_h = Parent(Arbol_f, pos_h);		//Obtenemos la posición del padre y seguir con el algoritmo de referencia.
+      }
+    while(contador_2 >= 0)	//Mientras no recorremos todos los datos.	PROBABLEMENTE AQUI ESTA MAL O ALGO RARO
+     {
+	if(referencia[contador_2] = 1)		//Si el dato es 1, ponemos el bit 1 en el byte.
+	  PONE_1(byte, contador_3);	
+	else					//Si no es 1, ponemos el bit 0 en el byte.
+	  PONE_0(byte, contador_3);
+        contador_bits++;
+	if(contador_bits==8)			//Si se completo el byte:
+	  {
+	    contador_bits = 0;			//Ponemos su contador en 0.
+            bytes[contador_3] = byte;		//Nos recorremos al siguiente byte.
+	    contador_3++;
+	  }
+	contador_2--;		//Quitamos uno a los datos totales.
+     }
+  }
+  return bytes;
+}
+
 int
 main (void)
 {
   int total = 0;		//Entero total de las frecuencias.
   int contador = 0;		//Contador para ciclos.
   int datos = 0;		//Entero que obtiene la cantidad de datos.
-  char texto[5000];		//Arreglo que contiene el texto y sacar la frecuencia de letras.
+  char texto[6000];		//Arreglo que contiene el texto y sacar la frecuencia de letras.
+  char bytes[751];		//Arreglo de bytes para el mensaje codificado.
   elemento alfabeto[53]; 	//Arreglo para las frecuencias de las letras. ASCII 65-90 mayusculas, 97-122 minusculas, 32 espacio.
   elemento nodos[130];		//Arreglo de los nodos sumados por los elementos basicos.
   elemento auxiliar;		//Elemento auxiliar para las funciones de arbol.
@@ -152,6 +199,7 @@ main (void)
   arbol_bin Arbol_f;		//Arbol final construido por las frecuencias.
   ifstream Archivo;		//Hace un archivo de salida.
   string buffer;		//Una cadena auxiliar para recibir las lineas de texto con getline.
+  FILE *mensaje;		//Archivo a modificar.
 
   for(contador = 0; contador<53; contador++)	//Inicializamos nuestro arreglo para las frecuencias.
   {
@@ -179,9 +227,29 @@ main (void)
     }
 
   construir_arbol(nodos, datos, &Arbol_f, pos);	//Construimos a nuestro arbol mediante la recursividad.
-  pos=Root(&Arbol_f);
-  referencia_bits(&Arbol_f, pos);
-  InOrden(&Arbol_f,pos);
+  pos=Root(&Arbol_f);		//Nos colocamos en la raiz.
+  referencia_bits(&Arbol_f, pos);		//Ponemos las referencias de 0 y 1 para el mensaje.
+  for(contador = 0; contador<53; contador++)	//Ponemos las referencias a los nodos del alfabeto.
+  {	
+    auxiliar = alfabeto[contador];	//Primero lo obtenemos.
+    pos = Search(&Arbol_f, auxiliar);	//Obtenemos su posición.
+    if(pos == NULL)	//Si su posición es nula significa que su referencia es 1.
+      {
+	auxiliar.bit = 1;
+        alfabeto[contador] = auxiliar;	//Lo ponemos de nuevo en el arreglo.
+      }
+    else	//Si encontro al elemento su referencia es 0.
+      {
+	auxiliar.bit = 0;
+        alfabeto[contador] = auxiliar;	//Lo ponemos de nuevo en el arreglo.
+      }
+  }
+
+  transformar_mensaje(&Arbol_f, bytes, texto, alfabeto);	//Transformamos el mensaje a binario.
+  mensaje = fopen("mensaje.txt", "w");		//Abrimos un txt.
+  fwrite(bytes, sizeof(char), sizeof(bytes), mensaje);	//Pasamos el mensaje.
+  fclose(mensaje);				//Cerramos el txt.
+
 
 return 0;
 }

@@ -94,7 +94,7 @@ posicion LeftSon(arbol_bin *A, posicion P)
 
 /*recibe<-árbol(A), elemento (E); retorna -> posición
 Search(A,E)
-Efecto: Recibe un árbol binario A y un elemento E, devuelve la posición del elemento E en el árbol  A.
+Efecto: Recibe un árbol binario A y un elemento, devuelve la posición del elemento E en el árbol  A.
 Requerimientos: El árbol binario A es no vacío y la posición P es una posición valida. Si E no es encontrado devuelve una posición nula.
 */
 posicion Search(arbol_bin *A, elemento e)
