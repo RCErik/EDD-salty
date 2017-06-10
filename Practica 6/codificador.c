@@ -189,9 +189,13 @@ main (void)
 {
   int total = 0;		//Entero total de las frecuencias.
   int contador = 0;		//Contador para ciclos.
+  int contador_2 = 0;		//Contador que ayuda a pasar los elementos a tabla.txt.
   int datos = 0;		//Entero que obtiene la cantidad de datos.
+  int numero[53];
+  int bit[53];
   char texto[6000];		//Arreglo que contiene el texto y sacar la frecuencia de letras.
   char bytes[751];		//Arreglo de bytes para el mensaje codificado.
+  char letras[53];
   elemento alfabeto[53]; 	//Arreglo para las frecuencias de las letras. ASCII 65-90 mayusculas, 97-122 minusculas, 32 espacio.
   elemento nodos[130];		//Arreglo de los nodos sumados por los elementos basicos.
   elemento auxiliar;		//Elemento auxiliar para las funciones de arbol.
@@ -200,6 +204,7 @@ main (void)
   ifstream Archivo;		//Hace un archivo de salida.
   string buffer;		//Una cadena auxiliar para recibir las lineas de texto con getline.
   FILE *mensaje;		//Archivo a modificar.
+  FILE *tabla;			//Tabla de frecuencias.
 
   for(contador = 0; contador<53; contador++)	//Inicializamos nuestro arreglo para las frecuencias.
   {
@@ -249,7 +254,23 @@ main (void)
   mensaje = fopen("mensaje.txt", "w");		//Abrimos un txt.
   fwrite(bytes, sizeof(char), sizeof(bytes), mensaje);	//Pasamos el mensaje.
   fclose(mensaje);				//Cerramos el txt.
+  tabla = fopen("tabla.txt", "w");		//Abrimos un txt.
+for(contador = 0; contador<53; contador++)
+{
+bit[contador]=alfabeto[contador].bit;
+numero[contador]=alfabeto[contador].valor;
+letras[contador]=alfabeto[contador].caracter;
+}
 
+  for(contador = 0; contador<53; contador++)
+{
+  fputc(letras[contador],tabla);	//Pasamos el mensaje.
+  fprintf(tabla," %d ",numero[contador]);	//Pasamos el mensaje.
+  fprintf(tabla,"%d ",bit[contador]);	//Pasamos el mensaje.
+  fputc('\n',tabla);
+}
+
+  fclose(tabla);
 
 return 0;
 }
