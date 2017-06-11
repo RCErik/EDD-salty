@@ -29,8 +29,13 @@ typedef struct elemento
 	//Variables de la estructura "elemento" (El usuario puede modificar)
 	int n;
 	char c;
-	//***
-	//***
+	int tiempo;
+	char nombre[45];
+	char actividad[200];
+	char ID[45];
+	int tiempo_aux;
+	int tiempo_ejec;
+	
 } elemento;
 
 //Definir una cola (Se modela con una estructura que incluye un arreglo estatico de "elemento",
