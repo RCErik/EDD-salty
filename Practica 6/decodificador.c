@@ -250,7 +250,9 @@ main (void)
   referencia_bits(&Arbol_f, pos);		//Ponemos las referencias de 0 y 1
   pos = Root(&Arbol_f); //Nos colocamos en la raiz.
   decodificar(&Arbol_f, pos, texto, bytes);	//Decodificamos el mensaje.
-	
+  msj_decod = fopen("mensaje_decodificado.txt", "w");		//Abrimos un txt.
+  fwrite(texto, sizeof(char), sizeof(texto), msj_decod);	//Pasamos el mensaje decodificado.
+  fclose(msj_decod);				//Cerramos el txt.	
 
 return 0;
 }
