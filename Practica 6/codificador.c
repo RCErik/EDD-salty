@@ -1,11 +1,23 @@
+/*
+	AUTOR: Equipo "Salty boys" (C) Junio 2017
+	VERSIÓN: 1.0
+	DESCRIPCIÓN: Programa que codifica el mensaje del usuario para que en el decodificador se pueda leer, además de que el archivo 
+	generado es mas ligero que el original.
+	OBSERVACIONES: Asegure que el texto a decodificar no tenga acentos o caracteres especiales como @, ñ, $, signos de puntuacion, etc. No abra el archivo
+	codificado generado, solo con el decodificador. Hace uso de la estructura TAD_Arbol binario y la recursividad. Solo basta con
+	ejecutar el programa para generar la tabla de frecuencias y el mensaje codificado
+	
+	COMPILACION: g++ codificador.c TADArbolBin.c -o "nombre del ejecutable" 
+*/
+
 #include<stdio.h>
 #include<string.h>
 #include<iostream>
 #include<fstream>
 #include"TADArbolBin.h"
-#define PESOBIT(bpos) 1<<bpos
-#define PONE_1(var,bpos) *(unsigned*)&var |= PESOBIT(bpos)
-#define PONE_0(var,bpos) *(unsigned*)&var &= ~(PESOBIT(bpos))
+#define PESOBIT(bpos) 1<<bpos	//Corrimiento del bit.
+#define PONE_1(var,bpos) *(unsigned*)&var |= PESOBIT(bpos)	//Pone 1 al bit en una posicion dada (OR).
+#define PONE_0(var,bpos) *(unsigned*)&var &= ~(PESOBIT(bpos))	//Pone 0 al bit en la posicion dada (AND).
 using namespace std;
 
 elemento *
@@ -45,7 +57,7 @@ void InOrden(arbol_bin *a,posicion p)
 	{
 		InOrden(a,LeftSon(a,p));
 		e=ReadNode(a,p);
-		printf("bit %d\t valor %d\n",e.bit, e.valor);
+		printf("bit %d\t valor %d caracter %c\n",e.bit, e.valor, e.caracter);
 		InOrden(a,RightSon(a,p));
 	}
 	return;
@@ -143,10 +155,10 @@ referencia_bits(arbol_bin *Arbol_f, posicion pos)	//Funcion que pone la referenc
 char*
 transformar_mensaje(arbol_bin *Arbol_f, char bytes[751], char texto[6000], elemento alfabeto[53])
 {
-  int contador = 0;
-  int contador_2 = 0;
-  int contador_3 = 0;
-  int contador_bits = 0;
+  int contador = 0;		//Contador de ciclos.
+  int contador_2 = 0;		//Contador que se desplaza por la referencia de bits.
+  int contador_3 = 0;		//Contador que ayuda a desplazarse en el arreglo de bytes 
+  int contador_bits = 0;	//Entero que va de 0-7 y ayuda a modificar bits.
   int numero = 0;		//Longitud del texto.
   int referencia[21];		//COmbinacion de refencia binaria de la letra.
   unsigned char byte = 0; 	//Variable de tipo char (byte)
@@ -155,7 +167,8 @@ transformar_mensaje(arbol_bin *Arbol_f, char bytes[751], char texto[6000], eleme
   numero = strlen(texto);	//Cuenta el largo del texto.
   for(contador = 0; contador<21; contador++)	//Inicializamos la referencia.
     referencia[contador] = 0;
-  for(contador = 0; contador<numero; contador++)
+
+  for(contador = 0; contador<numero; contador++)	//Mientras aun no se recorra todo el texto.
   {
     for(contador_2 = 0; texto[contador] != alfabeto[contador_2].caracter; contador_2++); //Obtiene el lugar de la letra en el arreglo alfabeto.
     pos_h = Search(Arbol_f, alfabeto[contador_2]);	//Obtiene su posicion en el arbol.
@@ -167,10 +180,10 @@ transformar_mensaje(arbol_bin *Arbol_f, char bytes[751], char texto[6000], eleme
       }
     while(contador_2 >= 0)	//Mientras no recorremos todos los datos.	PROBABLEMENTE AQUI ESTA MAL O ALGO RARO
      {
-	if(referencia[contador_2] = 1)		//Si el dato es 1, ponemos el bit 1 en el byte.
-	  PONE_1(byte, contador_3);	
-	else					//Si no es 1, ponemos el bit 0 en el byte.
-	  PONE_0(byte, contador_3);
+	if(referencia[contador_2] == 1)		//Si el dato es 1, ponemos el bit 1 en el byte.
+	  PONE_1(byte, contador_bits);	
+	else if(referencia[contador_2] == 0)	//Si no es 1, ponemos el bit 0 en el byte.
+	  PONE_0(byte, contador_bits);
         contador_bits++;
 	if(contador_bits==8)			//Si se completo el byte:
 	  {
@@ -186,16 +199,16 @@ transformar_mensaje(arbol_bin *Arbol_f, char bytes[751], char texto[6000], eleme
 
 int
 main (void)
-{
+{	//Bloque de declaración.
   int total = 0;		//Entero total de las frecuencias.
   int contador = 0;		//Contador para ciclos.
   int contador_2 = 0;		//Contador que ayuda a pasar los elementos a tabla.txt.
   int datos = 0;		//Entero que obtiene la cantidad de datos.
-  int numero[53];
-  int bit[53];
+  int numero[53];		//Arreglo para pasar los numeros de los elementos a la tabla.
+  int bit[53];			//Arreglo para los bits de los elementos
   char texto[6000];		//Arreglo que contiene el texto y sacar la frecuencia de letras.
   char bytes[751];		//Arreglo de bytes para el mensaje codificado.
-  char letras[53];
+  char letras[53];		//Arreglo para los caracteres de los elementos y pasarlos al texto.
   elemento alfabeto[53]; 	//Arreglo para las frecuencias de las letras. ASCII 65-90 mayusculas, 97-122 minusculas, 32 espacio.
   elemento nodos[130];		//Arreglo de los nodos sumados por los elementos basicos.
   elemento auxiliar;		//Elemento auxiliar para las funciones de arbol.
@@ -206,6 +219,7 @@ main (void)
   FILE *mensaje;		//Archivo a modificar.
   FILE *tabla;			//Tabla de frecuencias.
 
+	//Bloque de inicializacion.
   for(contador = 0; contador<53; contador++)	//Inicializamos nuestro arreglo para las frecuencias.
   {
     alfabeto[contador].valor = 0;
@@ -215,6 +229,7 @@ main (void)
     nodos[contador].valor = 0;
   Initialize(&Arbol_f);				//Inicializamos nuestro arbol final.
 
+	//Bloque de frecuencias.
   Archivo.open ("ejemplo.txt");		//Abrimos el archivo de texto.
   getline (Archivo, buffer);		//Obtenemos el texto.
   strcpy (texto, buffer.c_str ());	//Lo copiamos al arreglo y sacar las frecuencias.
@@ -231,6 +246,7 @@ main (void)
         }
     }
 
+	//Bloque de armar y arreglar el arbol.
   construir_arbol(nodos, datos, &Arbol_f, pos);	//Construimos a nuestro arbol mediante la recursividad.
   pos=Root(&Arbol_f);		//Nos colocamos en la raiz.
   referencia_bits(&Arbol_f, pos);		//Ponemos las referencias de 0 y 1 para el mensaje.
@@ -250,25 +266,27 @@ main (void)
       }
   }
 
+	//Bloque de codificación.
   transformar_mensaje(&Arbol_f, bytes, texto, alfabeto);	//Transformamos el mensaje a binario.
   mensaje = fopen("mensaje.txt", "w");		//Abrimos un txt.
   fwrite(bytes, sizeof(char), sizeof(bytes), mensaje);	//Pasamos el mensaje.
   fclose(mensaje);				//Cerramos el txt.
   tabla = fopen("tabla.txt", "w");		//Abrimos un txt.
-for(contador = 0; contador<53; contador++)
-{
-bit[contador]=alfabeto[contador].bit;
-numero[contador]=alfabeto[contador].valor;
-letras[contador]=alfabeto[contador].caracter;
-}
+
+	//Bloque de traspasar los datos a la tabla.
+  for(contador = 0; contador<53; contador++)
+  {
+    numero[contador]=alfabeto[contador].valor;
+    letras[contador]=alfabeto[contador].caracter;
+  }
 
   for(contador = 0; contador<53; contador++)
-{
-  fputc(letras[contador],tabla);	//Pasamos el mensaje.
-  fprintf(tabla," %d ",numero[contador]);	//Pasamos el mensaje.
-  fprintf(tabla,"%d ",bit[contador]);	//Pasamos el mensaje.
-  fputc('\n',tabla);
-}
+  {
+    fputc(letras[contador],tabla);	//Pasamos el mensaje.
+    fputc('\n',tabla);
+    fprintf(tabla,"%d",numero[contador]);	//Pasamos el mensaje.
+    fputc('\n',tabla);
+  }
 
   fclose(tabla);
 
