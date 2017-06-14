@@ -218,8 +218,7 @@ main (void)
   elemento auxiliar;		//Elemento auxiliar para las funciones de arbol.
   posicion pos;			//Posicion auxiliar para las funciones de arbol.
   arbol_bin Arbol_f;		//Arbol final construido por las frecuencias.
-  FILE *mensaje;		//Archivo a modificar.
-  FILE *tabla;			//Tabla de frecuencias.
+  FILE *msj_decod;		//Archivo a modificar con mensaje decodificado.
 
   for(contador = 0; contador<53; contador++)	//Inicializamos nuestro arreglo para las frecuencias.
   {
@@ -251,7 +250,7 @@ main (void)
   referencia_bits(&Arbol_f, pos);		//Ponemos las referencias de 0 y 1
   pos = Root(&Arbol_f); //Nos colocamos en la raiz.
   decodificar(&Arbol_f, pos, texto, bytes);	//Decodificamos el mensaje.
-
+	
 
 return 0;
 }
