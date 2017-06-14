@@ -137,7 +137,7 @@ referencia_bits(arbol_bin *Arbol_f, posicion pos)	//Funcion que pone la referenc
   return Arbol_f;
 }
 
-void InOrden(arbol_bin *a,posicion p)
+void InOrden(arbol_bin *a,posicion p) //Para verificar la construccion correcta del arbol.
 {
 	elemento e;
 	if(!NullNode(a,p))
@@ -164,7 +164,6 @@ decodificar(arbol_bin *Arbol_f, posicion pos, char texto[6000], char bytes[751])
 	
   Archivo = fopen ("mensaje.txt", "r");		//Abrimos el archivo de texto.
   pos = Root(Arbol_f);		//Nos ponemos en la raiz.
-InOrden(Arbol_f, pos);
   posaux = pos;		//Tambien a nuestro seguro.
   do
   {
@@ -173,7 +172,6 @@ InOrden(Arbol_f, pos);
       auxbit[contador] = CONSULTARBIT(byte,contador);
     for (contador = 0; contador < 8; contador++)
     {
-
       if(auxbit[contador] == 1)		//Si es uno nos movemos a la derecha.
       {
 	posaux = pos;
@@ -184,7 +182,6 @@ InOrden(Arbol_f, pos);
           texto[largo] = auxiliar.caracter;	//Lo ponemos en el texto.
 	  largo++;	
 	  pos = Root(Arbol_f);		//Nos ponemos en la raiz
-cout<<auxiliar.caracter;
 	}
       }
       else if(auxbit[contador] == 0)	//Si es cero nos movemos a la izquierda.
@@ -197,13 +194,11 @@ cout<<auxiliar.caracter;
           texto[largo] = auxiliar.caracter;	//Ponemos la letra en el texto.
 	  largo++;
 	  pos = Root(Arbol_f);		//Volvemos a la raiz.
-cout<<auxiliar.caracter;
 	}
       }		//Asi hasta que acabemos con los caracteres codificados.
     }
   }while(fgetc(Archivo) != EOF);
   //Se usa Do-While para obtener los elementos sin que se pierdan datos, con While se pierde el primer dato.
-cout<<largo<<endl;
   fclose (Archivo);			//Cerramos el archivo.
 
   return texto;
