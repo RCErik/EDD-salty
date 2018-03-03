@@ -13,7 +13,8 @@
 #include<stdlib.h>
 
 void hanoi(int n,int ini, int aux, int fin){
-    //En este algoritmo se indica movimiento de un disco de la torre de inicio hacia la final, con el apoyo de una auxiliar en caso de necesitarse
+    //En este algoritmo se indica movimiento de un disco de la torre de inicio hacia la final, 
+	//con el apoyo de una auxiliar en caso de necesitarse
     //Si la cantidad de discos enviada es 1 realizamos el movimiento de la torre A a la C
 	if(n == 1){
 		printf("Mover disco de la torre %c hacia la torre %c",ini,fin);
@@ -24,7 +25,8 @@ void hanoi(int n,int ini, int aux, int fin){
         //Inicio = A    Auxiliar = C    Final = B
 		hanoi(n - 1,ini,fin,aux);
 		printf("\nMover disco de la torre %c hacia la torre %c\n",ini,fin);
-        //Posteriormente realizamos el amague del movimiento, llamando de nuevo a la función con la nueva cantidad de discos menos uno y las torres en este orden
+        //Posteriormente realizamos el amague del movimiento, llamando de nuevo a la función 
+		//con la nueva cantidad de discos menos uno y las torres en este orden
         //Inicio = B    Auxiliar = A    Final = C
 		hanoi(n-1,aux,ini,fin);
 	}
